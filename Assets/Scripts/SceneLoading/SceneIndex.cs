@@ -1,4 +1,4 @@
-public enum SceneIndexes
+public enum SceneIndex
 {
     NONE = -1,
     MANAGER = 0,

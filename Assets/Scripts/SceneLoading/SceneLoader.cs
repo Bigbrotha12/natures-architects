@@ -13,13 +13,13 @@ public class SceneLoader : MonoBehaviour
 
     List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
 
-    public IEnumerator LoadScene(SceneIndexes newScene, SceneIndexes oldScene)
+    public IEnumerator LoadScene(SceneIndex newScene, SceneIndex oldScene)
     {
-        List<SceneIndexes> scenesToLoad = new List<SceneIndexes>();
+        List<SceneIndex> scenesToLoad = new List<SceneIndex>();
         scenesToLoad.Add(newScene);
 
-        List<SceneIndexes> scenesToUnload = new List<SceneIndexes>();
-        if (oldScene != SceneIndexes.NONE)
+        List<SceneIndex> scenesToUnload = new List<SceneIndex>();
+        if (oldScene != SceneIndex.NONE)
         {
             scenesToUnload.Add(oldScene);
         }
@@ -28,7 +28,7 @@ public class SceneLoader : MonoBehaviour
     }
 
 
-    public IEnumerator LoadScenes(List<SceneIndexes> newScenes, List<SceneIndexes> oldScenes)
+    public IEnumerator LoadScenes(List<SceneIndex> newScenes, List<SceneIndex> oldScenes)
     {
         yield return fader.FadeOut(fadeTime);
         loadingScreen.SetActive(true);
@@ -36,12 +36,12 @@ public class SceneLoader : MonoBehaviour
 
         float startTime = Time.time;
 
-        foreach (SceneIndexes oldScene in oldScenes)
+        foreach (SceneIndex oldScene in oldScenes)
         {
             scenesLoading.Add(SceneManager.UnloadSceneAsync((int)oldScene));
         }
 
-        foreach (SceneIndexes newScene in newScenes)
+        foreach (SceneIndex newScene in newScenes)
         {
             scenesLoading.Add(SceneManager.LoadSceneAsync((int)newScene, LoadSceneMode.Additive));
         }

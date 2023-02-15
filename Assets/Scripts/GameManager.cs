@@ -27,7 +27,7 @@ public class GameManager : Singleton<GameManager>
     {
         yield return splashScreen.PlaySequence();
 
-        StartCoroutine(sceneLoader.LoadScene(SceneIndexes.TITLE_SCENE, SceneIndexes.NONE));
+        StartCoroutine(sceneLoader.LoadScene(SceneIndex.TITLE_SCENE, SceneIndex.NONE));
     }
 
     void OnDisable()
@@ -37,7 +37,7 @@ public class GameManager : Singleton<GameManager>
 
     void LoadGame()
     {
-        StartCoroutine(sceneLoader.LoadScene(SceneIndexes.GAME_SCENE, SceneIndexes.TITLE_SCENE));
+        StartCoroutine(sceneLoader.LoadScene(SceneIndex.GAME_SCENE, SceneIndex.TITLE_SCENE));
     }
 
     void QuitGame()

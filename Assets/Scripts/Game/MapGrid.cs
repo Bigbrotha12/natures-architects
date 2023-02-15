@@ -12,13 +12,14 @@ public enum TerrainTypes {
     FIRE,
     SNOW
 }
+
 public class MapGrid : MonoBehaviour
 {
     public Tile tile;
     public Tilemap tilemap;
     public int[,] Map;
     public int height, width, columns, rows;
-    // Start is called before the first frame update
+
     void Start()
     {
         Map = new int[rows, columns];
@@ -31,12 +32,6 @@ public class MapGrid : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void CreateTile(int positionX, int positionY, TerrainTypes type) 
     {
         if(Map is null) 
@@ -47,6 +42,11 @@ public class MapGrid : MonoBehaviour
 
         Vector3Int position = new Vector3Int(positionX, positionY, 0);
         tilemap.SetTile(position, tile);
+    }
 
+    public bool CheckPositionIsOnMapGrid(Vector3Int position)
+    {
+        // TODO
+        return true;
     }
 }

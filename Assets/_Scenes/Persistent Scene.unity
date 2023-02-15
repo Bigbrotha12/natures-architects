@@ -324,6 +324,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3519460630630122732, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: m_Name
+      value: Scene Loader
+      objectReference: {fileID: 0}
     - target: {fileID: 5426829570288137501, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -367,6 +371,10 @@ PrefabInstance:
     - target: {fileID: 5426829570288137501, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008718607466486950, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: m_Name
+      value: Splash Screen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}

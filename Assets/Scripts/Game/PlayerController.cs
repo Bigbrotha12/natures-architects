@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using TMPro;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,9 +17,17 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] MapGrid mapGrid;
 
+    Mover mover;
+
     void Awake()
     {
         playerCharacter = transform;
+        mover = GetComponent<Mover>();
+    }
+
+    void OnDisable()
+    {
+        mover.movementCompletedEvent -= OnMovementCompleted;
     }
 
 
@@ -106,15 +115,20 @@ public class PlayerController : MonoBehaviour
 
         if (mapGrid.CheckPositionIsOnMapGrid(newPosition))
         {
-            playerCharacter.position += direction;
+            mover.movementCompletedEvent += OnMovementCompleted;
+            mover.MoveTo(playerCharacter, newPosition);
             EventBroker.CallPlayerMove();
         }
         else
         {
             EventBroker.CallPlayerMoveBlocked();
         }
+    }
 
-        StartCoroutine("InputCooldown");
+    void OnMovementCompleted()
+    {
+        canMove = true;
+        mover.movementCompletedEvent -= OnMovementCompleted;
     }
 
     IEnumerator InputCooldown() 

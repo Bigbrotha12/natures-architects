@@ -2,37 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
-public enum TerrainTypes {
-    NONE,
-    GRASS,
-    FOREST,
-    WATER,
-    MOUNTAIN,
-    FIRE,
-    SNOW
-}
+using TMPro;
 
 public class MapGrid : MonoBehaviour
 {
     public Tile tile;
     public Tilemap tilemap;
-    public int[,] Map;
+    public TerrainTile[,] Map;
     public int height, width, columns, rows;
+    public TerrainTile[] initialTerrains;
+    public TMP_Text totalScore;
+    public TMP_Text grassScore;
+    public TMP_Text mountainScore;
+    public TMP_Text forestScore;
+    public TMP_Text waterScore;
+    public Dictionary<TerrainTypes, int> terrainScores = new Dictionary<TerrainTypes, int>();
 
     void Start()
     {
-        Map = new int[rows, columns];
-        for (int i = 0; i < rows; i++)
+        // Create random map tiles
+        Map = new TerrainTile[columns, rows];
+        for (int i = 0; i < columns; i++)
         {
-            for (int j = 0; j < columns; j++)
+            for (int j = 0; j < rows; j++)
             {
-                //CreateTile(i, j, TerrainTypes.GRASS);
+                int terrainIndex = Random.Range(0, initialTerrains.Length);
+                CreateTile(i, j, initialTerrains[terrainIndex]);
             }
         }
+        ScoreMap();
     }
 
-    void CreateTile(int positionX, int positionY, TerrainTypes type) 
+    public void CreateTile(int positionX, int positionY, TerrainTile type) 
     {
         if(Map is null) 
         {
@@ -41,12 +42,67 @@ public class MapGrid : MonoBehaviour
         }
 
         Vector3Int position = new Vector3Int(positionX, positionY, 0);
-        tilemap.SetTile(position, tile);
+        if(CheckPositionIsOnMapGrid(position))
+        {
+            Map[position.x, position.y] = type;
+            tilemap.SetTile(position, type.tileSprite);
+        }
+        
     }
 
     public bool CheckPositionIsOnMapGrid(Vector3Int position)
     {
-        // TODO
+        // check position is within grid
+        if(position.x < 0 || position.x >= columns || position.y < 0 || position.y >= rows) 
+        {
+            Debug.LogError("Invalid Map position.");   
+            return false;
+        }
         return true;
+    }
+
+    public void ScoreTile(Vector3Int position)
+    {
+        if(!CheckPositionIsOnMapGrid(position)) { return; }
+
+        TerrainTile tile = Map[position.x, position.y];
+        Vector3Int[] possiblePositions = {
+            new Vector3Int(position.x + 1, position.y, 0),
+            new Vector3Int(position.x - 1, position.y, 0),
+            new Vector3Int(position.x, position.y + 1, 0),
+            new Vector3Int(position.x, position.y - 1, 0)
+        };
+        List<TerrainTile> validAdjacentTiles = new List<TerrainTile>();
+        
+        foreach(Vector3Int positionTile in possiblePositions)
+        {
+            if(CheckPositionIsOnMapGrid(positionTile))
+            {
+                validAdjacentTiles.Add(Map[positionTile.x, positionTile.y]);
+            }
+        }
+
+        int score = Scorer.ScoreTile(tile, validAdjacentTiles.ToArray());
+        if(!terrainScores.ContainsKey(tile.tileType))
+        {
+            terrainScores[tile.tileType] = score;
+        } else 
+        {
+            terrainScores[tile.tileType] += score;
+        }
+        
+
+        Debug.Log(terrainScores[tile.tileType]);
+    }
+
+    public void ScoreMap()
+    {
+        for (int i = 0; i < columns; i++)
+        {
+            for (int j = 0; j < rows; j++)
+            {
+                ScoreTile(new Vector3Int(i, j, 0));
+            }
+        }
     }
 }

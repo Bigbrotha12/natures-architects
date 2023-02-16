@@ -10,12 +10,15 @@ public class Mover : MonoBehaviour
 
     public event Action movementCompletedEvent;
 
-    public void MoveTo(Transform moverTransform, Vector3 newPosition)
+    public void MoveToLocation(Transform moverTransform, Vector3 newPosition)
     {
-       activeCoroutine = StartCoroutine(MoveToCoroutine(moverTransform, newPosition));
+        if (activeCoroutine == null)
+        {
+            activeCoroutine = StartCoroutine(MoveCoroutine(moverTransform, newPosition));
+        }
     }
 
-    IEnumerator MoveToCoroutine(Transform moverTransform, Vector3 newPosition)
+    IEnumerator MoveCoroutine(Transform moverTransform, Vector3 newPosition)
     {
         while (!Mathf.Approximately(Vector3.Distance(moverTransform.position, newPosition), 0))
         {
@@ -25,5 +28,6 @@ public class Mover : MonoBehaviour
 
         moverTransform.position = newPosition;
         movementCompletedEvent?.Invoke();
+        activeCoroutine = null;
     }
 }

@@ -7,22 +7,25 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
-    public Transform playerCharacter;
+    public Transform player;
     public bool canMove = true;
     public float inputDelay = 0.2f;
-    public Tile tile;
-    public Tilemap map;
     public int actionCounter = 12;
     public TMP_Text actionCounterText;
 
     [SerializeField] MapGrid mapGrid;
+    Character character;
 
     Mover mover;
 
     void Awake()
     {
-        playerCharacter = transform;
+        if (player == null)
+        {
+            player = transform;
+        }
         mover = GetComponent<Mover>();
+        character = GetComponentInChildren<Character>();
     }
 
     void OnDisable()
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (actionCounter <= 0) return;
         if (!canMove) return;
         canMove = false;
 
@@ -44,25 +48,25 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.UpArrow))
         {
-            MoveUp();
+            Move(Vector3.up);
             return;
         }
 
         if(Input.GetKeyDown(KeyCode.DownArrow))
         {
-            MoveDown();
+            Move(Vector3.down);
             return;
         }
 
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            MoveLeft();
+            Move(Vector3.left);
             return;
         }
 
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
-            MoveRight();
+            Move(Vector3.right);
             return;
         }
 
@@ -71,57 +75,40 @@ public class PlayerController : MonoBehaviour
 
     void PlaceTile()
     {
-        if (playerCharacter is null || map is null || tile is null)
+        if (player is null || mapGrid is null || character.TerrainTile is null)
         {
             Debug.Log("Character, tilemap, or tile reference not set.");
             return;
         }
-        Vector3Int position = new Vector3Int((int)playerCharacter.position.x, (int)playerCharacter.position.y, 0);
-        map.SetTile(position, tile);
+        Vector3Int position = new Vector3Int((int)player.position.x, (int)player.position.y, 0);
+        mapGrid.CreateTile(position.x, position.y, character.TerrainTile);
         EventBroker.CallPlaceTerrain();
 
+        IncrementActionCount();
         StartCoroutine("InputCooldown");
-    }
-
-    void MoveUp() 
-    {
-        Move(Vector3.up);
-    }
-
-    void MoveDown() 
-    {
-        Move(Vector3.down);
-    }
-
-    void MoveLeft() 
-    {
-        Move(Vector3.left);
-    }
-
-    void MoveRight() 
-    {
-        Move(Vector3.right);
     }
 
     void Move(Vector3 direction)
     {
-        if (playerCharacter is null)
+        if (player is null)
         {
             Debug.Log("Character transform not set.");
             return;
         }
 
-        Vector3Int newPosition = new Vector3Int((int)playerCharacter.position.x + (int)direction.x, (int)playerCharacter.position.y + (int)direction.y, (int)playerCharacter.position.z);
+        Vector3Int newPosition = new Vector3Int((int)player.position.x + (int)direction.x, (int)player.position.y + (int)direction.y, (int)player.position.z);
 
         if (mapGrid.CheckPositionIsOnMapGrid(newPosition))
         {
             mover.movementCompletedEvent += OnMovementCompleted;
-            mover.MoveTo(playerCharacter, newPosition);
+            mover.MoveToLocation(player, newPosition);
             EventBroker.CallPlayerMove();
+            IncrementActionCount();
         }
         else
         {
             EventBroker.CallPlayerMoveBlocked();
+            canMove = true;
         }
     }
 
@@ -131,18 +118,24 @@ public class PlayerController : MonoBehaviour
         mover.movementCompletedEvent -= OnMovementCompleted;
     }
 
-    IEnumerator InputCooldown() 
+    void IncrementActionCount()
     {
+        actionCounter -= 1;
         if (actionCounter > 0)
         {
-            actionCounter -= 1;
             actionCounterText.text = actionCounter.ToString();
-            yield return new WaitForSeconds(inputDelay);
-            canMove = true;
-        } 
-        else 
+        }
+        else
         {
             actionCounterText.text = "Dead";
         }
+    }
+
+    IEnumerator InputCooldown() 
+    {
+        if (actionCounter <= 0) yield break;
+        
+        yield return new WaitForSeconds(inputDelay);
+        canMove = true;
     }
 }

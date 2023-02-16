@@ -20,7 +20,12 @@ public class MapGrid : MonoBehaviour
 
     void Start()
     {
-        // Create random map tiles
+        GenerateRandomTiles();
+        ScoreMap();
+    }
+
+    void GenerateRandomTiles()
+    {
         Map = new TerrainTile[columns, rows];
         for (int i = 0; i < columns; i++)
         {
@@ -30,7 +35,6 @@ public class MapGrid : MonoBehaviour
                 CreateTile(i, j, initialTerrains[terrainIndex]);
             }
         }
-        ScoreMap();
     }
 
     public void CreateTile(int positionX, int positionY, TerrainTile type) 
@@ -52,10 +56,8 @@ public class MapGrid : MonoBehaviour
 
     public bool CheckPositionIsOnMapGrid(Vector3Int position)
     {
-        // check position is within grid
         if(position.x < 0 || position.x >= columns || position.y < 0 || position.y >= rows) 
         {
-            Debug.LogError("Invalid Map position.");   
             return false;
         }
         return true;

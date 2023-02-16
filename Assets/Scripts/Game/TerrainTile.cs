@@ -9,6 +9,4 @@ public class TerrainTile : ScriptableObject
     public TerrainTypes tileType;
     public Tile tileSprite;
     public int value;
-
-    
 }

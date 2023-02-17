@@ -5,13 +5,27 @@ using TMPro;
 
 public class Scorer : MonoBehaviour
 {
+    // Actual
     [SerializeField] TMP_Text totalScoreText;
     [SerializeField] TMP_Text grassScoreText;
     [SerializeField] TMP_Text mountainScoreText;
     [SerializeField] TMP_Text forestScoreText;
     [SerializeField] TMP_Text waterScoreText;
+    [SerializeField] TMP_Text snowScoreText;
+    [SerializeField] TMP_Text fireScoreText;
+    // Targets
+    [SerializeField] TMP_Text totalTargetText;
+    [SerializeField] TMP_Text grassTargetText;
+    [SerializeField] TMP_Text mountainTargetText;
+    [SerializeField] TMP_Text forestTargetText;
+    [SerializeField] TMP_Text waterTargetText;
+    [SerializeField] TMP_Text snowTargetText;
+    [SerializeField] TMP_Text fireTargetText;
+
     int totalScore = 0;
+    int totalScoreTarget = 0;
     Dictionary<TerrainTypes, int> terrainScores = new Dictionary<TerrainTypes, int>();
+    Dictionary<TerrainTypes, int> terrainTarget = new Dictionary<TerrainTypes, int>();
     
     public void ScoreTile(TerrainTile scoringTile, TerrainTile[] adjacentTiles)
     {
@@ -67,21 +81,71 @@ public class Scorer : MonoBehaviour
                 grassScoreText.text = terrainScores[type].ToString();
                 break;
             case TerrainTypes.FOREST:
-                grassScoreText.text = terrainScores[type].ToString();
+                forestScoreText.text = terrainScores[type].ToString();
                 break;
             case TerrainTypes.WATER:
-                grassScoreText.text = terrainScores[type].ToString();
+                waterScoreText.text = terrainScores[type].ToString();
                 break;
             case TerrainTypes.MOUNTAIN:
-                grassScoreText.text = terrainScores[type].ToString();
+                mountainScoreText.text = terrainScores[type].ToString();
                 break;
             case TerrainTypes.FIRE:
-                grassScoreText.text = terrainScores[type].ToString();
+                fireScoreText.text = terrainScores[type].ToString();
                 break;
             case TerrainTypes.SNOW:
-                grassScoreText.text = terrainScores[type].ToString();
+                snowScoreText.text = terrainScores[type].ToString();
                 break;
         }
         totalScoreText.text = totalScore.ToString();
+    }
+
+    public void SetTargetScore(TerrainTypes type, int target)
+    {
+        terrainTarget[type] = target;
+        totalScoreTarget += target;
+
+        switch(type)
+        {
+            case TerrainTypes.NONE:
+                break;
+            case TerrainTypes.GRASS:
+                grassTargetText.text = target.ToString();
+                break;
+            case TerrainTypes.FOREST:
+                forestTargetText.text = target.ToString();
+                break;
+            case TerrainTypes.WATER:
+                waterTargetText.text = target.ToString();
+                break;
+            case TerrainTypes.MOUNTAIN:
+                mountainTargetText.text = target.ToString();
+                break;
+            case TerrainTypes.FIRE:
+                fireTargetText.text = target.ToString();
+                break;
+            case TerrainTypes.SNOW:
+                snowTargetText.text = target.ToString();
+                break;
+        }
+        totalTargetText.text = totalScoreTarget.ToString();
+    }
+
+    bool CheckWinCondition() 
+    {
+        foreach (KeyValuePair<TerrainTypes, int> score in terrainScores)
+        {
+            if(terrainTarget.ContainsKey(score.Key))
+            {
+                if(score.Value < terrainTarget[score.Key])
+                {
+                    Debug.Log(
+                        "You failed to meet score target for " + score.Key.ToString() + 
+                        " terrain. Achieved: " + score.Value.ToString() +
+                        ". Required: " + terrainTarget[score.Key].ToString() + ".");
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

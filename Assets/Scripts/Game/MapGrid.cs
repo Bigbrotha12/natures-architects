@@ -58,6 +58,15 @@ public class MapGrid : MonoBehaviour
         return true;
     }
 
+    public bool CheckTileEmpty(Vector3Int position)
+    {
+        if(CheckPositionIsOnMapGrid(position))
+        {
+            return Map[position.x, position.y].tileType == TerrainTypes.NONE;
+        }
+        return false;
+    }
+
     public void ScoreTile(Vector3Int position)
     {
         if(!CheckPositionIsOnMapGrid(position)) { return; }

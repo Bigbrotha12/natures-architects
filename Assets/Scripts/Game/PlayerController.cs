@@ -80,11 +80,21 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Character, tilemap, or tile reference not set.");
             return;
         }
-        Vector3Int position = new Vector3Int((int)player.position.x, (int)player.position.y, 0);
-        mapGrid.CreateTile(position.x, position.y, character.TerrainTile);
-        EventBroker.CallPlaceTerrain();
 
-        IncrementActionCount();
+        Vector3Int position = new Vector3Int((int)player.position.x, (int)player.position.y, 0);
+        // Only allow tile placement over "Empty" tiles.
+        if(mapGrid.CheckTileEmpty(position))
+        {
+            mapGrid.CreateTile(position.x, position.y, character.TerrainTile);
+            mapGrid.ScoreTile(position);
+            EventBroker.CallPlaceTerrain();
+
+            IncrementActionCount();
+        } else 
+        {
+            EventBroker.CallPlayerMoveBlocked();
+           
+        }
         StartCoroutine("InputCooldown");
     }
 

@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Dead
   m_EditorClassIdentifier: 
   tileType: 0
-  tileSprite: {fileID: 11400000, guid: 79f953aa0dbf82348af76cc731d3393b, type: 2}
-  value: 0
+  tileSprite: {fileID: 11400000, guid: ff72c0f220302424c8a7b7b351e343f9, type: 2}
+  adjacentGrassValue: 0
+  adjacentWaterValue: 0
+  adjacentMountainValue: 0
+  adjacentForestValue: 0
+  adjacentSnowValue: 0
+  adjacentFireValue: 0

@@ -25,15 +25,24 @@ public class Scorer : MonoBehaviour
         int score = 0;
         foreach(TerrainTile tile in adjacentTiles)
         {
-            Debug.Log("Scoring tile type: " + tile.tileType.ToString());
             if(tile.tileType == scoringTile.tileType)
             {
-                score += 1;
+                score += scoringTile.GetAdjacentTileValue(tile.tileType);
             }
         }
         
         UpdateScore(scoringTile.tileType, score);
         DisplayScore(scoringTile.tileType);
+    }
+
+    public int GetTerrainScore(TerrainTypes terrain)
+    {
+        return terrainScores.ContainsKey(terrain) ? terrainScores[terrain] : 0;
+    }
+
+    public int GetTotalScore()
+    {
+        return totalScore;
     }
 
     void UpdateScore(TerrainTypes tileType, int score)
@@ -73,5 +82,6 @@ public class Scorer : MonoBehaviour
                 grassScoreText.text = terrainScores[type].ToString();
                 break;
         }
+        totalScoreText.text = totalScore.ToString();
     }
 }

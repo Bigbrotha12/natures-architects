@@ -6,30 +6,37 @@ using TMPro;
 
 public class MapGrid : MonoBehaviour
 {
-    public Tile tile;
     public Tilemap tilemap;
+    public GameLevelSO gameLevel;
     public TerrainTile[,] Map;
-    public int height, width, columns, rows;
-    public TerrainTile[] initialTerrains;
     [SerializeField] Scorer ScoreBoard;
     
     void Start()
     {
         GenerateRandomTiles();
-        ScoreMap();
+        SetTargets();
     }
 
     void GenerateRandomTiles()
     {
-        Map = new TerrainTile[columns, rows];
-        for (int i = 0; i < columns; i++)
+        Map = new TerrainTile[gameLevel.columns, gameLevel.rows];
+        for (int i = 0; i < gameLevel.columns; i++)
         {
-            for (int j = 0; j < rows; j++)
+            for (int j = 0; j < gameLevel.rows; j++)
             {
-                int terrainIndex = Random.Range(0, initialTerrains.Length);
-                CreateTile(i, j, initialTerrains[terrainIndex]);
+                CreateTile(i, j, gameLevel.starterTile);
             }
         }
+    }
+
+    void SetTargets()
+    {
+        ScoreBoard.SetTargetScore(TerrainTypes.GRASS, gameLevel.grassTargetScore);
+        ScoreBoard.SetTargetScore(TerrainTypes.FOREST, gameLevel.forestTargetScore);
+        ScoreBoard.SetTargetScore(TerrainTypes.WATER, gameLevel.waterTargetScore);
+        ScoreBoard.SetTargetScore(TerrainTypes.MOUNTAIN, gameLevel.mountainTargetScore);
+        ScoreBoard.SetTargetScore(TerrainTypes.FIRE, gameLevel.fireTargetScore);
+        ScoreBoard.SetTargetScore(TerrainTypes.SNOW, gameLevel.snowTargetScore);
     }
 
     public void CreateTile(int positionX, int positionY, TerrainTile type) 
@@ -46,12 +53,11 @@ public class MapGrid : MonoBehaviour
             Map[position.x, position.y] = type;
             tilemap.SetTile(position, type.tileSprite);
         }
-        
     }
 
     public bool CheckPositionIsOnMapGrid(Vector3Int position)
     {
-        if(position.x < 0 || position.x >= columns || position.y < 0 || position.y >= rows) 
+        if(position.x < 0 || position.x >= gameLevel.columns || position.y < 0 || position.y >= gameLevel.rows) 
         {
             return false;
         }
@@ -93,9 +99,9 @@ public class MapGrid : MonoBehaviour
 
     public void ScoreMap()
     {
-        for (int i = 0; i < columns; i++)
+        for (int i = 0; i < gameLevel.columns; i++)
         {
-            for (int j = 0; j < rows; j++)
+            for (int j = 0; j < gameLevel.rows; j++)
             {
                 ScoreTile(new Vector3Int(i, j, 0));
             }

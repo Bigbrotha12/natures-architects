@@ -11,13 +11,8 @@ public class MapGrid : MonoBehaviour
     public TerrainTile[,] Map;
     public int height, width, columns, rows;
     public TerrainTile[] initialTerrains;
-    public TMP_Text totalScore;
-    public TMP_Text grassScore;
-    public TMP_Text mountainScore;
-    public TMP_Text forestScore;
-    public TMP_Text waterScore;
-    public Dictionary<TerrainTypes, int> terrainScores = new Dictionary<TerrainTypes, int>();
-
+    [SerializeField] Scorer ScoreBoard;
+    
     void Start()
     {
         GenerateRandomTiles();
@@ -84,17 +79,7 @@ public class MapGrid : MonoBehaviour
             }
         }
 
-        int score = Scorer.ScoreTile(tile, validAdjacentTiles.ToArray());
-        if(!terrainScores.ContainsKey(tile.tileType))
-        {
-            terrainScores[tile.tileType] = score;
-        } else 
-        {
-            terrainScores[tile.tileType] += score;
-        }
-        
-
-        Debug.Log(terrainScores[tile.tileType]);
+        ScoreBoard.ScoreTile(tile, validAdjacentTiles.ToArray());
     }
 
     public void ScoreMap()

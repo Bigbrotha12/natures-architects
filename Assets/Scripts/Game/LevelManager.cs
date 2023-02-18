@@ -4,29 +4,38 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] GameLevelSO currentLevelSO;
+    [SerializeField] GameLevelSO[] levels;
+    [SerializeField] int currentLevelIndex;
     [SerializeField] MapGrid mapGrid;
     [SerializeField] AudioClip defaultMusic;
 
     PlayerController player;
+    Scorer scorer;
     int currentCharacterID = 0;
     AudioSource audioSource;
 
     public GameLevelSO CurrentLevelSO
     {
-        get { return currentLevelSO; }
+        get { return levels[currentLevelIndex]; }
     }
 
     void Awake()
     {
         player = FindObjectOfType<PlayerController>();
+        scorer = FindObjectOfType<Scorer>();
         audioSource = GetComponent<AudioSource>();
+        currentLevelIndex = 0;
+
         EventBroker.CharacterDeath += OnCharacterDeath;
+        EventBroker.LoadNextLevel += LoadNextLevel;
+        EventBroker.RestartLevel += RestartLevel;
     }
 
     void OnDisable()
     {
         EventBroker.CharacterDeath -= OnCharacterDeath;
+        EventBroker.LoadNextLevel -= LoadNextLevel;
+        EventBroker.RestartLevel -= RestartLevel;
     }
 
     void Start()
@@ -51,9 +60,9 @@ public class LevelManager : MonoBehaviour
     void PlayLevelMusic()
     {
         audioSource.clip = defaultMusic;
-        if (currentLevelSO.music != null)
+        if (CurrentLevelSO.music != null)
         {
-            audioSource.clip = currentLevelSO.music;
+            audioSource.clip = CurrentLevelSO.music;
         }
         audioSource.Play();
     }
@@ -61,7 +70,7 @@ public class LevelManager : MonoBehaviour
     void OnCharacterDeath()
     {
         currentCharacterID++;
-        if (currentCharacterID >= currentLevelSO.AvailableCharacters.Length)
+        if (currentCharacterID >= CurrentLevelSO.AvailableCharacters.Length)
         {
             LevelEnd();
             return;
@@ -72,6 +81,35 @@ public class LevelManager : MonoBehaviour
 
     void LevelEnd()
     {
-        // TODO: display win/lose screen
+        if (scorer.CheckWinCondition())
+        {
+            EventBroker.CallLevelCompleted();
+        }
+        else
+        {
+            EventBroker.CallGameOver();
+        }
+    }
+
+    void LoadNextLevel()
+    {
+        currentLevelIndex++;
+        if (currentLevelIndex >= levels.Length)
+        {
+            NoMoreLevels();
+        }
+
+        InitializeLevel();
+    }
+
+    void RestartLevel()
+    {
+
+    }
+
+    void NoMoreLevels()
+    {
+        print("No more levels");
+        // Todo
     }
 }

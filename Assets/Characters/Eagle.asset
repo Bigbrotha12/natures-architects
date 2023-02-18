@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988738ad925986a48b7c224b5eedc3d4, type: 3}
   m_Name: Eagle
   m_EditorClassIdentifier: 
-  defaultSprite: {fileID: 0}
+  defaultSprite: {fileID: -23354077, guid: 987297cc6f6374a41912ede3b52cc119, type: 3}
   animatorOverride: {fileID: 0}
-  terrainTile: {fileID: 0}
+  terrainTile: {fileID: 11400000, guid: 86c96da9365285f489e4b6c6da074e3a, type: 2}

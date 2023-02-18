@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988738ad925986a48b7c224b5eedc3d4, type: 3}
   m_Name: Human
   m_EditorClassIdentifier: 
-  defaultSprite: {fileID: 0}
+  defaultSprite: {fileID: -1737500564, guid: b14b616d337283a4facc379ab6b0761f, type: 3}
   animatorOverride: {fileID: 0}
-  terrainTile: {fileID: 0}
+  terrainTile: {fileID: 11400000, guid: e9a83d52c25db2a4b9fc1bd269a32ad1, type: 2}

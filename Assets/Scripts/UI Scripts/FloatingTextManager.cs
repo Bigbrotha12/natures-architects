@@ -9,6 +9,11 @@ public class FloatingTextManager : MonoBehaviour
 {
     public GameObject textContainer;
     public GameObject textPrefab;
+    [SerializeField] Transform playerTransform;
+    [SerializeField] int fontSize = 60;
+    [SerializeField] Color positiveColor;
+    [SerializeField] Color negativeColor;
+    [SerializeField] float duration;
 
     private List<FloatingText> floatingTexts = new List<FloatingText>();
 
@@ -18,15 +23,20 @@ public class FloatingTextManager : MonoBehaviour
             txt.UpdateFloatingText();
     }
 
-    public void Show(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
+    public void Show(string msg, bool positive)
+    {
+        Show(msg, fontSize, positive ? positiveColor : negativeColor, playerTransform.position + Vector3.up, duration, Vector3.up);
+    }
+
+    public void Show(string msg, int fontSize, Color color, Vector3 position, float duration, Vector3 motion)
     {
         FloatingText floatingText = GetFloatingText();
 
         floatingText.txt.text = msg;
-        // floatingText.txt.fontSize = fontSize; // Disable this option until i figure out why it isn't working
+        floatingText.txt.fontSize = fontSize;
         floatingText.txt.color = color;
 
-        floatingText.go.transform.position = Camera.main.WorldToScreenPoint(position); // Transfer world space to screen space to use in ui
+        floatingText.go.transform.position = position; // Camera.main.WorldToScreenPoint(position); // Transfer world space to screen space to use in ui
         floatingText.motion = motion;
         floatingText.duration = duration;
 

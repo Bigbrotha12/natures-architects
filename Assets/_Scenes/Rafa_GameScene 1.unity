@@ -667,6 +667,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 848190522, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+      propertyPath: m_text
+      value: But in the end, the world was too far gone, and their life energy was
+        spent in vain...
+      objectReference: {fileID: 0}
     - target: {fileID: 1268843587, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -823,6 +828,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3769024385746773185, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+      propertyPath: m_text
+      value: 'After the end, what once was full of life and vibrant energy, now laid
+        bare and dead. The Creators mourned their loss and descended upon the land
+        as they had done eons ago. '
+      objectReference: {fileID: 0}
     - target: {fileID: 5248093511876314815, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -847,6 +858,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5320015130294120619, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5618066662500466895, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -870,6 +885,11 @@ PrefabInstance:
     - target: {fileID: 5618066662500466895, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7374395149191939812, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+      propertyPath: m_text
+      value: They healed the world for their new children. They planted trees to
+        shelter them, streams to quench their thirst, mountains to keep them warm.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}

@@ -36,4 +36,19 @@ public class UIController : MonoBehaviour
     {
         successPanel.SetActive(show);
     }
+
+    public void QuitToStart()
+    {
+        EventBroker.CallReturnToTitleScreen();
+    }
+
+    public void RestartLevel()
+    {
+        EventBroker.CallRestartLevel();
+    }
+
+    public void NextLevel()
+    {
+        EventBroker.CallLoadNextLevel();
+    }
 }

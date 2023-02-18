@@ -131,7 +131,7 @@ public class Scorer : MonoBehaviour
         totalTargetText.text = totalScoreTarget.ToString();
     }
 
-    bool CheckWinCondition() 
+    public bool CheckWinCondition() 
     {
         foreach (KeyValuePair<TerrainTypes, int> score in terrainScores)
         {

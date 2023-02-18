@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
 
         EventBroker.StartGame += LoadGame;
         EventBroker.QuitGame += QuitGame;
+        EventBroker.ReturnToTitleScreen += ReturnToStartMenu;
     }
 
     void Start()
@@ -33,11 +34,18 @@ public class GameManager : Singleton<GameManager>
     void OnDisable()
     {
         EventBroker.StartGame -= LoadGame;
+        EventBroker.QuitGame -= QuitGame;
+        EventBroker.ReturnToTitleScreen -= ReturnToStartMenu;
     }
 
     void LoadGame()
     {
         StartCoroutine(sceneLoader.LoadScene(SceneIndex.GAME_SCENE, SceneIndex.TITLE_SCENE));
+    }
+
+    void ReturnToStartMenu()
+    {
+        StartCoroutine(sceneLoader.LoadScene(SceneIndex.TITLE_SCENE, SceneIndex.GAME_SCENE));
     }
 
     void QuitGame()

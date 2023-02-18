@@ -38,4 +38,36 @@ public class EventBroker
     {
         CharacterDeath?.Invoke();
     }
+
+    public static event Action GameOver;
+    public static void CallGameOver()
+    {
+        GameOver?.Invoke();
+    }
+
+    public static event Action LevelCompleted;
+    public static void CallLevelCompleted()
+    {
+        LevelCompleted?.Invoke();
+    }
+
+
+    public static event Action ReturnToTitleScreen;
+    public static void CallReturnToTitleScreen()
+    {
+        ReturnToTitleScreen?.Invoke();
+    }
+
+    
+    public static event Action RestartLevel;
+    public static void CallRestartLevel()
+    {
+        RestartLevel?.Invoke();
+    }
+
+    public static event Action LoadNextLevel;
+    public static void CallLoadNextLevel()
+    {
+        LoadNextLevel?.Invoke();
+    }
 }

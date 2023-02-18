@@ -1,12 +1,21 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    [Header("Message Board")]
+    [SerializeField] string defaultMessageText;
+    [SerializeField] TextMeshProUGUI levelMessageText;
+
     [Header("Level End Panels")]
     [SerializeField] GameObject gameOverPanel;
+    [SerializeField] string defaultGameOverText;
+    [SerializeField] TextMeshProUGUI gameOverText;
     [SerializeField] GameObject successPanel;
+    [SerializeField] string defaultSuccessText;
+    [SerializeField] TextMeshProUGUI successText;
 
     [Header("Next Character Images")]
     [SerializeField] Image[] nextImages;
@@ -22,6 +31,24 @@ public class UIController : MonoBehaviour
 
         EventBroker.GameOver += OnGameOver;
         EventBroker.LevelCompleted += OnLevelCompleted;
+    }
+
+    public void SetLevelText(string[] messages)
+    {
+        SetDefaultText();
+        if (messages.Length > 0)
+            levelMessageText.text = messages[0];
+        if (messages.Length > 1)
+            successText.text = messages[1];
+        if (messages.Length > 2)
+            gameOverText.text = messages[2];
+    }
+
+    private void SetDefaultText()
+    {
+        levelMessageText.text = defaultMessageText;
+        gameOverText.text = defaultGameOverText;
+        successText.text = defaultSuccessText;
     }
 
     public void OnGameOver()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] int currentLevelIndex;
     [SerializeField] MapGrid mapGrid;
     [SerializeField] AudioClip defaultMusic;
+    [SerializeField] AudioClip gameOverMusic;
 
     PlayerController player;
     Scorer scorer;
@@ -52,6 +54,7 @@ public class LevelManager : MonoBehaviour
         player.transform.position = CurrentLevelSO.StartPosition;
         SetupCurrentCharacter();
         mapGrid.SetLevel(CurrentLevelSO);
+        SetLevelText(CurrentLevelSO);
 
         PlayLevelMusic();
     }
@@ -64,13 +67,24 @@ public class LevelManager : MonoBehaviour
         uiController.DisplayScoringKey(CurrentLevelSO.AvailableCharacters[currentCharacterID].CharacterSO);
     }
 
+    void SetLevelText(GameLevelSO levelSO)
+    {
+        uiController.SetLevelText(levelSO.flavorTexts);
+    }
+
     void PlayLevelMusic()
     {
-        audioSource.clip = defaultMusic;
+        AudioClip clip = defaultMusic;
         if (CurrentLevelSO.music != null)
         {
-            audioSource.clip = CurrentLevelSO.music;
+            clip = CurrentLevelSO.music;
         }
+        PlayMusic(clip);
+    }
+
+    void PlayMusic(AudioClip clip)
+    {
+        audioSource.clip = clip;
         audioSource.Play();
     }
 
@@ -88,6 +102,7 @@ public class LevelManager : MonoBehaviour
 
     void LevelEnd()
     {
+        PlayGameOverMusic();
         if (scorer.CheckWinCondition())
         {
             EventBroker.CallLevelCompleted();
@@ -96,6 +111,11 @@ public class LevelManager : MonoBehaviour
         {
             EventBroker.CallGameOver();
         }
+    }
+
+    void PlayGameOverMusic()
+    {
+        PlayMusic(gameOverMusic);
     }
 
     void LoadNextLevel()

@@ -12,10 +12,19 @@ public class Mover : MonoBehaviour
 
     public void MoveToLocation(Transform moverTransform, Vector3 newPosition)
     {
+        FaceDirection(moverTransform, newPosition.x >= moverTransform.position.x);
+
         if (activeCoroutine == null)
         {
             activeCoroutine = StartCoroutine(MoveCoroutine(moverTransform, newPosition));
         }
+    }
+
+    void FaceDirection(Transform moverTransform, bool faceRight)
+    {
+        float scaleX = Mathf.Abs(moverTransform.localScale.x);
+        scaleX = faceRight ? scaleX : -scaleX;
+        moverTransform.localScale = new Vector3(scaleX, moverTransform.localScale.y, moverTransform.localScale.z);
     }
 
     IEnumerator MoveCoroutine(Transform moverTransform, Vector3 newPosition)

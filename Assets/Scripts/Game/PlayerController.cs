@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public TMP_Text actionCounterText;
 
     [SerializeField] MapGrid mapGrid;
+
+    [Header("For testing")]
+    [SerializeField] bool placingTileUsesAction = true;
     Character character;
 
     Mover mover;
@@ -73,6 +76,19 @@ public class PlayerController : MonoBehaviour
         canMove = true;
     }
 
+    public void SetCharacter(CharacterSO newCharacter, int moves)
+    {
+        character.ChangeCharacter(newCharacter);
+        SetActionCounter(moves);
+        canMove = true;
+    }
+
+    void SetActionCounter(int moves)
+    {
+        actionCounter = moves;
+        actionCounterText.text = actionCounter.ToString();
+    }
+
     void PlaceTile()
     {
         if (player is null || mapGrid is null || character.TerrainTile is null)
@@ -83,14 +99,18 @@ public class PlayerController : MonoBehaviour
 
         Vector3Int position = new Vector3Int((int)player.position.x, (int)player.position.y, 0);
         // Only allow tile placement over "Empty" tiles.
-        if(mapGrid.CheckTileEmpty(position))
+        if (mapGrid.CheckTileEmpty(position))
         {
             mapGrid.CreateTile(position.x, position.y, character.TerrainTile);
             mapGrid.ScoreTile(position);
             EventBroker.CallPlaceTerrain();
 
-            IncrementActionCount();
-        } else 
+            if (placingTileUsesAction)
+            {
+                IncrementActionCount();
+            }
+        } 
+        else 
         {
             EventBroker.CallPlayerMoveBlocked();
            
@@ -138,7 +158,14 @@ public class PlayerController : MonoBehaviour
         else
         {
             actionCounterText.text = "Dead";
+            CharacterDeath();
         }
+    }
+
+    void CharacterDeath()
+    {
+        // TODO: Death animation
+        EventBroker.CallCharacterDeath();
     }
 
     IEnumerator InputCooldown() 

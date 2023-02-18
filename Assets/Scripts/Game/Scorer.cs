@@ -5,7 +5,7 @@ using TMPro;
 
 public class Scorer : MonoBehaviour
 {
-    // Actual
+    [Header("Actual")]
     [SerializeField] TMP_Text totalScoreText;
     [SerializeField] TMP_Text grassScoreText;
     [SerializeField] TMP_Text mountainScoreText;
@@ -13,7 +13,8 @@ public class Scorer : MonoBehaviour
     [SerializeField] TMP_Text waterScoreText;
     [SerializeField] TMP_Text snowScoreText;
     [SerializeField] TMP_Text fireScoreText;
-    // Targets
+
+    [Header("Targets")]
     [SerializeField] TMP_Text totalTargetText;
     [SerializeField] TMP_Text grassTargetText;
     [SerializeField] TMP_Text mountainTargetText;

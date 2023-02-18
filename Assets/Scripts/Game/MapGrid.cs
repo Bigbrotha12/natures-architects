@@ -13,6 +13,13 @@ public class MapGrid : MonoBehaviour
     
     void Start()
     {
+        /*GenerateRandomTiles();
+        SetTargets();*/
+    }
+
+    public void SetLevel(GameLevelSO levelSO)
+    {
+        gameLevel = levelSO;
         GenerateRandomTiles();
         SetTargets();
     }

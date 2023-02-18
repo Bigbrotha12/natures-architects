@@ -22,7 +22,7 @@ public class Scorer : MonoBehaviour
     [SerializeField] TMP_Text waterTargetText;
     [SerializeField] TMP_Text snowTargetText;
     [SerializeField] TMP_Text fireTargetText;
-
+    [SerializeField] FloatingTextManager floatText;
     int totalScore = 0;
     int totalScoreTarget = 0;
     Dictionary<TerrainTypes, int> terrainScores = new Dictionary<TerrainTypes, int>();
@@ -82,6 +82,8 @@ public class Scorer : MonoBehaviour
             terrainScores[tileType] += score;
         }
         totalScore += score;
+    
+        floatText.Show(score.ToString() + " Points.", score >= 0);
     }
 
     void DisplayScore(TerrainTypes type)

@@ -32,4 +32,10 @@ public class EventBroker
     {
         PlaceTerrain?.Invoke();
     }
+
+    public static event Action CharacterDeath;
+    public static void CallCharacterDeath()
+    {
+        CharacterDeath?.Invoke();
+    }
 }

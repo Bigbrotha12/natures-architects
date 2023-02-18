@@ -73,6 +73,19 @@ public class PlayerController : MonoBehaviour
         canMove = true;
     }
 
+    public void SetCharacter(CharacterSO newCharacter, int moves)
+    {
+        character.ChangeCharacter(newCharacter);
+        SetActionCounter(moves);
+        canMove = true;
+    }
+
+    void SetActionCounter(int moves)
+    {
+        actionCounter = moves;
+        actionCounterText.text = actionCounter.ToString();
+    }
+
     void PlaceTile()
     {
         if (player is null || mapGrid is null || character.TerrainTile is null)
@@ -138,7 +151,14 @@ public class PlayerController : MonoBehaviour
         else
         {
             actionCounterText.text = "Dead";
+            CharacterDeath();
         }
+    }
+
+    void CharacterDeath()
+    {
+        // TODO: Death animation
+        EventBroker.CallCharacterDeath();
     }
 
     IEnumerator InputCooldown() 

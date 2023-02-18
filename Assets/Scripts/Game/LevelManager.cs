@@ -47,6 +47,7 @@ public class LevelManager : MonoBehaviour
 
     void InitializeLevel()
     {
+        scorer.ResetScores();
         currentCharacterID = 0;
         player.transform.position = CurrentLevelSO.StartPosition;
         SetupCurrentCharacter();

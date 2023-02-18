@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using TMPro;
+
 
 public class MapGrid : MonoBehaviour
 {

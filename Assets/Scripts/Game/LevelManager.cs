@@ -60,6 +60,7 @@ public class LevelManager : MonoBehaviour
         player.SetCharacter(CurrentLevelSO.AvailableCharacters[currentCharacterID].CharacterSO, CurrentLevelSO.AvailableCharacters[currentCharacterID].Uses);
 
         uiController.SetNextCharacterSprites(currentCharacterID, CurrentLevelSO);
+        uiController.DisplayScoringKey(CurrentLevelSO.AvailableCharacters[currentCharacterID].CharacterSO);
     }
 
     void PlayLevelMusic()

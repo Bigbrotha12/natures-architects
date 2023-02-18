@@ -1,15 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    [Header("Level End Panels")]
     [SerializeField] GameObject gameOverPanel;
     [SerializeField] GameObject successPanel;
 
     [Header("Next Character Images")]
     [SerializeField] Image[] nextImages;
+
+    [Header("Scoring Key")]
+    [SerializeField] Transform ScoringKeyContainer;
+    [SerializeField] GameObject ScoringKeyPrefab;
 
     void Awake()
     {
@@ -78,6 +82,20 @@ public class UIController : MonoBehaviour
             {
                 nextImages[i].sprite = null; 
             }
+        }
+    }
+
+    public void DisplayScoringKey(CharacterSO currentCharacter)
+    {
+        foreach (Transform key in ScoringKeyContainer)
+        {
+            Destroy(key.gameObject);
+        }
+
+        foreach (string key in currentCharacter.terrainTile.GetScoringKeyText())
+        {
+            GameObject scoringKey = GameObject.Instantiate(ScoringKeyPrefab, ScoringKeyContainer);
+            scoringKey.GetComponent<TMP_Text>().text = key;
         }
     }
 }

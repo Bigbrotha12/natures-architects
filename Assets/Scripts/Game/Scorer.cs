@@ -115,7 +115,7 @@ public class Scorer : MonoBehaviour
     public void SetTargetScore(TerrainTypes type, int target)
     {
         terrainTarget[type] = target;
-        totalScoreTarget += target;
+        totalScoreTarget = target;
 
         switch(type)
         {

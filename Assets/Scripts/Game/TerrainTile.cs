@@ -35,4 +35,51 @@ public class TerrainTile : ScriptableObject
                 return 0;
         }
     }
+
+    public List<string> GetScoringKeyText() 
+    {
+        List<string> scoringText = new List<string>();
+        if(adjacentGrassValue != 0)
+        {
+            string key = adjacentGrassValue > 0 ? "+ " : "- ";
+            key += adjacentGrassValue.ToString() + " for each adjacent GRASS."; 
+            scoringText.Add(key);
+        }
+
+        if(adjacentWaterValue != 0)
+        {
+            string key = adjacentWaterValue > 0 ? "+ " : "- ";
+            key += adjacentWaterValue.ToString() + " for each adjacent WATER."; 
+            scoringText.Add(key);
+        }
+        
+        if(adjacentMountainValue != 0)
+        {
+            string key = adjacentMountainValue > 0 ? "+ " : "- ";
+            key += adjacentMountainValue.ToString() + " for each adjacent MOUNTAIN."; 
+            scoringText.Add(key);
+        }
+
+        if(adjacentForestValue != 0)
+        {
+            string key = adjacentForestValue > 0 ? "+ " : "- ";
+            key += adjacentForestValue.ToString() + " for each adjacent FOREST."; 
+            scoringText.Add(key);
+        }
+
+        if(adjacentSnowValue != 0)
+        {
+            string key = adjacentSnowValue > 0 ? "+ " : "- ";
+            key += adjacentSnowValue.ToString() + " for each adjacent SNOW."; 
+            scoringText.Add(key);
+        }
+
+        if(adjacentFireValue != 0)
+        {
+            string key = adjacentFireValue > 0 ? "+ " : "- ";
+            key += adjacentFireValue.ToString() + " for each adjacent FIRE."; 
+            scoringText.Add(key);
+        }
+        return scoringText;
+    }
 }

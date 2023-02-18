@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
+  m_Name: Level_04
+  m_EditorClassIdentifier: 
+  flavorTexts: []
+  music: {fileID: 8300000, guid: a8ad032ddc83ba74781ca486813a65fd, type: 3}
+  starterTile: {fileID: 11400000, guid: 4b937c1b6a03ef34a96952f2285296d9, type: 2}
+  rows: 20
+  columns: 20
+  StartPosition: {x: 10, y: 10, z: 0}
+  AvailableCharacters:
+  - CharacterSO: {fileID: 11400000, guid: 715d44fd46731394ea2d04a29c13f3bc, type: 2}
+    Uses: 14
+  - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
+    Uses: 16
+  - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
+    Uses: 10
+  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
+    Uses: 12
+  grassTargetScore: 0
+  forestTargetScore: 0
+  mountainTargetScore: 0
+  waterTargetScore: 0
+  fireTargetScore: 0
+  snowTargetScore: 0

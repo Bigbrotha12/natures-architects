@@ -9,6 +9,7 @@ public class MapGrid : MonoBehaviour
     public Tilemap tilemap;
     public GameLevelSO gameLevel;
     public TerrainTile[,] Map;
+    [SerializeField] TMP_Text storyText;
     [SerializeField] Scorer ScoreBoard;
     [SerializeField] Transform ScoringKeyContainer;
     [SerializeField] GameObject ScoringKeyPrefab;
@@ -51,6 +52,12 @@ public class MapGrid : MonoBehaviour
             scoringKey.GetComponent<TMP_Text>().text = key;
         }
     } 
+
+    public void DisplayStoryText()
+    {
+        string story = gameLevel.flavorTexts.Length > 0 ? gameLevel.flavorTexts[0] : "";
+        storyText.text = story;
+    }
 
     void SetTargets()
     {

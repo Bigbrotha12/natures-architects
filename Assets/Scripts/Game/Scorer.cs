@@ -30,7 +30,7 @@ public class Scorer : MonoBehaviour
 
     public void ResetScores()
     {
-        // TODO: reset all scores to zero
+        terrainScores = new Dictionary<TerrainTypes, int>();
     }
     
     public void ScoreTile(TerrainTile scoringTile, TerrainTile[] adjacentTiles)

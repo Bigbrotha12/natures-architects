@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using TMPro;
 
 public class MapGrid : MonoBehaviour
 {
@@ -28,20 +29,6 @@ public class MapGrid : MonoBehaviour
             }
         }
     }
-
-    public void DisplayScoringKey(CharacterSO currentCharacter)
-    {
-        foreach(Transform key in ScoringKeyContainer)
-        {
-            Destroy(key.gameObject);
-        }
-
-        foreach(string key in currentCharacter.terrainTile.GetScoringKeyText())
-        {
-            GameObject scoringKey = GameObject.Instantiate(ScoringKeyPrefab, ScoringKeyContainer);
-            scoringKey.GetComponent<TMP_Text>().text = key;
-        }
-    } 
 
     public void DisplayStoryText()
     {

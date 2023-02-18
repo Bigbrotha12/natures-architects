@@ -29,6 +29,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5265814512687667025}
   m_RootOrder: 0
@@ -90,6 +91,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textContainer: {fileID: 5265814512687667029}
   textPrefab: {fileID: 4918470615920799304, guid: 68dc7e072b34d93408cc373f396efa77, type: 3}
+  playerTransform: {fileID: 0}
+  fontSize: 10
+  positiveColor: {r: 0.066497564, g: 1, b: 0, a: 1}
+  negativeColor: {r: 1, g: 0, b: 0, a: 1}
+  duration: 1
 --- !u!1 &5265814512687667029
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +124,8 @@ RectTransform:
   m_GameObject: {fileID: 5265814512687667029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5265814512329243890}
   m_Father: {fileID: 0}
@@ -138,7 +145,7 @@ Canvas:
   m_GameObject: {fileID: 5265814512687667029}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -146,9 +153,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: -1611045341
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!114 &5265814512687667027
 MonoBehaviour:
@@ -165,13 +172,13 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 720, y: 1280}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.505
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
+  m_DynamicPixelsPerUnit: 1000
   m_PresetInfoIsWorld: 0
 --- !u!114 &5265814512687667028
 MonoBehaviour:

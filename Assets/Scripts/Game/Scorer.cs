@@ -84,7 +84,7 @@ public class Scorer : MonoBehaviour
         }
         totalScore += score;
     
-        floatText.Show(score.ToString() + " Points.", score >= 0);
+        floatText.Show((score >= 0 ? "+" : "-") + score.ToString() + " points", score >= 0);
     }
 
     void DisplayScore(TerrainTypes type)

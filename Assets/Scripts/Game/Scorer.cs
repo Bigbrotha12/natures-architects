@@ -33,11 +33,11 @@ public class Scorer : MonoBehaviour
         terrainScores = new Dictionary<TerrainTypes, int>();
         totalScore = 0;
         DisplayScore(TerrainTypes.GRASS);
-        DisplayScore(TerrainType.FOREST);
-        DisplayScore(TerrainType.MOUNTAIN);
-        DisplayScore(TerrainType.WATER);
-        DisplayScore(TerrainType.FIRE);
-        DisplayScore(TerrainType.SNOW);
+        DisplayScore(TerrainTypes.FOREST);
+        DisplayScore(TerrainTypes.MOUNTAIN);
+        DisplayScore(TerrainTypes.WATER);
+        DisplayScore(TerrainTypes.FIRE);
+        DisplayScore(TerrainTypes.SNOW);
     }
     
     public void ScoreTile(TerrainTile scoringTile, TerrainTile[] adjacentTiles)
@@ -91,22 +91,22 @@ public class Scorer : MonoBehaviour
             case TerrainTypes.NONE:
                 break;
             case TerrainTypes.GRASS:
-                grassScoreText.text = terrainScores[type].ToString();
+                grassScoreText.text = terrainScores.ContainsKey(type) ? terrainScores[type].ToString() : "0";
                 break;
             case TerrainTypes.FOREST:
-                forestScoreText.text = terrainScores[type].ToString();
+                forestScoreText.text = terrainScores.ContainsKey(type) ? terrainScores[type].ToString() : "0";
                 break;
             case TerrainTypes.WATER:
-                waterScoreText.text = terrainScores[type].ToString();
+                waterScoreText.text = terrainScores.ContainsKey(type) ? terrainScores[type].ToString() : "0";
                 break;
             case TerrainTypes.MOUNTAIN:
-                mountainScoreText.text = terrainScores[type].ToString();
+                mountainScoreText.text = terrainScores.ContainsKey(type) ? terrainScores[type].ToString() : "0";
                 break;
             case TerrainTypes.FIRE:
-                fireScoreText.text = terrainScores[type].ToString();
+                fireScoreText.text = terrainScores.ContainsKey(type) ? terrainScores[type].ToString() : "0";
                 break;
             case TerrainTypes.SNOW:
-                snowScoreText.text = terrainScores[type].ToString();
+                snowScoreText.text = terrainScores.ContainsKey(type) ? terrainScores[type].ToString() : "0";
                 break;
         }
         totalScoreText.text = totalScore.ToString();
@@ -145,16 +145,20 @@ public class Scorer : MonoBehaviour
 
     public bool CheckWinCondition() 
     {
-        foreach (KeyValuePair<TerrainTypes, int> score in terrainScores)
+        foreach (KeyValuePair<TerrainTypes, int> target in terrainTarget)
         {
-            if(terrainTarget.ContainsKey(score.Key))
+            if(!terrainScores.ContainsKey(target.Key))
             {
-                if(score.Value < terrainTarget[score.Key])
+                return false;
+                
+            } else 
+            {
+                if(target.Value > terrainScores[target.Key])
                 {
                     Debug.Log(
-                        "You failed to meet score target for " + score.Key.ToString() + 
-                        " terrain. Achieved: " + score.Value.ToString() +
-                        ". Required: " + terrainTarget[score.Key].ToString() + ".");
+                        "You failed to meet score target for " + target.Key.ToString() + 
+                        " terrain. Achieved: " + terrainScores[target.Key].ToString() +
+                        ". Required: " + target.Value.ToString() + ".");
                     return false;
                 }
             }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mountain
   m_EditorClassIdentifier: 
   tileType: 4
-  tileSprite: {fileID: 11400000, guid: 0178b078e77b8a543a32581399d0d473, type: 2}
+  tileSprite: {fileID: 11400000, guid: 7a7d02738cca3de49969df74587aa099, type: 2}
   adjacentGrassValue: 0
   adjacentWaterValue: 0
   adjacentMountainValue: 2

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Forest
   m_EditorClassIdentifier: 
   tileType: 2
-  tileSprite: {fileID: 11400000, guid: d5b6671b6644b5d4cafb5297c226b51f, type: 2}
+  tileSprite: {fileID: 11400000, guid: 4e90f37f00157474cb6651d4107f4e75, type: 2}
   adjacentGrassValue: 0
   adjacentWaterValue: 3
   adjacentMountainValue: 2

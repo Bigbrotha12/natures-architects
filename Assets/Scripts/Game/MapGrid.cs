@@ -10,7 +10,6 @@ public class MapGrid : MonoBehaviour
     public TerrainTile[,] Map;
     [SerializeField] TMP_Text storyText;
     [SerializeField] Scorer ScoreBoard;
-    [SerializeField] FloatingTextManager floatText;
     
     public void SetLevel(GameLevelSO levelSO)
     {

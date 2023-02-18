@@ -552,7 +552,7 @@ PrefabInstance:
     - target: {fileID: 1843845594924854134, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
       propertyPath: actionCounterText
       value: 
-      objectReference: {fileID: 534556974}
+      objectReference: {fileID: 802435081}
     - target: {fileID: 1843845594924854135, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -603,17 +603,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
---- !u!114 &534556974 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3769024385610155396, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
-  m_PrefabInstance: {fileID: 1328948687}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &615548737 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3769024385862760265, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
@@ -628,6 +617,17 @@ MonoBehaviour:
 --- !u!114 &754194311 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3769024385944194429, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+  m_PrefabInstance: {fileID: 1328948687}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &802435081 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3769024385458042249, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
   m_PrefabInstance: {fileID: 1328948687}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -847,6 +847,14 @@ PrefabInstance:
       propertyPath: mapGrid
       value: 
       objectReference: {fileID: 319406925}
+    - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
+      propertyPath: defaultMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
+    - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
+      propertyPath: currentLevelSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 89adedc2b2a1d654d946d425505eafda, type: 2}
     - target: {fileID: 4003986231188321078, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -890,6 +898,10 @@ PrefabInstance:
     - target: {fileID: 4003986231188321078, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5706492576524476612, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}

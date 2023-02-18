@@ -5,8 +5,10 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] GameLevelSO currentLevelSO;
-    PlayerController player;
     [SerializeField] MapGrid mapGrid;
+    [SerializeField] AudioClip defaultMusic;
+
+    PlayerController player;
     int currentCharacterID = 0;
     AudioSource audioSource;
 
@@ -48,7 +50,11 @@ public class LevelManager : MonoBehaviour
 
     void PlayLevelMusic()
     {
-        audioSource.clip = currentLevelSO.music;
+        audioSource.clip = defaultMusic;
+        if (currentLevelSO.music != null)
+        {
+            audioSource.clip = currentLevelSO.music;
+        }
         audioSource.Play();
     }
 

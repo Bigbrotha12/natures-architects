@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public TMP_Text actionCounterText;
 
     [SerializeField] MapGrid mapGrid;
+
+    [Header("For testing")]
+    [SerializeField] bool placingTileUsesAction = true;
     Character character;
 
     Mover mover;
@@ -96,14 +99,18 @@ public class PlayerController : MonoBehaviour
 
         Vector3Int position = new Vector3Int((int)player.position.x, (int)player.position.y, 0);
         // Only allow tile placement over "Empty" tiles.
-        if(mapGrid.CheckTileEmpty(position))
+        if (mapGrid.CheckTileEmpty(position))
         {
             mapGrid.CreateTile(position.x, position.y, character.TerrainTile);
             mapGrid.ScoreTile(position);
             EventBroker.CallPlaceTerrain();
 
-            IncrementActionCount();
-        } else 
+            if (placingTileUsesAction)
+            {
+                IncrementActionCount();
+            }
+        } 
+        else 
         {
             EventBroker.CallPlayerMoveBlocked();
            

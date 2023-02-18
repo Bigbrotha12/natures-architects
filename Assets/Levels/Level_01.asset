@@ -24,7 +24,7 @@ MonoBehaviour:
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 6
   columns: 8
-  StartPosition: {x: 6, y: 5, z: 0}
+  StartPosition: {x: 3, y: 4, z: 0}
   AvailableCharacters:
   - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
     Uses: 12
@@ -38,9 +38,9 @@ MonoBehaviour:
     Uses: 10
   - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
     Uses: 6
-  grassTargetScore: 15
-  forestTargetScore: 20
-  mountainTargetScore: 5
-  waterTargetScore: 10
+  grassTargetScore: 25
+  forestTargetScore: 25
+  mountainTargetScore: 0
+  waterTargetScore: 15
   fireTargetScore: 0
   snowTargetScore: 0

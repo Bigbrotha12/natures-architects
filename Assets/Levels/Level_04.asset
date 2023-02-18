@@ -32,9 +32,23 @@ MonoBehaviour:
     Uses: 10
   - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
     Uses: 12
-  grassTargetScore: 0
-  forestTargetScore: 0
-  mountainTargetScore: 0
-  waterTargetScore: 0
+  - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
+    Uses: 8
+  - CharacterSO: {fileID: 11400000, guid: 715d44fd46731394ea2d04a29c13f3bc, type: 2}
+    Uses: 10
+  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
+    Uses: 6
+  - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
+    Uses: 14
+  - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
+    Uses: 12
+  - CharacterSO: {fileID: 11400000, guid: 715d44fd46731394ea2d04a29c13f3bc, type: 2}
+    Uses: 8
+  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
+    Uses: 16
+  grassTargetScore: 20
+  forestTargetScore: 60
+  mountainTargetScore: 70
+  waterTargetScore: 600
   fireTargetScore: 0
   snowTargetScore: 0

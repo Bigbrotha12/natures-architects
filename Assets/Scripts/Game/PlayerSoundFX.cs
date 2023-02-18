@@ -18,6 +18,12 @@ public class PlayerSoundFX : MonoBehaviour
         EventBroker.PlayerMoveBlocked += PlayMoveBlockedSFX;
         EventBroker.PlaceTerrain += PlayPlaceTerrainSFX;
     }
+    void OnDisable()
+    {
+        EventBroker.PlayerMove -= PlayMoveSFX;
+        EventBroker.PlayerMoveBlocked -= PlayMoveBlockedSFX;
+        EventBroker.PlaceTerrain -= PlayPlaceTerrainSFX;
+    }
 
     void PlayMoveSFX()
     {

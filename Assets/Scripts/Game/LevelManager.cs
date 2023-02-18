@@ -124,6 +124,7 @@ public class LevelManager : MonoBehaviour
         if (currentLevelIndex >= levels.Length)
         {
             NoMoreLevels();
+            return;
         }
 
         InitializeLevel();
@@ -136,7 +137,6 @@ public class LevelManager : MonoBehaviour
 
     void NoMoreLevels()
     {
-        print("No more levels");
-        // Todo
+        EventBroker.CallGameCompleted();
     }
 }

@@ -65,9 +65,21 @@ public class EventBroker
         RestartLevel?.Invoke();
     }
 
+    public static event Action RestartGame;
+    public static void CallRestartGame()
+    {
+        RestartGame?.Invoke();
+    }
+
     public static event Action LoadNextLevel;
     public static void CallLoadNextLevel()
     {
         LoadNextLevel?.Invoke();
+    }
+    
+    public static event Action GameCompleted;
+    public static void CallGameCompleted()
+    {
+        GameCompleted?.Invoke();
     }
 }

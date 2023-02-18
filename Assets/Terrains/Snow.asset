@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39c03027e623b04f9de37ee7b260f64, type: 3}
   m_Name: Snow
   m_EditorClassIdentifier: 
-  tileType: 0
+  tileType: 6
   tileSprite: {fileID: 11400000, guid: 06fb6cc740224c24f99a1e2609a37d2f, type: 2}
-  adjacentGrassValue: -1
+  adjacentGrassValue: 0
   adjacentWaterValue: -1
-  adjacentMountainValue: 3
+  adjacentMountainValue: 5
   adjacentForestValue: -2
   adjacentSnowValue: 2
   adjacentFireValue: 0

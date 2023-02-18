@@ -13,6 +13,7 @@ public class MapGrid : MonoBehaviour
     
     public void SetLevel(GameLevelSO levelSO)
     {
+        tilemap.ClearAllTiles();
         gameLevel = levelSO;
         GenerateRandomTiles();
         SetTargets();
@@ -75,7 +76,7 @@ public class MapGrid : MonoBehaviour
     {
         if(CheckPositionIsOnMapGrid(position))
         {
-            return Map[position.x, position.y].tileType == TerrainTypes.NONE;
+            return Map[position.x, position.y].tileType == TerrainTypes.NONE || Map[position.x, position.y].tileType == TerrainTypes.FIRE;
         }
         return false;
     }

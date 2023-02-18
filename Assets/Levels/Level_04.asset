@@ -18,8 +18,8 @@ MonoBehaviour:
   - The trees started to regrow, the mountains refilled the lakes and streams, and
     the world's energy healed the Creators themselves.
   - However, it was not enough. The devastation  was too great and their Spirit broke.
-  music: {fileID: 8300000, guid: a8ad032ddc83ba74781ca486813a65fd, type: 3}
-  starterTile: {fileID: 11400000, guid: 4b937c1b6a03ef34a96952f2285296d9, type: 2}
+  music: {fileID: 8300000, guid: 5bc89260206ebfe459233f75f373c32b, type: 3}
+  starterTile: {fileID: 11400000, guid: e9a83d52c25db2a4b9fc1bd269a32ad1, type: 2}
   rows: 20
   columns: 20
   StartPosition: {x: 10, y: 10, z: 0}

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 5
   tileSprite: {fileID: 11400000, guid: 79ab28592f962764d9b89e0d0965880b, type: 2}
-  adjacentGrassValue: -2
+  adjacentGrassValue: 0
   adjacentWaterValue: 0
   adjacentMountainValue: -2
-  adjacentForestValue: -2
+  adjacentForestValue: 8
   adjacentSnowValue: -2
-  adjacentFireValue: 0
+  adjacentFireValue: 5

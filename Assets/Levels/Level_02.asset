@@ -20,17 +20,23 @@ MonoBehaviour:
     destined slumber.
   music: {fileID: 8300000, guid: a8ad032ddc83ba74781ca486813a65fd, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
-  rows: 6
-  columns: 8
+  rows: 10
+  columns: 12
   StartPosition: {x: 2, y: 4, z: 0}
   AvailableCharacters:
+  - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
+    Uses: 14
+  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
+    Uses: 5
+  - CharacterSO: {fileID: 11400000, guid: a3907f2873f20c14187a6f96d460d7a0, type: 2}
+    Uses: 8
   - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
     Uses: 12
   - CharacterSO: {fileID: 11400000, guid: a3907f2873f20c14187a6f96d460d7a0, type: 2}
-    Uses: 32
-  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
-    Uses: 5
+    Uses: 16
   - CharacterSO: {fileID: 11400000, guid: 715d44fd46731394ea2d04a29c13f3bc, type: 2}
+    Uses: 7
+  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
     Uses: 14
   grassTargetScore: 5
   forestTargetScore: 17

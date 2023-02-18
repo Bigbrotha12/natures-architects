@@ -58,3 +58,4 @@ MonoBehaviour:
   waterTargetText: {fileID: 0}
   snowTargetText: {fileID: 0}
   fireTargetText: {fileID: 0}
+  floatText: {fileID: 0}

@@ -31,6 +31,7 @@ public class Scorer : MonoBehaviour
     public void ResetScores()
     {
         terrainScores = new Dictionary<TerrainTypes, int>();
+        totalScoreTarget = 0;
         totalScore = 0;
         DisplayScore(TerrainTypes.GRASS);
         DisplayScore(TerrainTypes.FOREST);
@@ -48,14 +49,14 @@ public class Scorer : MonoBehaviour
             return;
         }
         
-        // Each tile score +1 for adjacent tiles of same type.
         int score = 0;
         foreach(TerrainTile tile in adjacentTiles)
         {
-            if(tile.tileType == scoringTile.tileType)
-            {
-                score += scoringTile.GetAdjacentTileValue(tile.tileType);
-            }
+            Debug.Log("Adjacent Terrains: " + tile.tileType.ToString());
+            int tileScore = scoringTile.GetAdjacentTileValue(tile.tileType);
+            Debug.Log("Score: " + tileScore.ToString());
+            score += scoringTile.GetAdjacentTileValue(tile.tileType);
+            
         }
         
         UpdateScore(scoringTile.tileType, score);
@@ -117,7 +118,7 @@ public class Scorer : MonoBehaviour
     public void SetTargetScore(TerrainTypes type, int target)
     {
         terrainTarget[type] = target;
-        totalScoreTarget = target;
+        totalScoreTarget += target;
 
         switch(type)
         {
@@ -149,6 +150,8 @@ public class Scorer : MonoBehaviour
     {
         foreach (KeyValuePair<TerrainTypes, int> target in terrainTarget)
         {
+            if(target.Value == 0) continue;
+
             if(!terrainScores.ContainsKey(target.Key))
             {
                 return false;

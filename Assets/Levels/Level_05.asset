@@ -19,8 +19,8 @@ MonoBehaviour:
     but the Determination and Hope to continue living even after the End.
   - But they lacked the Determination that Their world had shown them, and so They
     failed their mission.
-  music: {fileID: 8300000, guid: a8ad032ddc83ba74781ca486813a65fd, type: 3}
-  starterTile: {fileID: 11400000, guid: e9a83d52c25db2a4b9fc1bd269a32ad1, type: 2}
+  music: {fileID: 8300000, guid: 526eab355c20a254a9469e5874e65056, type: 3}
+  starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 25
   columns: 25
   StartPosition: {x: 10, y: 10, z: 0}

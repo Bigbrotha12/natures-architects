@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 4302857050816720534}
   gameLevel: {fileID: 11400000, guid: 015de374af6850d44b4c3ca19d0dafc1, type: 2}
+  storyText: {fileID: 0}
   ScoreBoard: {fileID: 0}
 --- !u!1 &4302857051109939043
 GameObject:

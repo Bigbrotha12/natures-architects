@@ -706,6 +706,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5265814512687667027, guid: 807508b84f64c0343a5a731166efb2e1, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5265814512687667029, guid: 807508b84f64c0343a5a731166efb2e1, type: 3}
       propertyPath: m_Name
       value: FloatingTextCanvas

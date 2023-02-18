@@ -49,7 +49,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 015de374af6850d44b4c3ca19d0dafc1, type: 2}
   - {fileID: 11400000, guid: 3a75d60b2b0977b45bbfd2e6d18de860, type: 2}
   - {fileID: 11400000, guid: d9a074ce19b4a324abba22c1e205959b, type: 2}
-  - {fileID: 11400000, guid: d9a074ce19b4a324abba22c1e205959b, type: 2}
+  - {fileID: 11400000, guid: 1d3797e11da17744d8ebd4403fa78a8f, type: 2}
+  - {fileID: 11400000, guid: 9a9efd38941fa5e4e858e9c41720eb55, type: 2}
   currentLevelIndex: 0
   mapGrid: {fileID: 0}
   defaultMusic: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}

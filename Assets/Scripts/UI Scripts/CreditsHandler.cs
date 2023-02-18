@@ -5,11 +5,15 @@ using UnityEngine;
 public class CreditsHandler : MonoBehaviour
 {
     [SerializeField] GameObject CreditsPanel;
+    [SerializeField] GameObject menuPanel;
+    [SerializeField] GameObject title;
     public void DisplayCredits()
     {
         if(CreditsPanel is not null)
         {
             CreditsPanel.SetActive(true);
+            menuPanel.SetActive(false);
+            title.SetActive(false);
         }
     }
 
@@ -18,6 +22,8 @@ public class CreditsHandler : MonoBehaviour
         if(CreditsPanel is not null)
         {
             CreditsPanel.SetActive(false);
+            menuPanel.SetActive(true);
+            title.SetActive(true);
         }
     }
 }

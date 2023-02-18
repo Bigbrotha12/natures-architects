@@ -27,6 +27,11 @@ public class Scorer : MonoBehaviour
     int totalScoreTarget = 0;
     Dictionary<TerrainTypes, int> terrainScores = new Dictionary<TerrainTypes, int>();
     Dictionary<TerrainTypes, int> terrainTarget = new Dictionary<TerrainTypes, int>();
+
+    public void ResetScores()
+    {
+        // TODO: reset all scores to zero
+    }
     
     public void ScoreTile(TerrainTile scoringTile, TerrainTile[] adjacentTiles)
     {

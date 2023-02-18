@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
   m_Name: Level_03
   m_EditorClassIdentifier: 
-  flavorTexts: []
+  flavorTexts:
+  - However, not all Creators cherished Their work. There were Those saddened by
+    the sacrifices of their brethrens and came to resent this new world; and its
+    inhabitants.
+  - And so the land burned brightly once more, consuming all of creation.
+  - And so, the Resenters worked slowly and tirelessly to undo Their work and, eventually,
+    brought the world to its End.
   music: {fileID: 8300000, guid: a8ad032ddc83ba74781ca486813a65fd, type: 3}
   starterTile: {fileID: 11400000, guid: 66129f5e2cc44ae469d65fbc883ad04c, type: 2}
   rows: 15

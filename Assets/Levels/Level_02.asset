@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
   m_Name: Level_02
   m_EditorClassIdentifier: 
-  flavorTexts: []
+  flavorTexts:
+  - The Creators worked tirelessly, sacrificing their life energy for them. The land
+    healed, their children thrived and lived in awe of the beauty of Their creation.
+  - The Creators looked upon their work and smiled.
+  - But alas, it was not meant to last. And soon after the world succumbed to its
+    destined slumber.
   music: {fileID: 8300000, guid: a8ad032ddc83ba74781ca486813a65fd, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 6

@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flavorTexts:
   - 'After the end, what once was full of life and vibrant energy, now laid bare
-    and dead. The Creators mourned their lost and descended upon the land as they
+    and dead. The Creators mourned their loss and descended upon the land as they
     had done eons ago. '
-  - You succeeded.
-  - You failed.
-  music: {fileID: 0}
+  - They healed the world for their new children. They planted trees to shelter them,
+    streams to quench their thirst, mountains to keep them warm.
+  - But in the end, the world was too far gone, and their life energy was spent in
+    vain...
+  music: {fileID: 8300000, guid: a8ad032ddc83ba74781ca486813a65fd, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 10
   columns: 12

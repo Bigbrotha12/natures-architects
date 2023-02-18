@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
   m_Name: Level_05
   m_EditorClassIdentifier: 
-  flavorTexts: []
+  flavorTexts:
+  - With renewed Hope, the Creators resumed their work, helping the land heal once
+    more. They were overjoyed at the return of their children.
+  - And They now understood that their gift to the world, was not all that was seen,
+    but the Determination and Hope to continue living even after the End.
+  - But they lacked the Determination that Their world had shown them, and so They
+    failed their mission.
   music: {fileID: 8300000, guid: a8ad032ddc83ba74781ca486813a65fd, type: 3}
   starterTile: {fileID: 11400000, guid: e9a83d52c25db2a4b9fc1bd269a32ad1, type: 2}
   rows: 25

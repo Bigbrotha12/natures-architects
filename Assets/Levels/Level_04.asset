@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
   m_Name: Level_04
   m_EditorClassIdentifier: 
-  flavorTexts: []
+  flavorTexts:
+  - The Creators were devastated, their energy spent, their mission failed. But something
+    unexpected began to happen, Their Power somehow reawakened.
+  - The trees started to regrow, the mountains refilled the lakes and streams, and
+    the world's energy healed the Creators themselves.
+  - However, it was not enough. The devastation  was too great and their Spirit broke.
   music: {fileID: 8300000, guid: a8ad032ddc83ba74781ca486813a65fd, type: 3}
   starterTile: {fileID: 11400000, guid: 4b937c1b6a03ef34a96952f2285296d9, type: 2}
   rows: 20

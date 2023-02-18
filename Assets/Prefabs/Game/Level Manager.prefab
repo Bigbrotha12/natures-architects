@@ -46,11 +46,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - {fileID: 11400000, guid: 89adedc2b2a1d654d946d425505eafda, type: 2}
   - {fileID: 11400000, guid: 015de374af6850d44b4c3ca19d0dafc1, type: 2}
+  - {fileID: 11400000, guid: 3a75d60b2b0977b45bbfd2e6d18de860, type: 2}
+  - {fileID: 11400000, guid: d9a074ce19b4a324abba22c1e205959b, type: 2}
+  - {fileID: 11400000, guid: d9a074ce19b4a324abba22c1e205959b, type: 2}
   currentLevelIndex: 0
   mapGrid: {fileID: 0}
   defaultMusic: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 73d2f038499e58e41b9ddf41a58a573a, type: 3}
 --- !u!82 &5706492576524476612
 AudioSource:
   m_ObjectHideFlags: 0
@@ -63,7 +66,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

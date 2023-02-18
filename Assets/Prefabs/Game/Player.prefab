@@ -173,7 +173,7 @@ MonoBehaviour:
   actionCounter: 12
   actionCounterText: {fileID: 0}
   mapGrid: {fileID: 0}
-  placingTileUsesAction: 1
+  placingTileUsesAction: 0
 --- !u!114 &1843845594924854133
 MonoBehaviour:
   m_ObjectHideFlags: 0

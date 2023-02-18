@@ -33,11 +33,11 @@ public class Scorer : MonoBehaviour
         terrainScores = new Dictionary<TerrainTypes, int>();
         totalScore = 0;
         DisplayScore(TerrainTypes.GRASS);
-        DisplayScore(TerrainType.FOREST);
-        DisplayScore(TerrainType.MOUNTAIN);
-        DisplayScore(TerrainType.WATER);
-        DisplayScore(TerrainType.FIRE);
-        DisplayScore(TerrainType.SNOW);
+        DisplayScore(TerrainTypes.FOREST);
+        DisplayScore(TerrainTypes.MOUNTAIN);
+        DisplayScore(TerrainTypes.WATER);
+        DisplayScore(TerrainTypes.FIRE);
+        DisplayScore(TerrainTypes.SNOW);
     }
     
     public void ScoreTile(TerrainTile scoringTile, TerrainTile[] adjacentTiles)

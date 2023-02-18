@@ -33,6 +33,12 @@ public class UIController : MonoBehaviour
         EventBroker.LevelCompleted += OnLevelCompleted;
     }
 
+    void OnDisable()
+    {
+        EventBroker.GameOver -= OnGameOver;
+        EventBroker.LevelCompleted -= OnLevelCompleted;
+    }
+
     public void SetLevelText(string[] messages)
     {
         SetDefaultText();

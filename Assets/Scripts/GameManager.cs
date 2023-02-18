@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class GameManager : Singleton<GameManager>
         EventBroker.StartGame += LoadGame;
         EventBroker.QuitGame += QuitGame;
         EventBroker.ReturnToTitleScreen += ReturnToStartMenu;
+        EventBroker.GameCompleted += OnGameCompleted;
+        EventBroker.RestartGame += RestartGame;
     }
 
     void Start()
@@ -36,6 +39,8 @@ public class GameManager : Singleton<GameManager>
         EventBroker.StartGame -= LoadGame;
         EventBroker.QuitGame -= QuitGame;
         EventBroker.ReturnToTitleScreen -= ReturnToStartMenu;
+        EventBroker.GameCompleted -= OnGameCompleted;
+        EventBroker.RestartGame -= RestartGame;
     }
 
     void LoadGame()
@@ -43,9 +48,19 @@ public class GameManager : Singleton<GameManager>
         StartCoroutine(sceneLoader.LoadScene(SceneIndex.GAME_SCENE, SceneIndex.TITLE_SCENE));
     }
 
+    void RestartGame()
+    {
+        StartCoroutine(sceneLoader.LoadScene(SceneIndex.GAME_SCENE, SceneIndex.END_SCENE));
+    }
+
     void ReturnToStartMenu()
     {
         StartCoroutine(sceneLoader.LoadScene(SceneIndex.TITLE_SCENE, SceneIndex.GAME_SCENE));
+    }
+
+    void OnGameCompleted()
+    {
+        StartCoroutine(sceneLoader.LoadScene(SceneIndex.END_SCENE, SceneIndex.GAME_SCENE));
     }
 
     void QuitGame()

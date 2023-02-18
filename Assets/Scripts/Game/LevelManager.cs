@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
 
     PlayerController player;
     Scorer scorer;
+    UIController uiController;
     int currentCharacterID = 0;
     AudioSource audioSource;
 
@@ -23,6 +24,7 @@ public class LevelManager : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
         scorer = FindObjectOfType<Scorer>();
+        uiController = FindObjectOfType<UIController>();
         audioSource = GetComponent<AudioSource>();
         currentLevelIndex = 0;
 
@@ -45,6 +47,7 @@ public class LevelManager : MonoBehaviour
 
     void InitializeLevel()
     {
+        currentCharacterID = 0;
         player.transform.position = CurrentLevelSO.StartPosition;
         SetupCurrentCharacter();
         mapGrid.SetLevel(CurrentLevelSO);
@@ -55,6 +58,9 @@ public class LevelManager : MonoBehaviour
     void SetupCurrentCharacter()
     {
         player.SetCharacter(CurrentLevelSO.AvailableCharacters[currentCharacterID].CharacterSO, CurrentLevelSO.AvailableCharacters[currentCharacterID].Uses);
+
+        uiController.SetNextCharacterSprites(currentCharacterID, CurrentLevelSO);
+        uiController.DisplayScoringKey(CurrentLevelSO.AvailableCharacters[currentCharacterID].CharacterSO);
     }
 
     void PlayLevelMusic()
@@ -104,7 +110,7 @@ public class LevelManager : MonoBehaviour
 
     void RestartLevel()
     {
-
+        InitializeLevel();
     }
 
     void NoMoreLevels()

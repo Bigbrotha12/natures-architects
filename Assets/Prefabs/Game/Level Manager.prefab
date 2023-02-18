@@ -45,8 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d192f0ce4a131a42bbeb44692645115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevelSO: {fileID: 11400000, guid: 015de374af6850d44b4c3ca19d0dafc1, type: 2}
+  levels:
+  - {fileID: 11400000, guid: 89adedc2b2a1d654d946d425505eafda, type: 2}
+  - {fileID: 11400000, guid: 015de374af6850d44b4c3ca19d0dafc1, type: 2}
+  currentLevelIndex: 0
   mapGrid: {fileID: 0}
+  defaultMusic: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
 --- !u!82 &5706492576524476612
 AudioSource:
   m_ObjectHideFlags: 0
@@ -59,7 +63,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

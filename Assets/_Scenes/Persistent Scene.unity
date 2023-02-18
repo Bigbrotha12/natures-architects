@@ -376,5 +376,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Splash Screen
       objectReference: {fileID: 0}
+    - target: {fileID: 7008718607466486951, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: logos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008718607466486951, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: logos.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 207d0cc3148df084eb8cb62071a58603, type: 3}
+    - target: {fileID: 7008718607466486951, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: logos.Array.data[1].fadeInTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008718607466486951, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: logos.Array.data[1].fadeOutTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008718607466486951, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: logos.Array.data[1].displayDuration
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}

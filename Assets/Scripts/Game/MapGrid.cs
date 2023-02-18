@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using TMPro;
 
 public class MapGrid : MonoBehaviour
 {
@@ -11,15 +9,7 @@ public class MapGrid : MonoBehaviour
     public TerrainTile[,] Map;
     [SerializeField] TMP_Text storyText;
     [SerializeField] Scorer ScoreBoard;
-    [SerializeField] Transform ScoringKeyContainer;
-    [SerializeField] GameObject ScoringKeyPrefab;
     
-    void Start()
-    {
-        /*GenerateRandomTiles();
-        SetTargets();*/
-    }
-
     public void SetLevel(GameLevelSO levelSO)
     {
         gameLevel = levelSO;

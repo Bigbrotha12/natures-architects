@@ -444,6 +444,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1616459042}
     - target: {fileID: 6391418808084682556, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
+      propertyPath: fireTargetObject
+      value: 
+      objectReference: {fileID: 1855712154}
+    - target: {fileID: 6391418808084682556, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
       propertyPath: forestTargetText
       value: 
       objectReference: {fileID: 2055077955}
@@ -451,6 +455,10 @@ PrefabInstance:
       propertyPath: grassTargetCheck
       value: 
       objectReference: {fileID: 1867190699}
+    - target: {fileID: 6391418808084682556, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
+      propertyPath: snowTargetObject
+      value: 
+      objectReference: {fileID: 279577744}
     - target: {fileID: 6391418808084682556, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
       propertyPath: waterTargetCheck
       value: 
@@ -460,6 +468,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 380170798}
     - target: {fileID: 6391418808084682556, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
+      propertyPath: grassTargetObject
+      value: 
+      objectReference: {fileID: 1258382731}
+    - target: {fileID: 6391418808084682556, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
       propertyPath: mountainScoreText
       value: 
       objectReference: {fileID: 1522554422}
@@ -468,6 +480,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1023190779}
     - target: {fileID: 6391418808084682556, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
+      propertyPath: waterTargetObject
+      value: 
+      objectReference: {fileID: 197567672}
+    - target: {fileID: 6391418808084682556, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
+      propertyPath: forestTargetObject
+      value: 
+      objectReference: {fileID: 690994409}
+    - target: {fileID: 6391418808084682556, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
       propertyPath: mountainTargetText
       value: 
       objectReference: {fileID: 2138766019}
@@ -475,6 +495,10 @@ PrefabInstance:
       propertyPath: mountainTargetCheck
       value: 
       objectReference: {fileID: 1807131087}
+    - target: {fileID: 6391418808084682556, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
+      propertyPath: mountainTargetObject
+      value: 
+      objectReference: {fileID: 928243721}
     - target: {fileID: 6391418808084682557, guid: 7464d3f8f763b2a44ac7c57c6476dda3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -753,7 +777,7 @@ RectTransform:
   m_Children:
   - {fileID: 1546917823}
   m_Father: {fileID: 1698092394}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1168,7 +1192,7 @@ RectTransform:
   m_Children:
   - {fileID: 1982364314}
   m_Father: {fileID: 1698092394}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2106,7 +2130,7 @@ RectTransform:
   m_Children:
   - {fileID: 2048525801}
   m_Father: {fileID: 1698092394}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2617,7 +2641,7 @@ RectTransform:
   m_Children:
   - {fileID: 1849776215}
   m_Father: {fileID: 1698092394}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3780,7 +3804,7 @@ RectTransform:
   m_Children:
   - {fileID: 1722662191}
   m_Father: {fileID: 1698092394}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5986,7 +6010,7 @@ RectTransform:
   m_Children:
   - {fileID: 68062338}
   m_Father: {fileID: 1698092394}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

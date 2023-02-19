@@ -41,6 +41,15 @@ public class Scorer : MonoBehaviour
     [SerializeField] Image waterTargetCheck;
     [SerializeField] Image snowTargetCheck;
     [SerializeField] Image fireTargetCheck;
+
+    [Header("Object")]
+    [SerializeField] GameObject grassTargetObject;
+    [SerializeField] GameObject mountainTargetObject;
+    [SerializeField] GameObject forestTargetObject;
+    [SerializeField] GameObject waterTargetObject;
+    [SerializeField] GameObject snowTargetObject;
+    [SerializeField] GameObject fireTargetObject;
+
     [SerializeField] FloatingTextManager floatText;
     int totalScore = 0;
     int totalScoreTarget = 0;
@@ -114,52 +123,64 @@ public class Scorer : MonoBehaviour
             case TerrainTypes.NONE:
                 break;
             case TerrainTypes.GRASS:
+                grassTargetObject.SetActive(true);
                 score = terrainScores.ContainsKey(type) ? terrainScores[type] : 0;
                 target = terrainTarget.ContainsKey(type) ? terrainTarget[type] : score;
                 grassScoreText.text = score.ToString();
                 grassTargetBar.fillAmount = (float) score / (target == 0 ? 1f : (float) target);
                 if(score >= target) { grassTargetCheck.sprite = Checkmark; }
                 else { grassTargetCheck.sprite = Empty; }
+                if(target == 0) grassTargetObject.SetActive(false);
                 break;
             case TerrainTypes.FOREST:
+            forestTargetObject.SetActive(true);
                 score = terrainScores.ContainsKey(type) ? terrainScores[type] : 0;
                 target = terrainTarget.ContainsKey(type) ? terrainTarget[type] : score;
                 forestScoreText.text = score.ToString();
                 forestTargetBar.fillAmount = (float) score / (target == 0 ? 1f : (float) target);
                 if(score >= target) { forestTargetCheck.sprite = Checkmark; }
                 else { forestTargetCheck.sprite = Empty; }
+                if(target == 0) forestTargetObject.SetActive(false);
                 break;
             case TerrainTypes.WATER:
+            waterTargetObject.SetActive(true);
                 score = terrainScores.ContainsKey(type) ? terrainScores[type] : 0;
                 target = terrainTarget.ContainsKey(type) ? terrainTarget[type] : score;
                 waterScoreText.text = score.ToString();
                 waterTargetBar.fillAmount = (float) score / (target == 0 ? 1f : (float) target);
                 if(score >= target) { waterTargetCheck.sprite = Checkmark; }
                 else { waterTargetCheck.sprite = Empty; }
+                if(target == 0) waterTargetObject.SetActive(false);
                 break;
             case TerrainTypes.MOUNTAIN:
+            mountainTargetObject.SetActive(true);
                 score = terrainScores.ContainsKey(type) ? terrainScores[type] : 0;
                 target = terrainTarget.ContainsKey(type) ? terrainTarget[type] : score;
                 mountainScoreText.text = score.ToString();
                 mountainTargetBar.fillAmount = (float) score / (target == 0 ? 1f : (float) target);
                 if(score >= target) { mountainTargetCheck.sprite = Checkmark; }
                 else { mountainTargetCheck.sprite = Empty; }
+                if(target == 0) mountainTargetObject.SetActive(false);
                 break;
             case TerrainTypes.FIRE:
+            fireTargetObject.SetActive(true);
                 score = terrainScores.ContainsKey(type) ? terrainScores[type] : 0;
                 target = terrainTarget.ContainsKey(type) ? terrainTarget[type] : score;
                 fireScoreText.text = score.ToString();
                 fireTargetBar.fillAmount = (float) score / (target == 0 ? 1f : (float) target);
                 if(score >= target) { fireTargetCheck.sprite = Checkmark; }
                 else { fireTargetCheck.sprite = Empty; }
+                if(target == 0) fireTargetObject.SetActive(false);
                 break;
             case TerrainTypes.SNOW:
+            snowTargetObject.SetActive(true);
                 score = terrainScores.ContainsKey(type) ? terrainScores[type] : 0;
                 target = terrainTarget.ContainsKey(type) ? terrainTarget[type] : score;
                 snowScoreText.text = score.ToString();
                 snowTargetBar.fillAmount = (float) score / (target == 0 ? 1f : (float) target);
                 if(score >= target) { snowTargetCheck.sprite = Checkmark; }
                 else { snowTargetCheck.sprite = Empty; }
+                if(target == 0) snowTargetObject.SetActive(false);
                 break;
         }
         totalScoreText.text = totalScore.ToString();

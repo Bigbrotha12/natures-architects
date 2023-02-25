@@ -132,10 +132,10 @@ TextureImporter:
       name: penguin_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 11
         y: 224
-        width: 16
-        height: 16
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: penguin_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 216
-        width: 32
-        height: 32
+        x: 43
+        y: 224
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,10 +174,10 @@ TextureImporter:
       name: penguin_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 216
-        width: 32
-        height: 32
+        x: 75
+        y: 224
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,10 +195,10 @@ TextureImporter:
       name: penguin_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 216
-        width: 32
-        height: 32
+        x: 107
+        y: 224
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: penguin_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 216
-        width: 32
-        height: 32
+        x: 139
+        y: 224
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +237,10 @@ TextureImporter:
       name: penguin_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 216
-        width: 32
-        height: 32
+        x: 171
+        y: 224
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,10 +258,10 @@ TextureImporter:
       name: penguin_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 216
-        width: 32
-        height: 32
+        x: 203
+        y: 224
+        width: 10
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +279,10 @@ TextureImporter:
       name: penguin_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 216
-        width: 32
-        height: 32
+        x: 235
+        y: 224
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,10 +300,10 @@ TextureImporter:
       name: penguin_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 184
-        width: 32
-        height: 32
+        x: 11
+        y: 193
+        width: 9
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,10 +321,10 @@ TextureImporter:
       name: penguin_9
       rect:
         serializedVersion: 2
-        x: 32
-        y: 184
-        width: 32
-        height: 32
+        x: 43
+        y: 192
+        width: 10
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,10 +342,10 @@ TextureImporter:
       name: penguin_10
       rect:
         serializedVersion: 2
-        x: 64
-        y: 184
-        width: 32
-        height: 32
+        x: 75
+        y: 192
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,10 +363,10 @@ TextureImporter:
       name: penguin_11
       rect:
         serializedVersion: 2
-        x: 96
-        y: 184
-        width: 32
-        height: 32
+        x: 107
+        y: 192
+        width: 10
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,10 +384,10 @@ TextureImporter:
       name: penguin_12
       rect:
         serializedVersion: 2
-        x: 128
-        y: 184
-        width: 32
-        height: 32
+        x: 139
+        y: 193
+        width: 9
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,10 +405,10 @@ TextureImporter:
       name: penguin_13
       rect:
         serializedVersion: 2
-        x: 160
-        y: 184
-        width: 32
-        height: 32
+        x: 170
+        y: 192
+        width: 10
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,10 +426,10 @@ TextureImporter:
       name: penguin_14
       rect:
         serializedVersion: 2
-        x: 192
-        y: 184
-        width: 32
-        height: 32
+        x: 203
+        y: 192
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: penguin_15
       rect:
         serializedVersion: 2
-        x: 224
-        y: 184
-        width: 32
-        height: 32
+        x: 234
+        y: 192
+        width: 10
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,13 +465,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: penguin_16
+      name: penguin_idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 152
-        width: 32
-        height: 32
+        x: 11
+        y: 160
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -486,13 +486,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: penguin_17
+      name: penguin_idle_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 152
-        width: 32
-        height: 32
+        x: 43
+        y: 160
+        width: 8
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -507,13 +507,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: penguin_18
+      name: penguin_idle_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 152
-        width: 32
-        height: 32
+        x: 75
+        y: 160
+        width: 8
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -531,10 +531,10 @@ TextureImporter:
       name: penguin_19
       rect:
         serializedVersion: 2
-        x: 96
-        y: 152
-        width: 32
-        height: 32
+        x: 107
+        y: 160
+        width: 14
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -552,10 +552,10 @@ TextureImporter:
       name: penguin_20
       rect:
         serializedVersion: 2
-        x: 128
-        y: 152
-        width: 32
-        height: 32
+        x: 140
+        y: 160
+        width: 13
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -573,10 +573,10 @@ TextureImporter:
       name: penguin_21
       rect:
         serializedVersion: 2
-        x: 160
-        y: 152
-        width: 32
-        height: 32
+        x: 172
+        y: 160
+        width: 13
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,10 +594,10 @@ TextureImporter:
       name: penguin_22
       rect:
         serializedVersion: 2
-        x: 192
-        y: 152
-        width: 32
-        height: 32
+        x: 203
+        y: 160
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,10 +615,10 @@ TextureImporter:
       name: penguin_23
       rect:
         serializedVersion: 2
-        x: 224
-        y: 152
-        width: 32
-        height: 32
+        x: 234
+        y: 161
+        width: 12
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -636,10 +636,10 @@ TextureImporter:
       name: penguin_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 120
-        width: 32
-        height: 32
+        x: 10
+        y: 129
+        width: 12
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,10 +657,10 @@ TextureImporter:
       name: penguin_25
       rect:
         serializedVersion: 2
-        x: 32
-        y: 120
-        width: 32
-        height: 32
+        x: 42
+        y: 129
+        width: 12
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,10 +678,10 @@ TextureImporter:
       name: penguin_26
       rect:
         serializedVersion: 2
-        x: 64
-        y: 120
-        width: 32
-        height: 32
+        x: 74
+        y: 129
+        width: 12
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,10 +699,10 @@ TextureImporter:
       name: penguin_27
       rect:
         serializedVersion: 2
-        x: 96
-        y: 120
-        width: 32
-        height: 32
+        x: 107
+        y: 128
+        width: 9
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -720,10 +720,10 @@ TextureImporter:
       name: penguin_28
       rect:
         serializedVersion: 2
-        x: 128
-        y: 120
-        width: 32
-        height: 32
+        x: 139
+        y: 128
+        width: 9
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,10 +741,10 @@ TextureImporter:
       name: penguin_29
       rect:
         serializedVersion: 2
-        x: 160
-        y: 120
-        width: 32
-        height: 32
+        x: 171
+        y: 128
+        width: 9
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -762,10 +762,10 @@ TextureImporter:
       name: penguin_30
       rect:
         serializedVersion: 2
-        x: 192
-        y: 120
-        width: 32
-        height: 32
+        x: 202
+        y: 128
+        width: 11
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -783,10 +783,10 @@ TextureImporter:
       name: penguin_31
       rect:
         serializedVersion: 2
-        x: 224
-        y: 120
-        width: 32
-        height: 32
+        x: 235
+        y: 128
+        width: 9
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -804,10 +804,10 @@ TextureImporter:
       name: penguin_32
       rect:
         serializedVersion: 2
-        x: 0
-        y: 88
-        width: 32
-        height: 32
+        x: 11
+        y: 96
+        width: 9
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -825,10 +825,10 @@ TextureImporter:
       name: penguin_33
       rect:
         serializedVersion: 2
-        x: 32
-        y: 88
-        width: 32
-        height: 32
+        x: 42
+        y: 74
+        width: 11
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,10 +846,10 @@ TextureImporter:
       name: penguin_34
       rect:
         serializedVersion: 2
-        x: 64
-        y: 88
-        width: 32
-        height: 32
+        x: 73
+        y: 74
+        width: 12
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -867,10 +867,10 @@ TextureImporter:
       name: penguin_35
       rect:
         serializedVersion: 2
-        x: 96
-        y: 88
-        width: 32
-        height: 32
+        x: 104
+        y: 96
+        width: 13
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -888,10 +888,10 @@ TextureImporter:
       name: penguin_36
       rect:
         serializedVersion: 2
-        x: 128
-        y: 88
-        width: 32
-        height: 32
+        x: 139
+        y: 96
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -909,10 +909,10 @@ TextureImporter:
       name: penguin_37
       rect:
         serializedVersion: 2
-        x: 160
-        y: 88
-        width: 32
-        height: 32
+        x: 172
+        y: 96
+        width: 7
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -930,10 +930,10 @@ TextureImporter:
       name: penguin_38
       rect:
         serializedVersion: 2
-        x: 192
-        y: 88
-        width: 32
-        height: 32
+        x: 205
+        y: 96
+        width: 5
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -951,10 +951,10 @@ TextureImporter:
       name: penguin_39
       rect:
         serializedVersion: 2
-        x: 224
-        y: 88
-        width: 32
-        height: 32
+        x: 235
+        y: 96
+        width: 9
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -972,10 +972,10 @@ TextureImporter:
       name: penguin_40
       rect:
         serializedVersion: 2
-        x: 0
-        y: 56
-        width: 32
-        height: 32
+        x: 10
+        y: 65
+        width: 11
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -993,10 +993,10 @@ TextureImporter:
       name: penguin_41
       rect:
         serializedVersion: 2
-        x: 32
-        y: 56
-        width: 32
-        height: 32
+        x: 107
+        y: 64
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1014,10 +1014,10 @@ TextureImporter:
       name: penguin_42
       rect:
         serializedVersion: 2
-        x: 64
-        y: 56
-        width: 32
-        height: 32
+        x: 140
+        y: 64
+        width: 10
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1035,10 +1035,10 @@ TextureImporter:
       name: penguin_43
       rect:
         serializedVersion: 2
-        x: 96
-        y: 56
-        width: 32
-        height: 32
+        x: 172
+        y: 64
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1056,10 +1056,10 @@ TextureImporter:
       name: penguin_44
       rect:
         serializedVersion: 2
-        x: 128
-        y: 56
-        width: 32
-        height: 32
+        x: 203
+        y: 64
+        width: 12
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1077,10 +1077,10 @@ TextureImporter:
       name: penguin_45
       rect:
         serializedVersion: 2
-        x: 160
-        y: 56
-        width: 32
-        height: 32
+        x: 234
+        y: 64
+        width: 16
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1098,10 +1098,10 @@ TextureImporter:
       name: penguin_46
       rect:
         serializedVersion: 2
-        x: 192
-        y: 56
-        width: 32
-        height: 32
+        x: 10
+        y: 32
+        width: 16
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1119,10 +1119,10 @@ TextureImporter:
       name: penguin_47
       rect:
         serializedVersion: 2
-        x: 224
-        y: 56
-        width: 32
-        height: 32
+        x: 42
+        y: 32
+        width: 16
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1140,10 +1140,10 @@ TextureImporter:
       name: penguin_48
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
-        width: 32
-        height: 32
+        x: 74
+        y: 32
+        width: 16
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1153,48 +1153,6 @@ TextureImporter:
       bones: []
       spriteID: 87276f753e9b3be45969baf7aff68fbe
       internalID: -1158250408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: penguin_49
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 24
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4b98c20d7370c145b9a5e1be9467893
-      internalID: -834260691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: penguin_50
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 24
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e529e4ea86e4f154e9e2404c76f8cbbb
-      internalID: -747425585
       vertices: []
       indices: 
       edges: []
@@ -1219,11 +1177,12 @@ TextureImporter:
       penguin_1: -1597616373
       penguin_11: 1314921809
       penguin_23: -870783472
+      penguin_idle_0: -534491506
       penguin_32: -1057119774
       penguin_34: -1436682405
       penguin_43: 506190032
-      penguin_17: -1565539128
       penguin_22: 1579661102
+      penguin_48: -1158250408
       penguin_25: -865292884
       penguin_12: 42297911
       penguin_33: -721655626
@@ -1236,31 +1195,28 @@ TextureImporter:
       penguin_14: -1767383032
       penguin_21: -1911984636
       penguin_27: 677505178
-      penguin_48: -1158250408
       penguin_35: 722998978
       penguin_45: 1809000489
+      penguin_idle_1: -1565539128
       penguin_31: 886541161
       penguin_47: -1094474490
       penguin_29: 337245524
       penguin_30: -632798160
-      penguin_49: -834260691
       penguin_24: -344413239
       penguin_2: -856312881
-      penguin_50: -747425585
       penguin_37: 738113031
       penguin_42: 552807534
       penguin_36: -2033397304
       penguin_3: -1937315670
       penguin_7: 1027739887
       penguin_13: -879596125
-      penguin_16: -534491506
       penguin_10: -1911781384
       penguin_41: -376784201
       penguin_15: -421855406
       penguin_0: -1992678278
       penguin_8: -1440298143
-      penguin_18: 1968154354
       penguin_46: -1065151631
+      penguin_idle_2: 1968154354
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

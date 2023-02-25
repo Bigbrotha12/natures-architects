@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rabbit_0
+      name: rabbit_move_up_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 504
-        width: 72
-        height: 72
+        x: 26
+        y: 525
+        width: 19
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,13 +150,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_1
+      name: rabbit_move_up_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 504
-        width: 72
-        height: 72
+        x: 97
+        y: 516
+        width: 21
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,13 +171,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_2
+      name: rabbit_move_up_2
       rect:
         serializedVersion: 2
-        x: 144
-        y: 504
-        width: 72
-        height: 72
+        x: 170
+        y: 505
+        width: 19
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,13 +192,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_3
+      name: rabbit_move_up_3
       rect:
         serializedVersion: 2
-        x: 216
-        y: 504
-        width: 72
-        height: 72
+        x: 242
+        y: 515
+        width: 19
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: rabbit_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 432
-        width: 72
-        height: 72
+        x: 23
+        y: 454
+        width: 25
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +237,10 @@ TextureImporter:
       name: rabbit_5
       rect:
         serializedVersion: 2
-        x: 72
-        y: 432
-        width: 72
-        height: 72
+        x: 102
+        y: 454
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,10 +258,10 @@ TextureImporter:
       name: rabbit_6
       rect:
         serializedVersion: 2
-        x: 144
-        y: 432
-        width: 72
-        height: 72
+        x: 177
+        y: 455
+        width: 33
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +279,10 @@ TextureImporter:
       name: rabbit_7
       rect:
         serializedVersion: 2
-        x: 216
-        y: 432
-        width: 72
-        height: 72
+        x: 243
+        y: 454
+        width: 29
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,10 +300,10 @@ TextureImporter:
       name: rabbit_8
       rect:
         serializedVersion: 2
-        x: 21
-        y: 381
-        width: 28
-        height: 28
+        x: 26
+        y: 382
+        width: 19
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,10 +321,10 @@ TextureImporter:
       name: rabbit_9
       rect:
         serializedVersion: 2
-        x: 72
-        y: 360
-        width: 72
-        height: 72
+        x: 98
+        y: 389
+        width: 19
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,10 +342,10 @@ TextureImporter:
       name: rabbit_10
       rect:
         serializedVersion: 2
-        x: 144
-        y: 360
-        width: 72
-        height: 72
+        x: 170
+        y: 396
+        width: 19
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,10 +363,10 @@ TextureImporter:
       name: rabbit_11
       rect:
         serializedVersion: 2
-        x: 216
-        y: 360
-        width: 72
-        height: 72
+        x: 241
+        y: 382
+        width: 21
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,13 +381,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_12
+      name: rabbit_move_right_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 288
-        width: 72
-        height: 72
+        x: 24
+        y: 310
+        width: 25
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,13 +402,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_13
+      name: rabbit_move_right_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 288
-        width: 72
-        height: 72
+        x: 88
+        y: 310
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,13 +423,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_14
+      name: rabbit_move_right_2
       rect:
         serializedVersion: 2
-        x: 144
-        y: 288
-        width: 72
-        height: 72
+        x: 149
+        y: 311
+        width: 33
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,13 +444,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_15
+      name: rabbit_move_right_3
       rect:
         serializedVersion: 2
-        x: 216
-        y: 288
-        width: 72
-        height: 72
+        x: 232
+        y: 310
+        width: 29
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -468,10 +468,10 @@ TextureImporter:
       name: rabbit_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 216
-        width: 72
-        height: 72
+        x: 26
+        y: 237
+        width: 19
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -489,10 +489,10 @@ TextureImporter:
       name: rabbit_17
       rect:
         serializedVersion: 2
-        x: 72
-        y: 216
-        width: 72
-        height: 72
+        x: 98
+        y: 238
+        width: 19
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -510,10 +510,10 @@ TextureImporter:
       name: rabbit_18
       rect:
         serializedVersion: 2
-        x: 144
-        y: 216
-        width: 72
-        height: 72
+        x: 170
+        y: 238
+        width: 19
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -531,10 +531,10 @@ TextureImporter:
       name: rabbit_19
       rect:
         serializedVersion: 2
-        x: 216
-        y: 216
-        width: 72
-        height: 72
+        x: 242
+        y: 239
+        width: 19
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -552,10 +552,10 @@ TextureImporter:
       name: rabbit_20
       rect:
         serializedVersion: 2
-        x: 0
-        y: 144
-        width: 72
-        height: 72
+        x: 22
+        y: 166
+        width: 26
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -573,10 +573,10 @@ TextureImporter:
       name: rabbit_21
       rect:
         serializedVersion: 2
-        x: 72
-        y: 144
-        width: 72
-        height: 72
+        x: 92
+        y: 166
+        width: 27
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,10 +594,10 @@ TextureImporter:
       name: rabbit_22
       rect:
         serializedVersion: 2
-        x: 144
-        y: 144
-        width: 72
-        height: 72
+        x: 163
+        y: 166
+        width: 28
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,10 +615,10 @@ TextureImporter:
       name: rabbit_23
       rect:
         serializedVersion: 2
-        x: 216
-        y: 144
-        width: 72
-        height: 72
+        x: 235
+        y: 166
+        width: 28
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -636,10 +636,10 @@ TextureImporter:
       name: rabbit_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 72
-        width: 72
-        height: 72
+        x: 26
+        y: 94
+        width: 19
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,10 +657,10 @@ TextureImporter:
       name: rabbit_25
       rect:
         serializedVersion: 2
-        x: 72
-        y: 72
-        width: 72
-        height: 72
+        x: 98
+        y: 93
+        width: 19
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,10 +678,10 @@ TextureImporter:
       name: rabbit_26
       rect:
         serializedVersion: 2
-        x: 144
-        y: 72
-        width: 72
-        height: 72
+        x: 170
+        y: 93
+        width: 19
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,10 +699,10 @@ TextureImporter:
       name: rabbit_27
       rect:
         serializedVersion: 2
-        x: 216
-        y: 72
-        width: 72
-        height: 72
+        x: 242
+        y: 93
+        width: 19
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -717,13 +717,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_idle_0
+      name: rabbit_idle_right_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 19
-        width: 32
-        height: 32
+        x: 24
+        y: 22
+        width: 26
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -731,20 +731,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c7ea652710a0ec408c06b0e4e6fec38
-      internalID: -1860743707
+      spriteID: 595f8248c6be90b41bd8bde278a60871
+      internalID: -1253369649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_idle_1
+      name: rabbit_idle_right_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
-        width: 72
-        height: 72
+        x: 97
+        y: 22
+        width: 27
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -752,20 +752,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfba5697ea8c8994d8c7e881915d0f97
-      internalID: 1781160201
+      spriteID: b588d62a43d892944aecb4d3dc76bebb
+      internalID: -1342541118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_idle_2
+      name: rabbit_idle_right_2
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
-        width: 72
-        height: 72
+        x: 169
+        y: 22
+        width: 28
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -773,20 +773,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e83e03cba15190440b24786ea8e4dbfe
-      internalID: -575334506
+      spriteID: 39428eb90695dcb45a73f89e23d15c32
+      internalID: 1893677572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabbit_idle_3
+      name: rabbit_idle_right_3
       rect:
         serializedVersion: 2
-        x: 216
-        y: 0
-        width: 72
-        height: 72
+        x: 241
+        y: 22
+        width: 28
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -794,8 +794,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 715325eb25019ab4bb6cf40e263a0756
-      internalID: 534759012
+      spriteID: 70b2fa9c06d8c0848a2ea8509fe3feac
+      internalID: 601243410
       vertices: []
       indices: 
       edges: []
@@ -811,36 +811,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rabbit_14: -1294388435
-      rabbit_idle_3: 534759012
+      rabbit_idle_right_0: -1253369649
       rabbit_6: 1069772513
-      rabbit_3: -777932994
       rabbit_16: 735225557
       rabbit_21: 1180231165
       rabbit_25: 1806187666
       rabbit_23: 496351986
-      rabbit_13: -2023845863
+      rabbit_idle_right_1: -1342541118
       rabbit_8: 1196871078
       rabbit_20: -815895757
-      rabbit_idle_1: 1781160201
-      rabbit_idle_0: -1860743707
+      rabbit_move_up_0: 125042057
       rabbit_7: 219252382
       rabbit_24: 858303988
       rabbit_27: 1108327979
-      rabbit_1: -31870778
+      rabbit_move_up_1: -31870778
       rabbit_19: -1365153481
-      rabbit_2: 598681630
+      rabbit_move_right_3: -1422135135
       rabbit_18: -2018886375
-      rabbit_12: 1163278635
-      rabbit_15: -1422135135
-      rabbit_idle_2: -575334506
+      rabbit_idle_right_2: 1893677572
+      rabbit_move_up_3: -777932994
+      rabbit_move_up_2: 598681630
+      rabbit_move_right_0: 1163278635
+      rabbit_idle_right_3: 601243410
       rabbit_22: 1849172170
       rabbit_11: -2096053631
       rabbit_4: -936382133
       rabbit_9: 1751387445
       rabbit_5: -2093849993
-      rabbit_0: 125042057
+      rabbit_move_right_1: -2023845863
       rabbit_26: 1535013307
+      rabbit_move_right_2: -1294388435
       rabbit_17: -97114093
       rabbit_10: -1101722714
   spritePackingTag: 

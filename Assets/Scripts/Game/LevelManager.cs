@@ -61,10 +61,22 @@ public class LevelManager : MonoBehaviour
 
     void SetupCurrentCharacter()
     {
-        player.SetCharacter(CurrentLevelSO.AvailableCharacters[currentCharacterID].CharacterSO, CurrentLevelSO.AvailableCharacters[currentCharacterID].Uses);
+        CharacterSO currentCharacter = CurrentLevelSO.AvailableCharacters[currentCharacterID].CharacterSO;
+        if (currentCharacter != null)
+        {
+            player.SetCharacter(currentCharacter, CurrentLevelSO.AvailableCharacters[currentCharacterID].Uses);
 
-        uiController.SetNextCharacterSprites(currentCharacterID, CurrentLevelSO);
-        uiController.DisplayScoringKey(CurrentLevelSO.AvailableCharacters[currentCharacterID].CharacterSO);
+            uiController.SetNextCharacterSprites(currentCharacterID, CurrentLevelSO);
+            uiController.DisplayScoringKey(currentCharacter);
+            if (currentCharacter.terrainTile != null)
+            {
+                uiController.SetCurrentTileType(currentCharacter.terrainTile.name);
+            }
+            else
+            {
+                uiController.SetCurrentTileType("");
+            }
+        }
     }
 
     void SetLevelText(GameLevelSO levelSO)

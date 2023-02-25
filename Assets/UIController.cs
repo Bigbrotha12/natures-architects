@@ -21,6 +21,7 @@ public class UIController : MonoBehaviour
     [SerializeField] Image[] nextImages;
 
     [Header("Scoring Key")]
+    [SerializeField] TextMeshProUGUI currentTileText;
     [SerializeField] Transform ScoringKeyContainer;
     [SerializeField] GameObject ScoringKeyPrefab;
 
@@ -99,6 +100,11 @@ public class UIController : MonoBehaviour
     {
         EventBroker.CallLoadNextLevel();
         ShowSuccessPanel(false);
+    }
+
+    public void SetCurrentTileType(string terrainType)
+    {
+        currentTileText.text = terrainType;
     }
 
     public void SetNextCharacterSprites(int currentCharacterID, GameLevelSO currentLevel)

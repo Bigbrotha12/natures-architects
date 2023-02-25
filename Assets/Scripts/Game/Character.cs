@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     [SerializeField] CharacterSO characterSO;
+    [SerializeField] RuntimeAnimatorController baseAnimatorController;
 
     SpriteRenderer spriteRenderer;
     Animator animator;
@@ -13,7 +14,11 @@ public class Character : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        SetupCharacter(characterSO);
+    }
+
+    void Start()
+    {
+        SetupCharacter();
     }
 
     public TerrainTile TerrainTile
@@ -24,18 +29,19 @@ public class Character : MonoBehaviour
     public void ChangeCharacter(CharacterSO newCharacter)
     {
         characterSO = newCharacter;
-        SetupCharacter(newCharacter);
+        SetupCharacter();
     }
 
-    void SetupCharacter(CharacterSO characterSO)
+    void SetupCharacter()
     {
-        if (characterSO.defaultSprite != null)
-        {
-            spriteRenderer.sprite = characterSO.defaultSprite;
-        }
         if (characterSO.animatorOverride != null)
         {
             animator.runtimeAnimatorController = characterSO.animatorOverride;
         }
+        else
+        {
+            animator.runtimeAnimatorController = baseAnimatorController;
+        }
+        spriteRenderer.sprite = characterSO.defaultSprite;
     }
 }

@@ -17,9 +17,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("For testing")]
     [SerializeField] bool placingTileUsesAction = true;
+    
     Character character;
-
     Mover mover;
+
+    bool isDead;
 
     void Awake()
     {
@@ -144,6 +146,10 @@ public class PlayerController : MonoBehaviour
 
     void OnMovementCompleted()
     {
+        if (isDead)
+        {
+            CharacterDeath();
+        }
         canMove = true;
         mover.movementCompletedEvent -= OnMovementCompleted;
     }
@@ -158,13 +164,13 @@ public class PlayerController : MonoBehaviour
         else
         {
             actionCounterText.text = "Dead";
-            CharacterDeath();
+            isDead = true;
         }
     }
 
     void CharacterDeath()
     {
-        // TODO: Death animation
+        isDead = false;
         EventBroker.CallCharacterDeath();
     }
 

@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 608077874826055963, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: characterSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
+    - target: {fileID: 608077874826055963, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: baseAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: 527505aafbbf14e41bc6586dc22a6418, type: 2}
+    - target: {fileID: 7621901397210578017, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 527505aafbbf14e41bc6586dc22a6418, type: 2}
     - target: {fileID: 8093189793086981396, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -53,7 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093189793086981397, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: m_Name
-      value: Fish
+      value: Rabbit
       objectReference: {fileID: 0}
+    - target: {fileID: 8093189793086981399, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1860743707, guid: 2d8481d934037134680bbd87366e829e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 905ad43625c01b54989b29037e76badc, type: 3}

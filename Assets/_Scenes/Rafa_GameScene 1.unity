@@ -1612,10 +1612,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1843845594924854130, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1843845594924854134, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
       propertyPath: mapGrid
       value: 
@@ -1675,7 +1671,15 @@ PrefabInstance:
     - target: {fileID: 1843845595516817908, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -315253467, guid: 7c01f3453e4b55342b4b588c4e7e6d55, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843845595516817908, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040882595290056184, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
+      propertyPath: characterSO
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
 --- !u!1 &470564500

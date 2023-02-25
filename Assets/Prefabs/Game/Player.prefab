@@ -306,6 +306,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1843845594924854135}
     m_Modifications:
+    - target: {fileID: 608077874826055963, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: characterSO
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 608077874826055963, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: baseAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: 527505aafbbf14e41bc6586dc22a6418, type: 2}
+    - target: {fileID: 7621901397210578017, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 527505aafbbf14e41bc6586dc22a6418, type: 2}
     - target: {fileID: 8093189793086981396, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -353,6 +365,14 @@ PrefabInstance:
     - target: {fileID: 8093189793086981397, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: m_Name
       value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093189793086981399, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093189793086981399, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 905ad43625c01b54989b29037e76badc, type: 3}

@@ -7,11 +7,13 @@ public class Character : MonoBehaviour
     [SerializeField] CharacterSO characterSO;
 
     SpriteRenderer spriteRenderer;
+    Animator animator;
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = characterSO.defaultSprite;
+        animator = GetComponent<Animator>();
+        SetupCharacter(characterSO);
     }
 
     public TerrainTile TerrainTile
@@ -22,6 +24,18 @@ public class Character : MonoBehaviour
     public void ChangeCharacter(CharacterSO newCharacter)
     {
         characterSO = newCharacter;
-        spriteRenderer.sprite = characterSO.defaultSprite;
+        SetupCharacter(newCharacter);
+    }
+
+    void SetupCharacter(CharacterSO characterSO)
+    {
+        if (characterSO.defaultSprite != null)
+        {
+            spriteRenderer.sprite = characterSO.defaultSprite;
+        }
+        if (characterSO.animatorOverride != null)
+        {
+            animator.runtimeAnimatorController = characterSO.animatorOverride;
+        }
     }
 }

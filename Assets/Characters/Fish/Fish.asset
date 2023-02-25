@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Fish
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: -315253467, guid: 7c01f3453e4b55342b4b588c4e7e6d55, type: 3}
-  animatorOverride: {fileID: 0}
+  animatorOverride: {fileID: 22100000, guid: 14c56bb02d2b8344d8e91870adcc7e37, type: 2}
   terrainTile: {fileID: 11400000, guid: acaaabaae01f0e94b91ad1f196c6a042, type: 2}

@@ -1668,6 +1668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7040882595290056184, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
+      propertyPath: characterSO
+      value: 
+      objectReference: {fileID: 11400000, guid: a3907f2873f20c14187a6f96d460d7a0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
 --- !u!1 &470564500
@@ -7363,7 +7367,7 @@ PrefabInstance:
     - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
       propertyPath: levels.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 015de374af6850d44b4c3ca19d0dafc1, type: 2}
+      objectReference: {fileID: 11400000, guid: 89adedc2b2a1d654d946d425505eafda, type: 2}
     - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
       propertyPath: levels.Array.data[1]
       value: 

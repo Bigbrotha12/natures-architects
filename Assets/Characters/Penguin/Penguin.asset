@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988738ad925986a48b7c224b5eedc3d4, type: 3}
   m_Name: Penguin
   m_EditorClassIdentifier: 
-  defaultSprite: {fileID: -1992678278, guid: 8b06ed393600e9f4f810e40e8cdddd18, type: 3}
-  animatorOverride: {fileID: 0}
+  defaultSprite: {fileID: -534491506, guid: 8b06ed393600e9f4f810e40e8cdddd18, type: 3}
+  animatorOverride: {fileID: 22100000, guid: 3fab640fb6d87da429325f33b2493b5b, type: 2}
   terrainTile: {fileID: 11400000, guid: 4b937c1b6a03ef34a96952f2285296d9, type: 2}

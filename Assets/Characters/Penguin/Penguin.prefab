@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: characterSO
       value: 
       objectReference: {fileID: 11400000, guid: a3907f2873f20c14187a6f96d460d7a0, type: 2}
+    - target: {fileID: 608077874826055963, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: baseAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: 527505aafbbf14e41bc6586dc22a6418, type: 2}
     - target: {fileID: 7621901397210578017, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: m_Controller
       value: 

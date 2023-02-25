@@ -20,8 +20,12 @@ MonoBehaviour:
   columns: 2
   StartPosition: {x: 0, y: 0, z: 0}
   AvailableCharacters:
+  - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
+    Uses: 8
+  - CharacterSO: {fileID: 11400000, guid: a3907f2873f20c14187a6f96d460d7a0, type: 2}
+    Uses: 6
   - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
-    Uses: 7
+    Uses: 3
   grassTargetScore: 0
   forestTargetScore: 0
   mountainTargetScore: 0

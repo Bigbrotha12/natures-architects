@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Human
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: -1737500564, guid: b14b616d337283a4facc379ab6b0761f, type: 3}
-  animatorOverride: {fileID: 0}
+  animatorOverride: {fileID: 22100000, guid: a96e58af5707bd94a87b214208ffb39c, type: 2}
   terrainTile: {fileID: 11400000, guid: e9a83d52c25db2a4b9fc1bd269a32ad1, type: 2}

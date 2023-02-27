@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988738ad925986a48b7c224b5eedc3d4, type: 3}
   m_Name: Squirrel
   m_EditorClassIdentifier: 
-  defaultSprite: {fileID: 163502736, guid: d4eab13eb57d2eb4483fa3d371360f73, type: 3}
-  animatorOverride: {fileID: 0}
+  defaultSprite: {fileID: -537865316, guid: d4eab13eb57d2eb4483fa3d371360f73, type: 3}
+  animatorOverride: {fileID: 22100000, guid: 4e453eb341a9ecf40ad68496594959ad, type: 2}
   terrainTile: {fileID: 11400000, guid: 66129f5e2cc44ae469d65fbc883ad04c, type: 2}

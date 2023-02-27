@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988738ad925986a48b7c224b5eedc3d4, type: 3}
   m_Name: Rabbit
   m_EditorClassIdentifier: 
-  defaultSprite: {fileID: -1860743707, guid: 2d8481d934037134680bbd87366e829e, type: 3}
-  animatorOverride: {fileID: 0}
+  defaultSprite: {fileID: -1253369649, guid: 2d8481d934037134680bbd87366e829e, type: 3}
+  animatorOverride: {fileID: 22100000, guid: a4cedc85dfc8aa94e8d454a80874e11f, type: 2}
   terrainTile: {fileID: 11400000, guid: 99c4a0aa02844d6429cab20126965016, type: 2}

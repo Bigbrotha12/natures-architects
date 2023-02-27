@@ -18,7 +18,7 @@ public class Character : MonoBehaviour
 
     void Start()
     {
-        SetupCharacter();
+        //SetupCharacter();
     }
 
     public TerrainTile TerrainTile

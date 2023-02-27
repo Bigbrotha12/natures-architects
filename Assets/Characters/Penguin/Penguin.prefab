@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8218923179686831626
+--- !u!1001 &4128758225338044973
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 608077874826055963, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: characterSO
       value: 
-      objectReference: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
+      objectReference: {fileID: 11400000, guid: a3907f2873f20c14187a6f96d460d7a0, type: 2}
     - target: {fileID: 608077874826055963, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: baseAnimatorController
       value: 
@@ -18,7 +18,7 @@ PrefabInstance:
     - target: {fileID: 7621901397210578017, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: a4cedc85dfc8aa94e8d454a80874e11f, type: 2}
+      objectReference: {fileID: 22100000, guid: 3fab640fb6d87da429325f33b2493b5b, type: 2}
     - target: {fileID: 8093189793086981396, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -65,23 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093189793086981397, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: m_Name
-      value: Rabbit
-      objectReference: {fileID: 0}
-    - target: {fileID: 8093189793086981399, guid: 905ad43625c01b54989b29037e76badc, type: 3}
-      propertyPath: m_Size.x
-      value: 0.8125
-      objectReference: {fileID: 0}
-    - target: {fileID: 8093189793086981399, guid: 905ad43625c01b54989b29037e76badc, type: 3}
-      propertyPath: m_Size.y
-      value: 0.78125
+      value: Penguin
       objectReference: {fileID: 0}
     - target: {fileID: 8093189793086981399, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1253369649, guid: 2d8481d934037134680bbd87366e829e, type: 3}
-    - target: {fileID: 8093189793086981399, guid: 905ad43625c01b54989b29037e76badc, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1027739887, guid: 8b06ed393600e9f4f810e40e8cdddd18, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 905ad43625c01b54989b29037e76badc, type: 3}

@@ -68,8 +68,12 @@ PrefabInstance:
       value: Squirrel
       objectReference: {fileID: 0}
     - target: {fileID: 8093189793086981399, guid: 905ad43625c01b54989b29037e76badc, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093189793086981399, guid: 905ad43625c01b54989b29037e76badc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -76049092, guid: d4eab13eb57d2eb4483fa3d371360f73, type: 3}
+      objectReference: {fileID: 1228147580, guid: 9cf6ed4dd0b96484e91c78da7720539f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 905ad43625c01b54989b29037e76badc, type: 3}

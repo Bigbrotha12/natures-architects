@@ -16,6 +16,11 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject successPanel;
     [SerializeField] string defaultSuccessText;
     [SerializeField] TextMeshProUGUI successText;
+    [SerializeField] Image bronzeStar;
+    [SerializeField] Image silverStar;
+    [SerializeField] Image goldStar;
+    [SerializeField] Sprite filledStar;
+    [SerializeField] Sprite emptyStar;
 
     [Header("Next Character Images")]
     [SerializeField] Image[] nextImages;
@@ -63,9 +68,9 @@ public class UIController : MonoBehaviour
         ShowGameOverPanel(true);
     }
 
-    public void OnLevelCompleted()
+    public void OnLevelCompleted(Medals achieved)
     {
-        ShowSuccessPanel(true);
+        ShowSuccessPanel(true, achieved);
     }
 
     void HideGameOverPanels()
@@ -79,9 +84,32 @@ public class UIController : MonoBehaviour
         gameOverPanel.SetActive(show);
     }
 
-    void ShowSuccessPanel(bool show)
+    void ShowSuccessPanel(bool show, Medals achieved)
     {
         successPanel.SetActive(show);
+        switch(achieved) 
+        {
+            case Medals.BRONZE:
+                bronzeStar.sprite = filledStar;
+                silverStar.sprite = emptyStar;
+                goldStar.sprite = emptyStar;
+                break;
+            case Medals.SILVER:
+                bronzeStar.sprite = filledStar;
+                silverStar.sprite = filledStar;
+                goldStar.sprite = emptyStar;
+                break;
+            case Medals.GOLD:
+                bronzeStar.sprite = filledStar;
+                silverStar.sprite = filledStar;
+                goldStar.sprite = filledStar;
+                break;
+            default:
+                bronzeStar.sprite = emptyStar;
+                silverStar.sprite = emptyStar;
+                goldStar.sprite = emptyStar;
+                break;
+        }
     }
 
     public void QuitToStart()
@@ -99,7 +127,7 @@ public class UIController : MonoBehaviour
     public void NextLevel()
     {
         EventBroker.CallLoadNextLevel();
-        ShowSuccessPanel(false);
+        ShowSuccessPanel(false, Medals.NONE);
     }
 
     public void SetCurrentTileType(string terrainType)

@@ -115,9 +115,10 @@ public class LevelManager : MonoBehaviour
     void LevelEnd()
     {
         PlayGameOverMusic();
-        if (scorer.CheckWinCondition())
+        Medals result = scorer.CheckWinCondition();
+        if (result != Medals.NONE)
         {
-            EventBroker.CallLevelCompleted();
+            EventBroker.CallLevelCompleted(result);
         }
         else
         {

@@ -3,6 +3,17 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Game Level", fileName = "Levels")]
 public class GameLevelSO : ScriptableObject
 {
+    [System.Serializable]
+    public class ScoreTargets
+    {
+        public int[] GrassTargets;
+        public int[] ForestTargets;
+        public int[] MountainTargets;
+        public int[] WaterTargets;
+        public int[] SnowTargets;
+        public int[] FireTargets;
+    }
+
     public string[] flavorTexts;
     public AudioClip music;
     
@@ -16,12 +27,7 @@ public class GameLevelSO : ScriptableObject
     public CharacterUses[] AvailableCharacters;
 
     [Header("Target Scores")]
-    public int grassTargetScore;
-    public int forestTargetScore;
-    public int mountainTargetScore;
-    public int waterTargetScore;
-    public int fireTargetScore;
-    public int snowTargetScore;
+    public ScoreTargets levelTargets;
 }
 
 [System.Serializable]

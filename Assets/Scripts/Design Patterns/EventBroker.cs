@@ -45,10 +45,10 @@ public class EventBroker
         GameOver?.Invoke();
     }
 
-    public static event Action LevelCompleted;
-    public static void CallLevelCompleted()
+    public static event Action<Medals> LevelCompleted;
+    public static void CallLevelCompleted(Medals result)
     {
-        LevelCompleted?.Invoke();
+        LevelCompleted?.Invoke(result);
     }
 
 

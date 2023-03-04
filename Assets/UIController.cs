@@ -24,6 +24,8 @@ public class UIController : MonoBehaviour
 
     [Header("Next Character Images")]
     [SerializeField] Image[] nextImages;
+    [SerializeField] GameObject AnimalInfoPrefab;
+    [SerializeField] Transform AnimalInfoContainer;
 
     [Header("Scoring Key")]
     [SerializeField] TextMeshProUGUI currentTileText;
@@ -61,6 +63,22 @@ public class UIController : MonoBehaviour
         levelMessageText.text = defaultMessageText;
         gameOverText.text = defaultGameOverText;
         successText.text = defaultSuccessText;
+    }
+
+    public void SetLevelInformation(GameLevelSO currentLevel)
+    {
+        foreach(Transform container in AnimalInfoContainer)
+        {
+            Destroy(container.gameObject);
+        }
+
+        foreach (CharacterUses character in currentLevel.AvailableCharacters)
+        {
+            GameObject animal = GameObject.Instantiate(AnimalInfoPrefab, AnimalInfoContainer);
+            animal.transform.Find("ImageBorder").Find("AnimalSprite").GetComponent<Image>().sprite = character.CharacterSO.defaultSprite;
+            animal.transform.Find("TileTypeText").GetComponent<TMP_Text>().text = character.CharacterSO.terrainTile.tileType.ToString();
+            animal.transform.Find("Uses").Find("UsesText").GetComponent<TMP_Text>().text = character.Uses.ToString();
+        }
     }
 
     public void OnGameOver()

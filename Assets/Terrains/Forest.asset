@@ -15,8 +15,8 @@ MonoBehaviour:
   tileType: 2
   tileSprite: {fileID: 11400000, guid: 4e90f37f00157474cb6651d4107f4e75, type: 2}
   adjacentGrassValue: 0
-  adjacentWaterValue: 3
+  adjacentWaterValue: 1
   adjacentMountainValue: 2
-  adjacentForestValue: 1
-  adjacentSnowValue: -1
-  adjacentFireValue: -3
+  adjacentForestValue: 0
+  adjacentSnowValue: 0
+  adjacentFireValue: -1

@@ -55,6 +55,7 @@ public class LevelManager : MonoBehaviour
         SetupCurrentCharacter();
         mapGrid.SetLevel(CurrentLevelSO);
         SetLevelText(CurrentLevelSO);
+        uiController.SetLevelInformation(CurrentLevelSO);
 
         PlayLevelMusic();
     }

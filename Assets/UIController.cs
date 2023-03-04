@@ -24,6 +24,7 @@ public class UIController : MonoBehaviour
 
     [Header("Next Character Images")]
     [SerializeField] Image[] nextImages;
+    [SerializeField] GameObject LevelInfoPanel;
     [SerializeField] GameObject AnimalInfoPrefab;
     [SerializeField] Transform AnimalInfoContainer;
 
@@ -39,6 +40,14 @@ public class UIController : MonoBehaviour
 
         EventBroker.GameOver += OnGameOver;
         EventBroker.LevelCompleted += OnLevelCompleted;
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            LevelInfoPanel.SetActive(!LevelInfoPanel.activeSelf);
+        }
     }
 
     void OnDisable()

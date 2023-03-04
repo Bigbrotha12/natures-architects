@@ -5473,8 +5473,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13306,7 +13306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1080194893
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20081,7 +20081,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use Arrow Keys to Move - Press Spacebar to place Terrain
+  m_text: 'Use Arrow Keys to Move - Press ''Space'' to place Terrain
+
+    ''Tab''
+    to view Level Information'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26117,6 +26120,9 @@ MonoBehaviour:
   - {fileID: 3769024386411494516}
   - {fileID: 3769024386573030234}
   - {fileID: 3769024386365086853}
+  LevelInfoPanel: {fileID: 1080194892}
+  AnimalInfoPrefab: {fileID: 8578328562194467277, guid: 2c4333e5b1d014e43b05a20cca2fdc0c, type: 3}
+  AnimalInfoContainer: {fileID: 190971650}
   currentTileText: {fileID: 1861933971}
   ScoringKeyContainer: {fileID: 1268843587}
   ScoringKeyPrefab: {fileID: 6852331881114162988, guid: 322bb9cdfc54f424798e5085e27278cf, type: 3}

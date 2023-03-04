@@ -38,9 +38,10 @@ MonoBehaviour:
     Uses: 7
   - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
     Uses: 14
-  grassTargetScore: 15
-  forestTargetScore: 30
-  mountainTargetScore: 20
-  waterTargetScore: 12
-  fireTargetScore: 0
-  snowTargetScore: 35
+  levelTargets:
+    GrassTargets: 0f0000000f0000000f000000
+    ForestTargets: 1e0000001e0000001e000000
+    MountainTargets: 140000001400000014000000
+    WaterTargets: 0c0000000c0000000c000000
+    SnowTargets: 230000002300000023000000
+    FireTargets: 000000000000000000000000

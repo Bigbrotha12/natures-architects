@@ -73,13 +73,13 @@ public class MapGrid : MonoBehaviour
         return true;
     }
 
-    public bool CheckTileEmpty(Vector3Int position)
+    public TerrainTypes CheckTile(Vector3Int position)
     {
         if(CheckPositionIsOnMapGrid(position))
         {
-            return Map[position.x, position.y].tileType == TerrainTypes.NONE || Map[position.x, position.y].tileType == TerrainTypes.FIRE;
+            return Map[position.x, position.y].tileType;
         }
-        return false;
+        return TerrainTypes.NONE;
     }
 
     public void ScoreTile(Vector3Int position)

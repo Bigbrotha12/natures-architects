@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/GameCompletedScene.unity
     guid: dadbe51dd1d627443a27cbf73a380074
   - enabled: 1
-    path: Assets/_Scenes/Rafa_GameScene 1.unity
+    path: Assets/_Scenes/Game Scenes/Rafa_GameScene 1.unity
     guid: 552f84f5239122748a82f31e3b4e9769
   m_configObjects: {}

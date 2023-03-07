@@ -206,6 +206,74 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[0].displayName
+      value: Menu Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[1].displayName
+      value: Menu SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[2].displayName
+      value: Game Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[3].displayName
+      value: Game SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[0].currentVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[0].defaultVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[1].currentVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[1].defaultVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[2].currentVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[2].defaultVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[3].currentVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[3].defaultVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[0].audioGroupName
+      value: MenuMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[1].audioGroupName
+      value: MenuSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[2].audioGroupName
+      value: GameMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
+      propertyPath: audioGroups.Array.data[3].audioGroupName
+      value: GameSFX
+      objectReference: {fileID: 0}
     - target: {fileID: 3519460630630122732, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
       propertyPath: m_Name
       value: Scene Loader

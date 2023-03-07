@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f88b6b8fff48279a7f436358939ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1843845594924854135}
   canMove: 1
   inputDelay: 0.2
   actionCounter: 12
@@ -186,9 +186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f263c8aa410c64e8ef806d9d2669d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSFX: {fileID: 8300000, guid: 83d6b0925409dda49a252fd12134f377, type: 3}
-  moveBlockedSFX: {fileID: 8300000, guid: 76b7fb2c3de0b6f4aba12e4ef449c8f0, type: 3}
-  placeTerrainSFX: {fileID: 8300000, guid: 8f56f5aaf4f42d74d9d0ca86121694dd, type: 3}
+  defaultMoveSFX: {fileID: 8300000, guid: 83d6b0925409dda49a252fd12134f377, type: 3}
+  defaultMoveBlockedSFX: {fileID: 8300000, guid: 76b7fb2c3de0b6f4aba12e4ef449c8f0, type: 3}
+  defaultPlaceTerrainSFX: {fileID: 8300000, guid: 8f56f5aaf4f42d74d9d0ca86121694dd, type: 3}
 --- !u!82 &1843845594924854132
 AudioSource:
   m_ObjectHideFlags: 0
@@ -198,10 +198,10 @@ AudioSource:
   m_GameObject: {fileID: 1843845594924854137}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -36398918836810853, guid: f0d9499019b71b14e91d98bf56868a0c, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 83d6b0925409dda49a252fd12134f377, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.469
+  m_Volume: 0.442
   m_Pitch: 1
   Loop: 0
   Mute: 0

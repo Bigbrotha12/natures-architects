@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class Character : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     Animator animator;
+
+    public CharacterSO CharacterSO { get { return characterSO; } }
 
     void Awake()
     {
@@ -30,6 +33,7 @@ public class Character : MonoBehaviour
     {
         characterSO = newCharacter;
         SetupCharacter();
+        EventBroker.CallCharacterChange(newCharacter);
     }
 
     void SetupCharacter()

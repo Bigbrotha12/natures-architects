@@ -21,7 +21,6 @@ public class SoundSettingsUI : MonoBehaviour
 
     void OnEnable()
     {
-        if (initialised) return;
         if (audioSettings == null) return;
         SetupVolumeControls();
     }
@@ -30,11 +29,18 @@ public class SoundSettingsUI : MonoBehaviour
     {
         foreach (AudioGroupSettings audioGroup in audioSettings.AudioGroups)
         {
-            GameObject volumePanel = Instantiate(volumePanelPrefab, volumePanelsParentTransform);
-            volumePanels.Add(volumePanel);
-            volumePanel.GetComponentInChildren<TextMeshProUGUI>().text = audioGroup.displayName;
-            Slider slider = volumePanel.GetComponentInChildren<Slider>();
-            audioGroup.SetupSlider(slider);
+            if (!initialised)
+            {
+                GameObject volumePanel = Instantiate(volumePanelPrefab, volumePanelsParentTransform);
+                volumePanels.Add(volumePanel);
+                volumePanel.GetComponentInChildren<TextMeshProUGUI>().text = audioGroup.displayName;
+                Slider slider = volumePanel.GetComponentInChildren<Slider>();
+                audioGroup.SetupSlider(slider);
+            }
+            else
+            {
+                audioGroup.UpdateSliderValue();
+            }
         }
         initialised = true;
     }

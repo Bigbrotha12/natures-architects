@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public Transform player;
     public bool canMove = true;
-    public float inputDelay = 0.2f;
+    public float inputDelay = 0.5f;
     public int actionCounter = 12;
     public TMP_Text actionCounterText;
 
@@ -45,31 +45,34 @@ public class PlayerController : MonoBehaviour
         if (!canMove) return;
         canMove = false;
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetAxis("Fire1") > 0.5f)
         {
             PlaceTile();
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxis("Horizontal");
+        
+        if (vertical > 0.9f)
         {
             Move(Vector3.up);
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.DownArrow))
+        if (vertical < -0.9f)
         {
             Move(Vector3.down);
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        if (horizontal < -0.9f)
         {
             Move(Vector3.left);
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if (horizontal > 0.9f)
         {
             Move(Vector3.right);
             return;
@@ -162,7 +165,7 @@ public class PlayerController : MonoBehaviour
         {
             CharacterDeath();
         }
-        canMove = true;
+        StartCoroutine(InputCooldown());
         mover.movementCompletedEvent -= OnMovementCompleted;
     }
 

@@ -40,6 +40,11 @@ public class AudioGroupSettings
     {
         volumeSlider = slider;
         volumeSlider.onValueChanged.AddListener(SetVolume);
+        UpdateSliderValue();
+    }
+
+    public void UpdateSliderValue()
+    {
         volumeSlider.value = currentVolume;
     }
 

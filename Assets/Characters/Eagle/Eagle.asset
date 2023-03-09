@@ -15,3 +15,6 @@ MonoBehaviour:
   defaultSprite: {fileID: -23354077, guid: 987297cc6f6374a41912ede3b52cc119, type: 3}
   animatorOverride: {fileID: 22100000, guid: ac375dd58f2ab7648a55a0db0ac1426c, type: 2}
   terrainTile: {fileID: 11400000, guid: 86c96da9365285f489e4b6c6da074e3a, type: 2}
+  moveSFX: {fileID: 8300000, guid: 57253df4135684049ab464b906dc4fcc, type: 3}
+  moveBlockedSFX: {fileID: 0}
+  placeTerrainSFX: {fileID: 8300000, guid: 495080556fece4149859ac3b9b87a239, type: 3}

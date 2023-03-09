@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             EventBroker.CallPlayerMoveBlocked();
-            canMove = true;
+            StartCoroutine(InputCooldown());
         }
     }
 
@@ -191,8 +191,6 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator InputCooldown() 
     {
-        if (actionCounter <= 0) yield break;
-        
         yield return new WaitForSeconds(inputDelay);
         canMove = true;
     }

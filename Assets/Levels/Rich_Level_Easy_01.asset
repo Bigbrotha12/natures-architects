@@ -20,10 +20,10 @@ MonoBehaviour:
   columns: 10
   StartPosition: {x: 0, y: 0, z: 0}
   AvailableCharacters:
+  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
+    Uses: 10
   - CharacterSO: {fileID: 11400000, guid: a3907f2873f20c14187a6f96d460d7a0, type: 2}
     Uses: 10
-  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
-    Uses: 5
   - CharacterSO: {fileID: 11400000, guid: 96327b4f211644c4bba7cadfad9be1bb, type: 2}
     Uses: 5
   - CharacterSO: {fileID: 11400000, guid: 715d44fd46731394ea2d04a29c13f3bc, type: 2}

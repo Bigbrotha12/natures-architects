@@ -42,10 +42,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (actionCounter <= 0) return;
+
         if (!canMove) return;
         canMove = false;
 
-        if(Input.GetAxis("Fire1") > 0.5f)
+        if (Input.GetAxis("Fire1") > 0.5f)
         {
             PlaceTile();
             return;

@@ -6371,10 +6371,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1843845594924854133, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
-      propertyPath: defaultMoveSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 7735e6116729af54483b89cd62405779, type: 3}
     - target: {fileID: 1843845594924854134, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
       propertyPath: player
       value: 

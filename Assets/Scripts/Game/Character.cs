@@ -12,21 +12,16 @@ public class Character : MonoBehaviour
     Animator animator;
 
     public CharacterSO CharacterSO { get { return characterSO; } }
+   
+    public TerrainTile TerrainTile
+    {
+        get { return characterSO.terrainTile; }
+    }
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-    }
-
-    void Start()
-    {
-        //SetupCharacter();
-    }
-
-    public TerrainTile TerrainTile
-    {
-        get { return characterSO.terrainTile; }
     }
 
     public void ChangeCharacter(CharacterSO newCharacter)
@@ -47,5 +42,14 @@ public class Character : MonoBehaviour
             animator.runtimeAnimatorController = baseAnimatorController;
         }
         spriteRenderer.sprite = characterSO.defaultSprite;
+        animator.SetTrigger("Spawn");
+    }
+
+    public IEnumerator DeathAnimation()
+    {
+        // TODO: 
+        print("Death animation");
+        yield return new WaitForSecondsRealtime(0.2f);
+        yield break;
     }
 }

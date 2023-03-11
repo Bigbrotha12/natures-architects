@@ -86,6 +86,8 @@ public class PlayerController : MonoBehaviour
     {
         character.ChangeCharacter(newCharacter);
         SetActionCounter(moves);
+
+        // TODO: wait for spawn animation to finish before can move
         canMove = true;
     }
 
@@ -148,10 +150,10 @@ public class PlayerController : MonoBehaviour
 
         if (mapGrid.CheckPositionIsOnMapGrid(newPosition))
         {
+            IncrementActionCount();
             mover.movementCompletedEvent += OnMovementCompleted;
             mover.MoveToLocation(player, newPosition);
             EventBroker.CallPlayerMove();
-            IncrementActionCount();
         }
         else
         {
@@ -162,12 +164,14 @@ public class PlayerController : MonoBehaviour
 
     void OnMovementCompleted()
     {
+        mover.movementCompletedEvent -= OnMovementCompleted;
+
         if (isDead)
         {
-            CharacterDeath();
+            StartCoroutine(CharacterDeath());
+            return;
         }
         StartCoroutine(InputCooldown());
-        mover.movementCompletedEvent -= OnMovementCompleted;
     }
 
     void IncrementActionCount()
@@ -184,10 +188,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void CharacterDeath()
+    IEnumerator CharacterDeath()
     {
+        yield return StartCoroutine(character.DeathAnimation());
         isDead = false;
         EventBroker.CallCharacterDeath();
+        StartCoroutine(InputCooldown());
     }
 
     IEnumerator InputCooldown() 

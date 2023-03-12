@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 [CreateAssetMenu(menuName = "TerrainTile")]
-public class TerrainTile : ScriptableObject
+public class TerrainTile : TileBase
 {
     public TerrainTypes tileType;
     public Tile tileSprite;
@@ -34,6 +34,11 @@ public class TerrainTile : ScriptableObject
             default:
                 return 0;
         }
+    }
+
+    public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
+    {
+        tileSprite.GetTileData(position, tilemap, ref tileData);
     }
 
     public List<string> GetScoringKeyText() 

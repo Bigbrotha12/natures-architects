@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 [CreateAssetMenu(menuName = "Game Level", fileName = "Levels")]
 public class GameLevelSO : ScriptableObject
@@ -18,13 +19,18 @@ public class GameLevelSO : ScriptableObject
     public AudioClip music;
     
     [Header("Grid")]
+    public GameObject map;
     public TerrainTile starterTile;
     public int rows;
     public int columns;
+    
 
     [Header("Player info")]
-    public Vector3 StartPosition = Vector3.zero;
+    public Vector3Int StartCoordinates;
     public CharacterUses[] AvailableCharacters;
+    public Vector3 StartPosition { get {
+        return StartCoordinates;
+    }}
 
     [Header("Target Scores")]
     public ScoreTargets levelTargets;

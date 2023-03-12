@@ -5,9 +5,9 @@ using UnityEngine.Tilemaps;
 
 public class MapGrid : MonoBehaviour
 {
-    public Tilemap tilemap;
     public GameLevelSO gameLevel;
-    public TerrainTile[,] Map;
+    Tilemap mutableMap;
+    //public TerrainTile[,] Map;
     [SerializeField] TMP_Text storyText;
     [SerializeField] Scorer ScoreBoard;
     [SerializeField] TerrainTile[] TerrainIndex;
@@ -16,23 +16,23 @@ public class MapGrid : MonoBehaviour
     {
         gameLevel = levelSO;
 
-        //GenerateTileMap();
+        GenerateTileMap();
         //GenerateRandomTiles();
         SetTargets();
         
     }
 
-    void GenerateRandomTiles()
-    {
-        Map = new TerrainTile[gameLevel.columns, gameLevel.rows];
-        for (int i = 0; i < gameLevel.columns; i++)
-        {
-            for (int j = 0; j < gameLevel.rows; j++)
-            {
-                CreateTile(i, j, gameLevel.starterTile);
-            }
-        }
-    }
+    // void GenerateRandomTiles()
+    // {
+    //     Map = new TerrainTile[gameLevel.columns, gameLevel.rows];
+    //     for (int i = 0; i < gameLevel.columns; i++)
+    //     {
+    //         for (int j = 0; j < gameLevel.rows; j++)
+    //         {
+    //             CreateTile(i, j, gameLevel.starterTile);
+    //         }
+    //     }
+    // }
 
     public void DisplayStoryText()
     {
@@ -52,7 +52,7 @@ public class MapGrid : MonoBehaviour
 
     public void CreateTile(int positionX, int positionY, TerrainTile type) 
     {
-        if(Map is null) 
+        if(gameLevel.map is null) 
         {
             Debug.LogError("Map Grid not instantiated.");
             return;
@@ -61,8 +61,7 @@ public class MapGrid : MonoBehaviour
         Vector3Int position = new Vector3Int(positionX, positionY, 0);
         if(CheckPositionIsOnMapGrid(position))
         {
-            Map[position.x, position.y] = type;
-            tilemap.SetTile(position, type.tileSprite);
+            mutableMap.SetTile(position, type);
         }
     }
 
@@ -79,7 +78,7 @@ public class MapGrid : MonoBehaviour
     {
         if(CheckPositionIsOnMapGrid(position))
         {
-            return Map[position.x, position.y].tileType;
+            return mutableMap.GetTile<TerrainTile>(position).tileType;
         }
         return TerrainTypes.NONE;
     }
@@ -88,7 +87,7 @@ public class MapGrid : MonoBehaviour
     {
         if(!CheckPositionIsOnMapGrid(position)) { return; }
 
-        TerrainTile tile = Map[position.x, position.y];
+        TerrainTile tile = mutableMap.GetTile<TerrainTile>(position);
         Vector3Int[] possiblePositions = {
             new Vector3Int(position.x + 1, position.y, 0),
             new Vector3Int(position.x - 1, position.y, 0),
@@ -97,46 +96,42 @@ public class MapGrid : MonoBehaviour
         };
         List<TerrainTile> validAdjacentTiles = new List<TerrainTile>();
         
-        foreach(Vector3Int positionTile in possiblePositions)
+        foreach(Vector3Int adjacentPosition in possiblePositions)
         {
-            if(CheckPositionIsOnMapGrid(positionTile))
+            if(CheckPositionIsOnMapGrid(adjacentPosition))
             {
-                validAdjacentTiles.Add(Map[positionTile.x, positionTile.y]);
+                TerrainTile adjacentTile = mutableMap.GetTile<TerrainTile>(adjacentPosition);
+                validAdjacentTiles.Add(adjacentTile);
             }
         }
 
         ScoreBoard.ScoreTile(tile, validAdjacentTiles.ToArray());
     }
 
-    public void ScoreMap()
-    {
-        for (int i = 0; i < gameLevel.columns; i++)
-        {
-            for (int j = 0; j < gameLevel.rows; j++)
-            {
-                ScoreTile(new Vector3Int(i, j, 0));
-            }
-        }
-    }
-
-    // public void GenerateTileMap(MapData map)
+    // public void ScoreMap()
     // {
-    //     tilemap.ClearAllTiles();
-    //     for(int i = 0; i < map.data.Length; i++)
+    //     for (int i = 0; i < gameLevel.columns; i++)
     //     {
-    //         for(int j = 0; j < map.data[i].Length; j++)
+    //         for (int j = 0; j < gameLevel.rows; j++)
     //         {
-    //             TerrainTile tile = TerrainIndex[map.data[i][j]];
-    //             if(tile is null) 
-    //             {
-    //                 Debug.LogError("Missing Tile at index " + map.data[i][j].ToString());
-    //                 tile = TerrainIndex[0];
-    //             }
-                
-    //             Map[j, i] = tile;         
-    //             Vector3Int position = new Vector3Int(j, i, 0);
-    //             tilemap.SetTile(position, tile.tileSprite);
+    //             ScoreTile(new Vector3Int(i, j, 0));
     //         }
     //     }
     // }
+
+    public void GenerateTileMap()
+    {
+        // Create new mutable tilemap
+        Tilemap levelTilemap = gameLevel.map.GetComponent<Tilemap>();
+        mutableMap = transform.Find("MutableMap").GetComponent<Tilemap>();
+        mutableMap.ClearAllTiles();
+        for (int i = levelTilemap.cellBounds.xMin; i < levelTilemap.cellBounds.xMax; i++)
+        {
+            for(int j = levelTilemap.cellBounds.yMin; j < levelTilemap.cellBounds.yMax; j++)
+            {
+                Vector3Int position = new Vector3Int(i, j, 0);
+                mutableMap.SetTile(position, levelTilemap.GetTile(position));
+            }
+        }
+    }
 }

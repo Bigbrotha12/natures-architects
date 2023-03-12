@@ -10,8 +10,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] MapGrid mapGrid;
     [SerializeField] AudioClip defaultMusic;
     [SerializeField] AudioClip gameOverMusic;
+    [SerializeField] AudioClip levelSelectMusic;
+    [SerializeField] PlayerController player;
+    [SerializeField] GameObject levelSelectMenu;
 
-    PlayerController player;
     Scorer scorer;
     UIController uiController;
     int currentCharacterID = 0;
@@ -24,7 +26,6 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
-        player = FindObjectOfType<PlayerController>();
         scorer = FindObjectOfType<Scorer>();
         uiController = FindObjectOfType<UIController>();
         audioSource = GetComponent<AudioSource>();
@@ -44,10 +45,19 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        InitializeLevel();
+        ShowLevelSelectMenu(true);
     }
 
-    void InitializeLevel()
+    public void ShowLevelSelectMenu(bool value)
+    {
+        levelSelectMenu.SetActive(value);
+        if (value)
+        {
+            PlayMusic(levelSelectMusic);
+        }
+    }
+
+    public void InitializeLevel()
     {
         scorer.ResetScores();
         player.ShowCharacter(false);
@@ -59,19 +69,6 @@ public class LevelManager : MonoBehaviour
         uiController.SetLevelInformation(CurrentLevelSO);
 
         PlayLevelMusic();
-        StartCoroutine(DelaySetupCharacter());
-    }
-
-    IEnumerator DelaySetupCharacter()
-    {
-        if (GameManager.Instance != null)
-        {
-            while (GameManager.Instance.CurrentState != GameState.RUNNING)
-            {
-                yield return new WaitForEndOfFrame();
-
-            }
-        }
         SetupCurrentCharacter();
     }
 
@@ -112,8 +109,11 @@ public class LevelManager : MonoBehaviour
 
     void PlayMusic(AudioClip clip)
     {
-        audioSource.clip = clip;
-        audioSource.Play();
+        if (clip != null)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
     }
 
     void OnCharacterDeath()

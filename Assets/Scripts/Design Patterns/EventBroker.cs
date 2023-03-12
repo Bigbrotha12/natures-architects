@@ -94,4 +94,10 @@ public class EventBroker
     {
         CharacterChange?.Invoke(newCharacter);
     }
+
+    public static event Action SpawnCharacter;
+    public static void CallSpawnCharacter()
+    {
+        SpawnCharacter?.Invoke();
+    }
 }

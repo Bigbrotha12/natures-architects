@@ -6436,6 +6436,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1843845595516817908, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
+      propertyPath: m_Size.x
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843845595516817908, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
+      propertyPath: m_Size.y
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843845595516817908, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
@@ -27446,9 +27454,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 319406925}
     - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
+      propertyPath: levels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
       propertyPath: levels.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 89adedc2b2a1d654d946d425505eafda, type: 2}
+      objectReference: {fileID: 11400000, guid: 59728c2797c3f2d4c819cb6b8b4d6378, type: 2}
     - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
       propertyPath: levels.Array.data[1]
       value: 

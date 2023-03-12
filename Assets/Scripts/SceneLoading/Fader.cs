@@ -7,6 +7,8 @@ public class Fader : MonoBehaviour
     CanvasGroup canvasGroup;
     Coroutine currentActiveFade;
 
+    public bool FaderIsActive { get { return canvasGroup.alpha != 0; } }
+
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();

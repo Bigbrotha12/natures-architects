@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     Mover mover;
 
     bool isDead;
+    bool canBuild = true;
 
     void Awake()
     {
@@ -43,14 +44,18 @@ public class PlayerController : MonoBehaviour
     {
         if (actionCounter <= 0) return;
 
-        if (!canMove) return;
-        canMove = false;
+        if (!canBuild) return;
 
         if (Input.GetAxis("Fire1") > 0.5f)
         {
+            canBuild = false;
+            canMove = false;
             PlaceTile();
             return;
         }
+
+        if (!canMove) return;
+        canMove = false;
 
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
@@ -82,12 +87,29 @@ public class PlayerController : MonoBehaviour
         canMove = true;
     }
 
+    public void ShowCharacter(bool show)
+    {
+        character.ShowCharacter(show);
+    }
+
     public void SetCharacter(CharacterSO newCharacter, int moves)
     {
         character.ChangeCharacter(newCharacter);
         SetActionCounter(moves);
+        StartCoroutine(CheckCharacterSetupComplete());
+    }
 
-        // TODO: wait for spawn animation to finish before can move
+    IEnumerator CheckCharacterSetupComplete()
+    {
+        while(!character.IsReady)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        OnCharacterSetupComplete();
+    }
+
+    void OnCharacterSetupComplete()
+    {
         canMove = true;
     }
 
@@ -168,10 +190,10 @@ public class PlayerController : MonoBehaviour
 
         if (isDead)
         {
-            StartCoroutine(CharacterDeath());
+            CharacterDeath();
             return;
         }
-        StartCoroutine(InputCooldown());
+        canMove = true;
     }
 
     void IncrementActionCount()
@@ -188,17 +210,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator CharacterDeath()
+    void CharacterDeath()
     {
-        yield return StartCoroutine(character.DeathAnimation());
         isDead = false;
         EventBroker.CallCharacterDeath();
-        StartCoroutine(InputCooldown());
     }
 
     IEnumerator InputCooldown() 
     {
         yield return new WaitForSeconds(inputDelay);
         canMove = true;
+        canBuild = true;
     }
 }

@@ -50,14 +50,29 @@ public class LevelManager : MonoBehaviour
     void InitializeLevel()
     {
         scorer.ResetScores();
+        player.ShowCharacter(false);
         currentCharacterID = 0;
         player.transform.position = CurrentLevelSO.StartPosition;
-        SetupCurrentCharacter();
+
         mapGrid.SetLevel(CurrentLevelSO);
         SetLevelText(CurrentLevelSO);
         uiController.SetLevelInformation(CurrentLevelSO);
 
         PlayLevelMusic();
+        StartCoroutine(DelaySetupCharacter());
+    }
+
+    IEnumerator DelaySetupCharacter()
+    {
+        if (GameManager.Instance != null)
+        {
+            while (GameManager.Instance.CurrentState != GameState.RUNNING)
+            {
+                yield return new WaitForEndOfFrame();
+
+            }
+        }
+        SetupCurrentCharacter();
     }
 
     void SetupCurrentCharacter()

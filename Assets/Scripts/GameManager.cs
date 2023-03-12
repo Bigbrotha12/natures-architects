@@ -4,12 +4,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum GameState
+{
+    PREGAME,
+    RUNNING,
+    PAUSE,
+    ENDGAME
+}
+
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] SceneLoader sceneLoader;
     [SerializeField] SplashScreen splashScreen;
 
+    bool gameCompleted = false;
+    GameState currentState;
     Coroutine splashCoroutine;
+
+    public bool GameCompleted { get { return gameCompleted; } }
+    public GameState CurrentState { get { return currentState; } }
 
     protected override void Awake()
     {
@@ -20,6 +33,7 @@ public class GameManager : Singleton<GameManager>
         EventBroker.ReturnToTitleScreen += ReturnToStartMenu;
         EventBroker.GameCompleted += OnGameCompleted;
         EventBroker.RestartGame += RestartGame;
+        currentState = GameState.PREGAME;
     }
 
     void Start()
@@ -45,22 +59,31 @@ public class GameManager : Singleton<GameManager>
 
     void LoadGame()
     {
-        StartCoroutine(sceneLoader.LoadScene(SceneIndex.GAME_SCENE, SceneIndex.TITLE_SCENE));
+        StartCoroutine(LoadGameRoutine(SceneIndex.TITLE_SCENE));
+    }
+
+    IEnumerator LoadGameRoutine(SceneIndex previousScene)
+    {
+        yield return StartCoroutine(sceneLoader.LoadScene(SceneIndex.GAME_SCENE, previousScene));
+        currentState = GameState.RUNNING;
     }
 
     void RestartGame()
     {
-        StartCoroutine(sceneLoader.LoadScene(SceneIndex.GAME_SCENE, SceneIndex.END_SCENE));
+        StartCoroutine(LoadGameRoutine(SceneIndex.END_SCENE));
     }
 
     void ReturnToStartMenu()
     {
         StartCoroutine(sceneLoader.LoadScene(SceneIndex.TITLE_SCENE, SceneIndex.GAME_SCENE));
+        currentState = GameState.PREGAME;
     }
 
     void OnGameCompleted()
     {
-        StartCoroutine(sceneLoader.LoadScene(SceneIndex.END_SCENE, SceneIndex.GAME_SCENE));
+        gameCompleted = true;
+        StartCoroutine(sceneLoader.LoadScene(SceneIndex.TITLE_SCENE, SceneIndex.GAME_SCENE));
+        currentState = GameState.ENDGAME;
     }
 
     void QuitGame()

@@ -10,10 +10,12 @@ public class CharacterSO : ScriptableObject, IPlayerSFXs
     [SerializeField] AudioClip moveSFX;
     [SerializeField] AudioClip moveBlockedSFX;
     [SerializeField] AudioClip placeTerrainSFX;
+    [SerializeField] AudioClip spawnSFX;
 
     public AudioClip MoveSFX { get { return moveSFX; } }
     public AudioClip MoveBlockedSFX { get { return moveBlockedSFX; } }
     public AudioClip PlaceTerrainSFX { get { return placeTerrainSFX; } }
+    public AudioClip SpawnSFX { get { return spawnSFX; } }
 }
 
 public interface IPlayerSFXs
@@ -21,4 +23,5 @@ public interface IPlayerSFXs
     public AudioClip MoveSFX { get; }
     public AudioClip MoveBlockedSFX { get; }
     public AudioClip PlaceTerrainSFX { get; }
+    public AudioClip SpawnSFX { get; }
 }

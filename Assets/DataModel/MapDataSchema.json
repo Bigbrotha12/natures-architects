@@ -1,0 +1,7 @@
+{
+    "rows": "number",
+    "columns": "number",
+    "emptyTile": "number",
+    "defaultTile": "number",
+    "data": "number[][]"
+}

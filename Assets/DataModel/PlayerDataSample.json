@@ -1,0 +1,27 @@
+{
+    "name": "something",
+    "completion": 
+    [
+        {
+            "chapter": 1,
+            "level": 1,
+            "stars": 3,
+            "score": 100000,
+            "map_image": "MapData"
+        },
+        {
+            "chapter": 1,
+            "level": 2,
+            "stars": 3,
+            "score": 104000,
+            "map_image": "MapData"
+        },
+        {
+            "chapter": 1,
+            "level": 3,
+            "stars": 2,
+            "score": 102000,
+            "map_image": "MapData"
+        }
+    ]
+}

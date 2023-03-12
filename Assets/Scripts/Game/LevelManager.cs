@@ -153,4 +153,10 @@ public class LevelManager : MonoBehaviour
     {
         EventBroker.CallGameCompleted();
     }
+
+    // public void LoadLevel(int index) 
+    // {
+    //     MapData map = DataParser.GetMapData(index);
+    //     mapGrid.GenerateTileMap(map);
+    // }
 }

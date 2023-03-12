@@ -1,0 +1,13 @@
+{
+    "name": "string",
+    "completion": 
+    [
+        {
+            "chapter": "number",
+            "level": "number",
+            "stars": "number",
+            "score": "number",
+            "map_image": "MapData"
+        }
+    ]
+}

@@ -10,12 +10,14 @@ public class MapGrid : MonoBehaviour
     public TerrainTile[,] Map;
     [SerializeField] TMP_Text storyText;
     [SerializeField] Scorer ScoreBoard;
+    [SerializeField] TerrainTile[] TerrainIndex;
     
     public void SetLevel(GameLevelSO levelSO)
     {
-        tilemap.ClearAllTiles();
         gameLevel = levelSO;
-        GenerateRandomTiles();
+
+        //GenerateTileMap();
+        //GenerateRandomTiles();
         SetTargets();
         
     }
@@ -116,4 +118,25 @@ public class MapGrid : MonoBehaviour
             }
         }
     }
+
+    // public void GenerateTileMap(MapData map)
+    // {
+    //     tilemap.ClearAllTiles();
+    //     for(int i = 0; i < map.data.Length; i++)
+    //     {
+    //         for(int j = 0; j < map.data[i].Length; j++)
+    //         {
+    //             TerrainTile tile = TerrainIndex[map.data[i][j]];
+    //             if(tile is null) 
+    //             {
+    //                 Debug.LogError("Missing Tile at index " + map.data[i][j].ToString());
+    //                 tile = TerrainIndex[0];
+    //             }
+                
+    //             Map[j, i] = tile;         
+    //             Vector3Int position = new Vector3Int(j, i, 0);
+    //             tilemap.SetTile(position, tile.tileSprite);
+    //         }
+    //     }
+    // }
 }

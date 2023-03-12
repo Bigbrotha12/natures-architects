@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] PlayerController player;
     [SerializeField] GameObject levelSelectMenu;
 
+    int levelsCompleted = 0;
+
     Scorer scorer;
     UIController uiController;
     int currentCharacterID = 0;
@@ -29,7 +31,11 @@ public class LevelManager : MonoBehaviour
         scorer = FindObjectOfType<Scorer>();
         uiController = FindObjectOfType<UIController>();
         audioSource = GetComponent<AudioSource>();
-        currentLevelIndex = 0;
+        if (PlayerPrefs.HasKey("LevelsCompleted"))
+        {
+            levelsCompleted = PlayerPrefs.GetInt("LevelsCompleted");
+        }
+        currentLevelIndex = levelsCompleted;
 
         EventBroker.CharacterDeath += OnCharacterDeath;
         EventBroker.LoadNextLevel += LoadNextLevel;
@@ -55,6 +61,13 @@ public class LevelManager : MonoBehaviour
         {
             PlayMusic(levelSelectMusic);
         }
+    }
+
+    public bool SetLevelIndex(int newLevel)
+    {
+        if (newLevel > levelsCompleted + 1) return false;
+        currentLevelIndex = newLevel - 1;
+        return true;
     }
 
     public void InitializeLevel()

@@ -82,4 +82,22 @@ public class EventBroker
     {
         GameCompleted?.Invoke();
     }
+
+    public static event Action ExitSoundMenu;
+    public static void CallExitSoundMenu()
+    {
+        ExitSoundMenu?.Invoke();
+    }
+
+    public static event Action<CharacterSO> CharacterChange;
+    public static void CallCharacterChange(CharacterSO newCharacter)
+    {
+        CharacterChange?.Invoke(newCharacter);
+    }
+
+    public static event Action SpawnCharacter;
+    public static void CallSpawnCharacter()
+    {
+        SpawnCharacter?.Invoke();
+    }
 }

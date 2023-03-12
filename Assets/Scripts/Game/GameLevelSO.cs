@@ -7,12 +7,12 @@ public class GameLevelSO : ScriptableObject
     [System.Serializable]
     public class ScoreTargets
     {
-        public int[] GrassTargets;
-        public int[] ForestTargets;
-        public int[] MountainTargets;
-        public int[] WaterTargets;
-        public int[] SnowTargets;
-        public int[] FireTargets;
+        public int[] GrassTargets = new int[3];
+        public int[] ForestTargets = new int[3];
+        public int[] MountainTargets = new int[3];
+        public int[] WaterTargets = new int[3];
+        public int[] SnowTargets = new int[3];
+        public int[] FireTargets = new int[3];
     }
 
     public string[] flavorTexts;

@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public Transform player;
     public bool canMove = true;
-    public float inputDelay = 0.2f;
+    public float inputDelay = 0.5f;
     public int actionCounter = 12;
     public TMP_Text actionCounterText;
 
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     Mover mover;
 
     bool isDead;
+    bool canBuild = true;
 
     void Awake()
     {
@@ -42,34 +43,42 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (actionCounter <= 0) return;
-        if (!canMove) return;
-        canMove = false;
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (!canBuild) return;
+
+        if (Input.GetAxis("Fire1") > 0.5f)
         {
+            canBuild = false;
+            canMove = false;
             PlaceTile();
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        if (!canMove) return;
+        canMove = false;
+
+        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxis("Horizontal");
+        
+        if (vertical > 0.9f)
         {
             Move(Vector3.up);
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.DownArrow))
+        if (vertical < -0.9f)
         {
             Move(Vector3.down);
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        if (horizontal < -0.9f)
         {
             Move(Vector3.left);
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if (horizontal > 0.9f)
         {
             Move(Vector3.right);
             return;
@@ -78,10 +87,29 @@ public class PlayerController : MonoBehaviour
         canMove = true;
     }
 
+    public void ShowCharacter(bool show)
+    {
+        character.ShowCharacter(show);
+    }
+
     public void SetCharacter(CharacterSO newCharacter, int moves)
     {
         character.ChangeCharacter(newCharacter);
         SetActionCounter(moves);
+        StartCoroutine(CheckCharacterSetupComplete());
+    }
+
+    IEnumerator CheckCharacterSetupComplete()
+    {
+        while(!character.IsReady)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        OnCharacterSetupComplete();
+    }
+
+    void OnCharacterSetupComplete()
+    {
         canMove = true;
     }
 
@@ -144,26 +172,28 @@ public class PlayerController : MonoBehaviour
 
         if (mapGrid.CheckPositionIsOnMapGrid(newPosition))
         {
+            IncrementActionCount();
             mover.movementCompletedEvent += OnMovementCompleted;
             mover.MoveToLocation(player, newPosition);
             EventBroker.CallPlayerMove();
-            IncrementActionCount();
         }
         else
         {
             EventBroker.CallPlayerMoveBlocked();
-            canMove = true;
+            StartCoroutine(InputCooldown());
         }
     }
 
     void OnMovementCompleted()
     {
+        mover.movementCompletedEvent -= OnMovementCompleted;
+
         if (isDead)
         {
             CharacterDeath();
+            return;
         }
         canMove = true;
-        mover.movementCompletedEvent -= OnMovementCompleted;
     }
 
     void IncrementActionCount()
@@ -188,9 +218,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator InputCooldown() 
     {
-        if (actionCounter <= 0) yield break;
-        
         yield return new WaitForSeconds(inputDelay);
         canMove = true;
+        canBuild = true;
     }
 }

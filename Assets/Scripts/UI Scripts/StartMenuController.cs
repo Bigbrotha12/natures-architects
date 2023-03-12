@@ -12,8 +12,12 @@ public class StartMenuController : MonoBehaviour
     [SerializeField] Color buttonHighlightTextColor;
     [SerializeField] AudioClip buttonHighlightSFX;
 
+    [SerializeField] GameObject startMenu;
+    [SerializeField] GameObject settingsMenu;
+
     [SerializeField] Button startButton;
     [SerializeField] Button settingsButton;
+    [SerializeField] Button creditsButton;
     [SerializeField] Button quitButton;
 
     List<Button> buttons = new List<Button>();
@@ -24,13 +28,25 @@ public class StartMenuController : MonoBehaviour
         buttons.Add(startButton);
         buttons.Add(settingsButton);
         buttons.Add(quitButton);
+        buttons.Add(creditsButton);
 
         audioSource = GetComponent<AudioSource>();
+
+        EventBroker.ExitSoundMenu += ExitSoundMenu;
     }
 
     void OnEnable()
     {
         AddOnClickListeners();
+        SetDefaultColors();
+    }
+
+    private void SetDefaultColors()
+    {
+        foreach (Button button in buttons)
+        {
+            button.GetComponentInChildren<TextMeshProUGUI>().color = buttonDefaultTextColor;
+        }
     }
 
     void OnDisable()
@@ -76,7 +92,26 @@ public class StartMenuController : MonoBehaviour
 
     void SettingsButtonPressed()
     {
-        print("TODO: Settings button");
+        ShowStartMenu(false);
+        ShowSettingsMenu(true);
+    }
+
+    private void ExitSoundMenu()
+    {
+        ShowSettingsMenu(false);
+        ShowStartMenu(true);
+    }
+
+
+    public void ShowStartMenu(bool show)
+    {
+        startMenu.SetActive(show);
+        SetDefaultColors();
+    }
+
+    public void ShowSettingsMenu(bool show)
+    {
+        settingsMenu.SetActive(show);
     }
 
     void QuitButtonPressed()

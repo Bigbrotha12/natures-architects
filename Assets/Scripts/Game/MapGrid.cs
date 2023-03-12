@@ -7,7 +7,6 @@ public class MapGrid : MonoBehaviour
 {
     public GameLevelSO gameLevel;
     Tilemap mutableMap;
-    //public TerrainTile[,] Map;
     [SerializeField] TMP_Text storyText;
     [SerializeField] Scorer ScoreBoard;
     [SerializeField] TerrainTile[] TerrainIndex;
@@ -15,24 +14,9 @@ public class MapGrid : MonoBehaviour
     public void SetLevel(GameLevelSO levelSO)
     {
         gameLevel = levelSO;
-
         GenerateTileMap();
-        //GenerateRandomTiles();
         SetTargets();
-        
     }
-
-    // void GenerateRandomTiles()
-    // {
-    //     Map = new TerrainTile[gameLevel.columns, gameLevel.rows];
-    //     for (int i = 0; i < gameLevel.columns; i++)
-    //     {
-    //         for (int j = 0; j < gameLevel.rows; j++)
-    //         {
-    //             CreateTile(i, j, gameLevel.starterTile);
-    //         }
-    //     }
-    // }
 
     public void DisplayStoryText()
     {
@@ -107,17 +91,6 @@ public class MapGrid : MonoBehaviour
 
         ScoreBoard.ScoreTile(tile, validAdjacentTiles.ToArray());
     }
-
-    // public void ScoreMap()
-    // {
-    //     for (int i = 0; i < gameLevel.columns; i++)
-    //     {
-    //         for (int j = 0; j < gameLevel.rows; j++)
-    //         {
-    //             ScoreTile(new Vector3Int(i, j, 0));
-    //         }
-    //     }
-    // }
 
     public void GenerateTileMap()
     {

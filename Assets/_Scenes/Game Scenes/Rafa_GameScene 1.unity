@@ -455,6 +455,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 148080784, guid: b37d736d42716c44990a1b37d3ad8298, type: 3}
+      propertyPath: storyText
+      value: 
+      objectReference: {fileID: 813921242}
+    - target: {fileID: 148080784, guid: b37d736d42716c44990a1b37d3ad8298, type: 3}
+      propertyPath: ScoreBoard
+      value: 
+      objectReference: {fileID: 1524029833}
     - target: {fileID: 4302857050816720528, guid: b37d736d42716c44990a1b37d3ad8298, type: 3}
       propertyPath: storyText
       value: 
@@ -469,11 +477,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4302857051109939041, guid: b37d736d42716c44990a1b37d3ad8298, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302857051109939041, guid: b37d736d42716c44990a1b37d3ad8298, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302857051109939041, guid: b37d736d42716c44990a1b37d3ad8298, type: 3}
       propertyPath: m_LocalPosition.z
@@ -635,6 +643,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d89cd04860a1c439bf77bfad47b26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &226156628 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 148080784, guid: b37d736d42716c44990a1b37d3ad8298, type: 3}
+  m_PrefabInstance: {fileID: 148080780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e0e40c396714810ac492240cf85919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &264290329 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 264290329, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
@@ -719,17 +738,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 279577744, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
   m_PrefabInstance: {fileID: 1328948687}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &319406925 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4302857050816720528, guid: b37d736d42716c44990a1b37d3ad8298, type: 3}
-  m_PrefabInstance: {fileID: 148080780}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6e0e40c396714810ac492240cf85919, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &380170798 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 380170798, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
@@ -773,7 +781,7 @@ PrefabInstance:
     - target: {fileID: 1843845594924854134, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
       propertyPath: mapGrid
       value: 
-      objectReference: {fileID: 319406925}
+      objectReference: {fileID: 226156628}
     - target: {fileID: 1843845594924854134, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
       propertyPath: actionCounterText
       value: 
@@ -847,6 +855,17 @@ GameObject:
 --- !u!114 &802435081 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3769024385458042249, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+  m_PrefabInstance: {fileID: 1328948687}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &813921242 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9063200114381971352, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
   m_PrefabInstance: {fileID: 1328948687}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3206,7 +3225,7 @@ PrefabInstance:
     - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
       propertyPath: mapGrid
       value: 
-      objectReference: {fileID: 319406925}
+      objectReference: {fileID: 226156628}
     - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
       propertyPath: levels.Array.data[0]
       value: 

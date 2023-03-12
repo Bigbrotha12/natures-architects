@@ -23,9 +23,9 @@ MonoBehaviour:
   music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
   map: {fileID: 1168148588298665087, guid: 94024f0180208304a9544618804e91ea, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
-  rows: 4
+  rows: 6
   columns: 4
-  StartCoordinates: {x: 0, y: 0, z: 0}
+  StartCoordinates: {x: 2, y: 2, z: 0}
   AvailableCharacters:
   - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
     Uses: 12

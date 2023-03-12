@@ -85,11 +85,6 @@ public class StartMenuController : MonoBehaviour
         EventBroker.CallStartGame();
     }
 
-    public void RestartButtonPressed()
-    {
-        EventBroker.CallRestartGame();
-    }
-
     void SettingsButtonPressed()
     {
         ShowStartMenu(false);

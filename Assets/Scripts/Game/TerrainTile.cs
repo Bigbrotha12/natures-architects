@@ -87,4 +87,16 @@ public class TerrainTile : TileBase
         }
         return scoringText;
     }
+
+    public List<(TerrainTypes, int)> GetScoringKey()
+    {
+        List<(TerrainTypes, int)> scoring = new List<(TerrainTypes, int)>();
+        if(adjacentGrassValue != 0) scoring.Add((TerrainTypes.Grass, adjacentGrassValue));
+        if(adjacentWaterValue != 0) scoring.Add((TerrainTypes.Water, adjacentWaterValue));
+        if(adjacentMountainValue != 0) scoring.Add((TerrainTypes.Mountain, adjacentMountainValue));
+        if(adjacentForestValue != 0) scoring.Add((TerrainTypes.Forest, adjacentForestValue));
+        if(adjacentSnowValue != 0) scoring.Add((TerrainTypes.Snow, adjacentSnowValue));
+        if(adjacentFireValue != 0) scoring.Add((TerrainTypes.Fire, adjacentFireValue));
+        return scoring;
+    }
 }

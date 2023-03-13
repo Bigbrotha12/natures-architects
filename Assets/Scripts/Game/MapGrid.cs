@@ -9,7 +9,7 @@ public class MapGrid : MonoBehaviour
     Tilemap mutableMap;
     [SerializeField] TMP_Text storyText;
     [SerializeField] Scorer ScoreBoard;
-    [SerializeField] TerrainTile[] TerrainIndex;
+    public TerrainTile[] TerrainIndex;
     
     public void SetLevel(GameLevelSO levelSO)
     {

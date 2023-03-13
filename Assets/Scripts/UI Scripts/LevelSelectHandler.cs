@@ -49,7 +49,8 @@ public class LevelSelectHandler: MonoBehaviour {
         playerSavedData = new playerTestData(); 
         #endregion
 
-        EventBroker.ReturnToTitleScreen += () => gameObject.SetActive(true);
+        // Not sure why this line is needed
+        //EventBroker.ReturnToTitleScreen += () => gameObject.SetActive(true);
         transform
             .Find("Border")
             .Find("LevelSelect")

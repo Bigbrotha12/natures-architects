@@ -147,6 +147,10 @@ public class LevelManager : MonoBehaviour
         Medals result = scorer.CheckWinCondition();
         if (result != Medals.NONE)
         {
+            if (currentLevelIndex + 1 > levelsCompleted)
+            {
+                levelsCompleted = currentLevelIndex + 1;
+            }
             EventBroker.CallLevelCompleted(result);
         }
         else

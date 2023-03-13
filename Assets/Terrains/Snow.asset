@@ -18,5 +18,5 @@ MonoBehaviour:
   adjacentWaterValue: 1
   adjacentMountainValue: 2
   adjacentForestValue: 0
-  adjacentSnowValue: 0
+  adjacentSnowValue: 1
   adjacentFireValue: -3

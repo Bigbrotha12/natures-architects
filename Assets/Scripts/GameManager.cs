@@ -32,7 +32,6 @@ public class GameManager : Singleton<GameManager>
         EventBroker.QuitGame += QuitGame;
         EventBroker.ReturnToTitleScreen += ReturnToStartMenu;
         EventBroker.GameCompleted += OnGameCompleted;
-        EventBroker.RestartGame += RestartGame;
         currentState = GameState.PREGAME;
     }
 
@@ -54,7 +53,6 @@ public class GameManager : Singleton<GameManager>
         EventBroker.QuitGame -= QuitGame;
         EventBroker.ReturnToTitleScreen -= ReturnToStartMenu;
         EventBroker.GameCompleted -= OnGameCompleted;
-        EventBroker.RestartGame -= RestartGame;
     }
 
     void LoadGame()
@@ -66,11 +64,6 @@ public class GameManager : Singleton<GameManager>
     {
         yield return StartCoroutine(sceneLoader.LoadScene(SceneIndex.GAME_SCENE, previousScene));
         currentState = GameState.RUNNING;
-    }
-
-    void RestartGame()
-    {
-        StartCoroutine(LoadGameRoutine(SceneIndex.END_SCENE));
     }
 
     void ReturnToStartMenu()

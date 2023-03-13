@@ -10,8 +10,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField] MapGrid mapGrid;
     [SerializeField] AudioClip defaultMusic;
     [SerializeField] AudioClip gameOverMusic;
+    [SerializeField] AudioClip levelSelectMusic;
+    [SerializeField] PlayerController player;
+    [SerializeField] GameObject levelSelectMenu;
 
-    PlayerController player;
+    int levelsCompleted = 0;
+
     Scorer scorer;
     UIController uiController;
     int currentCharacterID = 0;
@@ -24,11 +28,14 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
-        player = FindObjectOfType<PlayerController>();
         scorer = FindObjectOfType<Scorer>();
         uiController = FindObjectOfType<UIController>();
         audioSource = GetComponent<AudioSource>();
-        currentLevelIndex = 0;
+        if (PlayerPrefs.HasKey("LevelsCompleted"))
+        {
+            levelsCompleted = PlayerPrefs.GetInt("LevelsCompleted");
+        }
+        currentLevelIndex = levelsCompleted;
 
         EventBroker.CharacterDeath += OnCharacterDeath;
         EventBroker.LoadNextLevel += LoadNextLevel;
@@ -44,10 +51,26 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        InitializeLevel();
+        ShowLevelSelectMenu(true);
     }
 
-    void InitializeLevel()
+    public void ShowLevelSelectMenu(bool value)
+    {
+        levelSelectMenu.SetActive(value);
+        if (value)
+        {
+            PlayMusic(levelSelectMusic);
+        }
+    }
+
+    public bool SetLevelIndex(int newLevel)
+    {
+        if (newLevel > levelsCompleted + 1) return false;
+        currentLevelIndex = newLevel - 1;
+        return true;
+    }
+
+    public void InitializeLevel()
     {
         scorer.ResetScores();
         player.ShowCharacter(false);
@@ -59,19 +82,6 @@ public class LevelManager : MonoBehaviour
         uiController.SetLevelInformation(CurrentLevelSO);
 
         PlayLevelMusic();
-        StartCoroutine(DelaySetupCharacter());
-    }
-
-    IEnumerator DelaySetupCharacter()
-    {
-        if (GameManager.Instance != null)
-        {
-            while (GameManager.Instance.CurrentState != GameState.RUNNING)
-            {
-                yield return new WaitForEndOfFrame();
-
-            }
-        }
         SetupCurrentCharacter();
     }
 
@@ -112,8 +122,11 @@ public class LevelManager : MonoBehaviour
 
     void PlayMusic(AudioClip clip)
     {
-        audioSource.clip = clip;
-        audioSource.Play();
+        if (clip != null)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
     }
 
     void OnCharacterDeath()
@@ -134,6 +147,10 @@ public class LevelManager : MonoBehaviour
         Medals result = scorer.CheckWinCondition();
         if (result != Medals.NONE)
         {
+            if (currentLevelIndex + 1 > levelsCompleted)
+            {
+                levelsCompleted = currentLevelIndex + 1;
+            }
             EventBroker.CallLevelCompleted(result);
         }
         else

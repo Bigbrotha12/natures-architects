@@ -1,9 +1,9 @@
 public enum TerrainTypes {
-    NONE,
-    GRASS,
-    FOREST,
-    WATER,
-    MOUNTAIN,
-    FIRE,
-    SNOW
+    None,
+    Grass,
+    Forest,
+    Water,
+    Mountain,
+    Fire,
+    Snow
 }

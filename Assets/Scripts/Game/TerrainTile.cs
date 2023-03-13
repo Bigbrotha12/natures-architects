@@ -19,17 +19,17 @@ public class TerrainTile : TileBase
     {
         switch (type)
         {
-            case TerrainTypes.GRASS:
+            case TerrainTypes.Grass:
                 return adjacentGrassValue;
-            case TerrainTypes.FOREST:
+            case TerrainTypes.Forest:
                 return adjacentForestValue;
-            case TerrainTypes.WATER:
+            case TerrainTypes.Water:
                 return adjacentWaterValue;
-            case TerrainTypes.MOUNTAIN:
+            case TerrainTypes.Mountain:
                 return adjacentMountainValue;
-            case TerrainTypes.FIRE:
+            case TerrainTypes.Fire:
                 return adjacentFireValue;
-            case TerrainTypes.SNOW:
+            case TerrainTypes.Snow:
                 return adjacentSnowValue;
             default:
                 return 0;

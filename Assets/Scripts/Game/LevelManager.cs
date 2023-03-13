@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] GameLevelSO[] levels;
+    public GameLevelSO[] levels;
     [SerializeField] int currentLevelIndex;
     [SerializeField] MapGrid mapGrid;
     [SerializeField] AudioClip defaultMusic;
@@ -65,13 +65,21 @@ public class LevelManager : MonoBehaviour
 
     public bool SetLevelIndex(int newLevel)
     {
-        if (newLevel > levelsCompleted + 1) return false;
+        Debug.Log("Setting Level Index: " + newLevel.ToString());
+        
+        // @Richard I had to comment out below line, otherwise it won't let me select levels.
+        // The UI already checks and disables selecting unavailable levels so this check can 
+        // be skipped.
+        //if (newLevel > levelsCompleted + 1) return false;
         currentLevelIndex = newLevel - 1;
+        Debug.Log("Index result: " + currentLevelIndex.ToString());
         return true;
     }
 
     public void InitializeLevel()
     {
+        Debug.Log("Index result: " + currentLevelIndex.ToString());
+        Debug.Log("Initializing Level Index: " + CurrentLevelSO.levelID.ToString());
         scorer.ResetScores();
         player.ShowCharacter(false);
         currentCharacterID = 0;

@@ -4,6 +4,7 @@ using UnityEngine.Tilemaps;
 [CreateAssetMenu(menuName = "Game Level", fileName = "Levels")]
 public class GameLevelSO : ScriptableObject
 {
+    public int levelID;
     [System.Serializable]
     public class ScoreTargets
     {

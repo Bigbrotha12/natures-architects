@@ -13,6 +13,7 @@ public class MapGrid : MonoBehaviour
     
     public void SetLevel(GameLevelSO levelSO)
     {
+        Debug.Log("MapGrid: Setting level to " + levelSO.levelID.ToString());
         gameLevel = levelSO;
         GenerateTileMap();
         SetTargets();
@@ -26,12 +27,12 @@ public class MapGrid : MonoBehaviour
 
     void SetTargets()
     {
-        ScoreBoard.SetTargetScore(TerrainTypes.GRASS, (gameLevel.levelTargets.GrassTargets[0], gameLevel.levelTargets.GrassTargets[1], gameLevel.levelTargets.GrassTargets[2]));
-        ScoreBoard.SetTargetScore(TerrainTypes.FOREST, (gameLevel.levelTargets.ForestTargets[0], gameLevel.levelTargets.ForestTargets[1], gameLevel.levelTargets.ForestTargets[2]));
-        ScoreBoard.SetTargetScore(TerrainTypes.WATER, (gameLevel.levelTargets.WaterTargets[0], gameLevel.levelTargets.WaterTargets[1], gameLevel.levelTargets.WaterTargets[2]));
-        ScoreBoard.SetTargetScore(TerrainTypes.MOUNTAIN, (gameLevel.levelTargets.MountainTargets[0], gameLevel.levelTargets.MountainTargets[1], gameLevel.levelTargets.MountainTargets[2]));
-        ScoreBoard.SetTargetScore(TerrainTypes.FIRE, (gameLevel.levelTargets.FireTargets[0], gameLevel.levelTargets.FireTargets[1], gameLevel.levelTargets.FireTargets[2]));
-        ScoreBoard.SetTargetScore(TerrainTypes.SNOW, (gameLevel.levelTargets.SnowTargets[0], gameLevel.levelTargets.SnowTargets[1], gameLevel.levelTargets.SnowTargets[2]));
+        ScoreBoard.SetTargetScore(TerrainTypes.Grass, (gameLevel.levelTargets.GrassTargets[0], gameLevel.levelTargets.GrassTargets[1], gameLevel.levelTargets.GrassTargets[2]));
+        ScoreBoard.SetTargetScore(TerrainTypes.Forest, (gameLevel.levelTargets.ForestTargets[0], gameLevel.levelTargets.ForestTargets[1], gameLevel.levelTargets.ForestTargets[2]));
+        ScoreBoard.SetTargetScore(TerrainTypes.Water, (gameLevel.levelTargets.WaterTargets[0], gameLevel.levelTargets.WaterTargets[1], gameLevel.levelTargets.WaterTargets[2]));
+        ScoreBoard.SetTargetScore(TerrainTypes.Mountain, (gameLevel.levelTargets.MountainTargets[0], gameLevel.levelTargets.MountainTargets[1], gameLevel.levelTargets.MountainTargets[2]));
+        ScoreBoard.SetTargetScore(TerrainTypes.Fire, (gameLevel.levelTargets.FireTargets[0], gameLevel.levelTargets.FireTargets[1], gameLevel.levelTargets.FireTargets[2]));
+        ScoreBoard.SetTargetScore(TerrainTypes.Snow, (gameLevel.levelTargets.SnowTargets[0], gameLevel.levelTargets.SnowTargets[1], gameLevel.levelTargets.SnowTargets[2]));
     }
 
     public void CreateTile(int positionX, int positionY, TerrainTile type) 
@@ -64,7 +65,7 @@ public class MapGrid : MonoBehaviour
         {
             return mutableMap.GetTile<TerrainTile>(position).tileType;
         }
-        return TerrainTypes.NONE;
+        return TerrainTypes.None;
     }
 
     public void ScoreTile(Vector3Int position)

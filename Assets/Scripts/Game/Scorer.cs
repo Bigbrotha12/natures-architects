@@ -38,12 +38,12 @@ public class Scorer : MonoBehaviour
     {
         UIElement = new Dictionary<TerrainTypes, ScoreUI>()
         {
-            {TerrainTypes.GRASS, grassScore},
-            {TerrainTypes.FOREST, forestScore},
-            {TerrainTypes.MOUNTAIN, mountainScore},
-            {TerrainTypes.WATER, waterScore},
-            {TerrainTypes.SNOW, snowScore},
-            {TerrainTypes.FIRE, fireScore}
+            {TerrainTypes.Grass, grassScore},
+            {TerrainTypes.Forest, forestScore},
+            {TerrainTypes.Mountain, mountainScore},
+            {TerrainTypes.Water, waterScore},
+            {TerrainTypes.Snow, snowScore},
+            {TerrainTypes.Fire, fireScore}
         };
     }
 

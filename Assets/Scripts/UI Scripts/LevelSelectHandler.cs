@@ -19,18 +19,23 @@ public class LevelSelectHandler: MonoBehaviour {
         public bool completed;
         public int score;
         public int stars;
-        public bool Available(){return available;}
-        public bool Completed(){return completed;}
-        public int HighScore(){return score;}
-        public Sprite MapImage()
-        {
-            throw new System.NotImplementedException();
-        }
-        public int StarsAwarded(){return stars;}
+        public bool Available { get { return available; } set { available = value; } }
+        public bool Completed { get { return completed; } set { completed = value; } }
+        public int HighScore { get { return score; } set { score = value; } }
+        public Sprite MapImage {  get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+        public int StarsAwarded { get { return stars; } set { stars = value; } }
     }
     class playerTestData : IPlayerProgressData
     {
-        public ILevelProgressData GetLevelProgress(int levelID)
+        string playerName = "Test";
+
+        public string Name { get => playerName; set => playerName = value; }
+
+        public int LevelsCompleted => throw new System.NotImplementedException();
+
+        public void AddLevelProgressData(int levelID, ILevelProgressData levelProgress) { }
+
+        public ILevelProgressData GetLevelProgressData(int levelID)
         {
             return new progressTestData()
             {
@@ -46,10 +51,9 @@ public class LevelSelectHandler: MonoBehaviour {
     {
         // Mock Test
         #region Test
-        playerSavedData = new playerTestData(); 
+        playerSavedData = SaveData.Instance.PlayerProgressData;
         #endregion
 
-        EventBroker.ReturnToTitleScreen += () => gameObject.SetActive(true);
         transform
             .Find("Border")
             .Find("LevelSelect")
@@ -94,7 +98,7 @@ public class LevelSelectHandler: MonoBehaviour {
 
     void DisplayLevelScore(GameLevelSO level)
     {
-        ILevelProgressData progress = playerSavedData.GetLevelProgress(level.levelID);
+        ILevelProgressData progress = playerSavedData.GetLevelProgressData(level.levelID);
         Image bronzeStar = transform
             .Find("Border")
             .Find("LevelInfo")
@@ -121,8 +125,20 @@ public class LevelSelectHandler: MonoBehaviour {
             .Find("ScoreText")
             .GetComponent<TMP_Text>();
         
-        highScore.text = progress.HighScore().ToString();
-        switch (progress.StarsAwarded())
+        if (progress == null)
+        {
+            highScore.text = "0";
+
+            bronzeStar.sprite = emptyStar;
+            silverStar.sprite = emptyStar;
+            goldStar.sprite = emptyStar;
+
+            return;
+        }
+
+        highScore.text = progress.HighScore.ToString();
+
+        switch (progress.StarsAwarded)
         {
             case 1:
                 bronzeStar.sprite = filledStar;
@@ -340,9 +356,11 @@ public class LevelSelectHandler: MonoBehaviour {
             .Find("StartButton")
             .GetComponent<Button>();
         
-        foreach (GameLevelSO level in levels)
+        for (int i = 0; i < levels.Length; i++ )
         {
-            ILevelProgressData progressData = playerSavedData.GetLevelProgress(level.levelID);
+            GameLevelSO level = levels[i];
+
+            ILevelProgressData progressData = playerSavedData.GetLevelProgressData(level.levelID);
             
             GameObject item = GameObject.Instantiate(levelPrefab, container);
             item
@@ -352,7 +370,7 @@ public class LevelSelectHandler: MonoBehaviour {
                 .GetComponent<TMP_Text>()
                 .text = level.levelID.ToString();
 
-            if(progressData.Available())
+            if( i <= playerSavedData.LevelsCompleted)
             {
                 item.transform
                     .Find("Border")
@@ -376,7 +394,7 @@ public class LevelSelectHandler: MonoBehaviour {
                 }); 
             }
             
-            if(progressData.Completed())
+            if(progressData != null && progressData.Completed)
             {
                 item.GetComponent<Image>().color = Color.green;
             }

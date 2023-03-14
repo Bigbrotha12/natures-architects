@@ -14,8 +14,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] PlayerController player;
     [SerializeField] GameObject levelSelectMenu;
 
-    int levelsCompleted = 0;
-
     Scorer scorer;
     UIController uiController;
     int currentCharacterID = 0;
@@ -31,11 +29,6 @@ public class LevelManager : MonoBehaviour
         scorer = FindObjectOfType<Scorer>();
         uiController = FindObjectOfType<UIController>();
         audioSource = GetComponent<AudioSource>();
-        if (PlayerPrefs.HasKey("LevelsCompleted"))
-        {
-            levelsCompleted = PlayerPrefs.GetInt("LevelsCompleted");
-        }
-        currentLevelIndex = levelsCompleted;
 
         EventBroker.CharacterDeath += OnCharacterDeath;
         EventBroker.LoadNextLevel += LoadNextLevel;
@@ -66,11 +59,6 @@ public class LevelManager : MonoBehaviour
     public bool SetLevelIndex(int newLevel)
     {
         Debug.Log("Setting Level Index: " + newLevel.ToString());
-        
-        // @Richard I had to comment out below line, otherwise it won't let me select levels.
-        // The UI already checks and disables selecting unavailable levels so this check can 
-        // be skipped.
-        //if (newLevel > levelsCompleted + 1) return false;
         currentLevelIndex = newLevel - 1;
         Debug.Log("Index result: " + currentLevelIndex.ToString());
         return true;
@@ -153,12 +141,13 @@ public class LevelManager : MonoBehaviour
     {
         PlayGameOverMusic();
         Medals result = scorer.CheckWinCondition();
+        LevelProgress levelProgress = new LevelProgress { StarsAwarded = (int)result, 
+                                                            Available = true, 
+                                                            Completed = result != Medals.NONE, 
+                                                            HighScore = scorer.GetTotalScore() };
+        SaveData.Instance.LevelPlayed(levels[currentLevelIndex].levelID, levelProgress); 
         if (result != Medals.NONE)
         {
-            if (currentLevelIndex + 1 > levelsCompleted)
-            {
-                levelsCompleted = currentLevelIndex + 1;
-            }
             EventBroker.CallLevelCompleted(result);
         }
         else

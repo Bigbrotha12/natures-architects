@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     
     Character character;
     Mover mover;
+    bool paused = false;
 
     bool isDead;
     bool canBuild = true;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (paused) return;
         if (actionCounter <= 0) return;
 
         if (!canBuild) return;
@@ -87,6 +89,11 @@ public class PlayerController : MonoBehaviour
         canMove = true;
     }
 
+    public void PauseControls(bool value)
+    {
+        paused = value;
+    }
+
     public void ShowCharacter(bool show)
     {
         character.ShowCharacter(show);
@@ -111,6 +118,7 @@ public class PlayerController : MonoBehaviour
     void OnCharacterSetupComplete()
     {
         canMove = true;
+        paused = false;
     }
 
     void SetActionCounter(int moves)

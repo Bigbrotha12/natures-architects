@@ -31,7 +31,11 @@ public class LevelSelectHandler: MonoBehaviour {
 
         public string Name { get => playerName; set => playerName = value; }
 
-        public ILevelProgressData GetLevelProgress(int levelID)
+        public int LevelsCompleted => throw new System.NotImplementedException();
+
+        public void AddLevelProgressData(int levelID, ILevelProgressData levelProgress) { }
+
+        public ILevelProgressData GetLevelProgressData(int levelID)
         {
             return new progressTestData()
             {
@@ -47,11 +51,9 @@ public class LevelSelectHandler: MonoBehaviour {
     {
         // Mock Test
         #region Test
-        playerSavedData = new playerTestData(); 
+        playerSavedData = SaveData.Instance.PlayerProgressData;
         #endregion
 
-        // Not sure why this line is needed
-        //EventBroker.ReturnToTitleScreen += () => gameObject.SetActive(true);
         transform
             .Find("Border")
             .Find("LevelSelect")
@@ -96,7 +98,7 @@ public class LevelSelectHandler: MonoBehaviour {
 
     void DisplayLevelScore(GameLevelSO level)
     {
-        ILevelProgressData progress = playerSavedData.GetLevelProgress(level.levelID);
+        ILevelProgressData progress = playerSavedData.GetLevelProgressData(level.levelID);
         Image bronzeStar = transform
             .Find("Border")
             .Find("LevelInfo")
@@ -123,7 +125,19 @@ public class LevelSelectHandler: MonoBehaviour {
             .Find("ScoreText")
             .GetComponent<TMP_Text>();
         
+        if (progress == null)
+        {
+            highScore.text = "0";
+
+            bronzeStar.sprite = emptyStar;
+            silverStar.sprite = emptyStar;
+            goldStar.sprite = emptyStar;
+
+            return;
+        }
+
         highScore.text = progress.HighScore.ToString();
+
         switch (progress.StarsAwarded)
         {
             case 1:
@@ -342,9 +356,11 @@ public class LevelSelectHandler: MonoBehaviour {
             .Find("StartButton")
             .GetComponent<Button>();
         
-        foreach (GameLevelSO level in levels)
+        for (int i = 0; i < levels.Length; i++ )
         {
-            ILevelProgressData progressData = playerSavedData.GetLevelProgress(level.levelID);
+            GameLevelSO level = levels[i];
+
+            ILevelProgressData progressData = playerSavedData.GetLevelProgressData(level.levelID);
             
             GameObject item = GameObject.Instantiate(levelPrefab, container);
             item
@@ -354,7 +370,7 @@ public class LevelSelectHandler: MonoBehaviour {
                 .GetComponent<TMP_Text>()
                 .text = level.levelID.ToString();
 
-            if(progressData.Available)
+            if( i <= playerSavedData.LevelsCompleted)
             {
                 item.transform
                     .Find("Border")
@@ -378,7 +394,7 @@ public class LevelSelectHandler: MonoBehaviour {
                 }); 
             }
             
-            if(progressData.Completed)
+            if(progressData != null && progressData.Completed)
             {
                 item.GetComponent<Image>().color = Color.green;
             }

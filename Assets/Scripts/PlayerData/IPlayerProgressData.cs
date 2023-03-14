@@ -4,7 +4,9 @@ using UnityEngine;
 public interface IPlayerProgressData
 {
     public string Name { get; set; }
-    public ILevelProgressData GetLevelProgress(int levelID);
+    public int LevelsCompleted { get; }
+    public ILevelProgressData GetLevelProgressData(int levelID);
+    public void AddLevelProgressData(int levelID, ILevelProgressData levelProgress);
 }
 
 public interface ILevelProgressData

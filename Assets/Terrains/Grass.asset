@@ -20,3 +20,23 @@ MonoBehaviour:
   adjacentForestValue: 1
   adjacentSnowValue: 0
   adjacentFireValue: 0
+  Grass_animatedSprites: []
+  AnimationSpeed: 1
+  AnimationStartTime: 0
+  tileRule:
+    Base: {fileID: -1184644129, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    UpOnly: {fileID: -1632092535, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    LeftOnly: {fileID: -928247733, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    DownOnly: {fileID: -720027267, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    RightOnly: {fileID: 1779544382, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    UpLeft: {fileID: -1296805004, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    LeftDown: {fileID: 2100094921, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    DownRight: {fileID: 1852980687, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    RightUp: {fileID: 1320188689, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    LeftRight: {fileID: -1664253397, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    UpDown: {fileID: 1832219759, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    UpLeftDown: {fileID: 889017345, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    LeftDownRight: {fileID: 1284332468, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    DownRightUp: {fileID: 930384501, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    RightUpLeft: {fileID: -420135602, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    AllSides: {fileID: 1448942836, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}

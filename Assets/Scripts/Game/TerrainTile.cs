@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+ 
 
 [CreateAssetMenu(menuName = "TerrainTile")]
 public class TerrainTile : TileBase
@@ -14,6 +15,103 @@ public class TerrainTile : TileBase
     public int adjacentForestValue;
     public int adjacentSnowValue;
     public int adjacentFireValue;
+
+    // Tile Animation
+    public Sprite[] Grass_animatedSprites;
+    public float AnimationSpeed = 1f;
+    public float AnimationStartTime = 0f;
+
+    // Tile Rule
+    [System.Serializable]
+    class AnimatedTileRule {
+        public Sprite[] Base;
+        public Sprite[] UpOnly, LeftOnly, DownOnly, RightOnly;
+        public Sprite[] UpLeft, LeftDown, DownRight, RightUp, LeftRight, UpDown;
+        public Sprite[] UpLeftDown, LeftDownRight, DownRightUp, RightUpLeft;
+        public Sprite[] AllSides;
+
+        public Sprite[] GetRuleSprite(bool Up, bool Left, bool Down, bool Right) {
+            if(Up) {
+                if(Left) {
+                    if(Right) {
+                        if(Down) {
+                            return AllSides;
+                        } else {
+                            return RightUpLeft;
+                        }
+                    } else {
+                        if(Down) {
+                            return UpLeftDown;
+                        } else {
+                            return UpLeft;
+                        }
+                    }
+                } else {
+                    if(Right) {
+                        if(Down) {
+                            return DownRightUp;
+                        } else {
+                            return RightUp;
+                        }
+                    } else {
+                        if(Down) {
+                            return UpDown;
+                        } else {
+                            return UpOnly;
+                        }
+                    }
+                }
+            } else {
+                if(Left) {
+                    if(Right) {
+                        if(Down) {
+                            return LeftDownRight;
+                        } else {
+                            return LeftRight;
+                        }
+                    } else {
+                        if(Down) {
+                            return LeftDown;
+                        } else {
+                            return LeftOnly;
+                        }
+                    }
+                } else {
+                    if(Right) {
+                        if(Down) {
+                            return DownRight;
+                        } else {
+                            return RightOnly;
+                        }
+                    } else {
+                        if(Down) {
+                            return DownOnly;
+                        } else {
+                            return Base;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    [SerializeField] AnimatedTileRule tileRule;
+    Sprite[] currentAnimatedTile;
+
+    public override bool GetTileAnimationData(Vector3Int position, ITilemap tilemap, ref TileAnimationData tileAnimationData)
+    {
+        if(tileType is not TerrainTypes.Grass) return false;
+
+        if(currentAnimatedTile is not null) {
+            tileAnimationData.animatedSprites = currentAnimatedTile;
+        } else {
+            (bool Up, bool Left, bool Down, bool Right) = GetWaterLocations(position, tilemap);
+            tileAnimationData.animatedSprites = tileRule.GetRuleSprite(Up, Left, Down, Right);
+        }
+        tileAnimationData.animationSpeed = AnimationSpeed;
+        tileAnimationData.animationStartTime = AnimationStartTime;
+        return true;
+    }
 
     public int GetAdjacentTileValue(TerrainTypes type)
     {
@@ -38,8 +136,34 @@ public class TerrainTile : TileBase
 
     public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
     {
-        tileSprite.GetTileData(position, tilemap, ref tileData);
+        if(tileType == TerrainTypes.Grass) 
+        {
+            (bool Up, bool Left, bool Down, bool Right) = GetWaterLocations(position, tilemap);
+            Sprite[] ruledTile = tileRule.GetRuleSprite(Up, Left, Down, Right);
+            currentAnimatedTile = ruledTile;
+            tileData.sprite = ruledTile[0];
+
+        } else
+        {
+            tileSprite.GetTileData(position, tilemap, ref tileData);
+        }
+        
     }
+
+    (bool, bool, bool, bool) GetWaterLocations(Vector3Int position, ITilemap tilemap) 
+    {
+        TerrainTile terrainUp = tilemap.GetTile<TerrainTile>(new Vector3Int(position.x, position.y + 1, 0));
+        TerrainTile terrainLeft = tilemap.GetTile<TerrainTile>(new Vector3Int(position.x - 1, position.y, 0));
+        TerrainTile terrainDown = tilemap.GetTile<TerrainTile>(new Vector3Int(position.x, position.y - 1, 0));
+        TerrainTile terrainRight = tilemap.GetTile<TerrainTile>(new Vector3Int(position.x + 1, position.y, 0));
+        bool Up = terrainUp is not null ? terrainUp.tileType == TerrainTypes.Water : false;
+        bool Left = terrainLeft is not null ? terrainLeft.tileType == TerrainTypes.Water : false;
+        bool Down = terrainDown is not null ? terrainDown.tileType == TerrainTypes.Water : false;
+        bool Right = terrainRight is not null ? terrainRight.tileType == TerrainTypes.Water : false;
+        return (Up, Left, Down, Right);
+    }
+
+    
 
     public List<string> GetScoringKeyText() 
     {

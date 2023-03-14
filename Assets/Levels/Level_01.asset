@@ -29,8 +29,8 @@ MonoBehaviour:
   StartCoordinates: {x: 2, y: 2, z: 0}
   AvailableCharacters:
   - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
-    Uses: 12
-  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
+    Uses: 16
+  - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
     Uses: 12
   - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
     Uses: 12

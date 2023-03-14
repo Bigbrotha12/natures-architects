@@ -117,6 +117,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCharacterSetupComplete()
     {
+        canMove = true;
         paused = false;
     }
 

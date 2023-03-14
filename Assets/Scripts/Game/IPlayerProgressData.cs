@@ -3,14 +3,15 @@ using UnityEngine;
 
 public interface IPlayerProgressData
 {
+    public string Name { get; set; }
     public ILevelProgressData GetLevelProgress(int levelID);
 }
 
 public interface ILevelProgressData
 {
-    public int StarsAwarded();
-    public int HighScore();
-    public bool Completed();
-    public bool Available();
-    public Sprite MapImage();
+    public int StarsAwarded { get; set; }
+    public int HighScore { get; set; }
+    public bool Completed { get; set; }
+    public bool Available { get; set; }
+    public Sprite MapImage { get; set; }
 }

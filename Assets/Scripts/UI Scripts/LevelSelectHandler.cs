@@ -122,8 +122,8 @@ public class LevelSelectHandler: MonoBehaviour {
             .Find("ScoreText")
             .GetComponent<TMP_Text>();
         
-        highScore.text = progress.HighScore().ToString();
-        switch (progress.StarsAwarded())
+        highScore.text = progress.HighScore.ToString();
+        switch (progress.StarsAwarded)
         {
             case 1:
                 bronzeStar.sprite = filledStar;
@@ -353,7 +353,7 @@ public class LevelSelectHandler: MonoBehaviour {
                 .GetComponent<TMP_Text>()
                 .text = level.levelID.ToString();
 
-            if(progressData.Available())
+            if(progressData.Available)
             {
                 item.transform
                     .Find("Border")
@@ -377,7 +377,7 @@ public class LevelSelectHandler: MonoBehaviour {
                 }); 
             }
             
-            if(progressData.Completed())
+            if(progressData.Completed)
             {
                 item.GetComponent<Image>().color = Color.green;
             }

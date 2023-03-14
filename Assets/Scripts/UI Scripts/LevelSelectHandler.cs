@@ -19,17 +19,18 @@ public class LevelSelectHandler: MonoBehaviour {
         public bool completed;
         public int score;
         public int stars;
-        public bool Available(){return available;}
-        public bool Completed(){return completed;}
-        public int HighScore(){return score;}
-        public Sprite MapImage()
-        {
-            throw new System.NotImplementedException();
-        }
-        public int StarsAwarded(){return stars;}
+        public bool Available { get { return available; } set { available = value; } }
+        public bool Completed { get { return completed; } set { completed = value; } }
+        public int HighScore { get { return score; } set { score = value; } }
+        public Sprite MapImage {  get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+        public int StarsAwarded { get { return stars; } set { stars = value; } }
     }
     class playerTestData : IPlayerProgressData
     {
+        string playerName = "Test";
+
+        public string Name { get => playerName; set => playerName = value; }
+
         public ILevelProgressData GetLevelProgress(int levelID)
         {
             return new progressTestData()

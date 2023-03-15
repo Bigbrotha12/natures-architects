@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/TitleScene.unity
     guid: 2da8f831f46cbe04d807742e192fe93e
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/Game Scenes/Test scene.unity
     guid: 71a673baadec1354b980a642c9cacca2
+  - enabled: 1
+    path: Assets/_Scenes/Game Scenes/Rafa_GameScene 1.unity
+    guid: 552f84f5239122748a82f31e3b4e9769
   m_configObjects: {}

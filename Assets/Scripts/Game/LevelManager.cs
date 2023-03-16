@@ -141,7 +141,7 @@ public class LevelManager : MonoBehaviour
     {
         PlayGameOverMusic();
         Medals result = scorer.CheckWinCondition();
-        LevelProgress levelProgress = new LevelProgress { StarsAwarded = (int)result, 
+        LevelProgress_SO levelProgress = new LevelProgress_SO { StarsAwarded = (int)result, 
                                                             Available = true, 
                                                             Completed = result != Medals.NONE, 
                                                             HighScore = scorer.GetTotalScore() };

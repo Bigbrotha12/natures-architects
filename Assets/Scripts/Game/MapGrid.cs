@@ -65,7 +65,7 @@ public class MapGrid : MonoBehaviour
         {
             return mutableMap.GetTile<TerrainTile>(position).tileType;
         }
-        return TerrainTypes.None;
+        return TerrainTypes.Blocked;
     }
 
     public void ScoreTile(Vector3Int position)

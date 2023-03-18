@@ -5,5 +5,6 @@ public enum TerrainTypes {
     Water,
     Mountain,
     Fire,
-    Snow
+    Snow,
+    Blocked
 }

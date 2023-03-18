@@ -44,18 +44,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc070c06330895649bd27719f46cb9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grassScore:
+    UIObject: {fileID: 0}
+    ActualScore: {fileID: 0}
+    TargetScore: {fileID: 0}
+    ScoreBar: {fileID: 0}
+    ScoreCheck: {fileID: 0}
+  forestScore:
+    UIObject: {fileID: 0}
+    ActualScore: {fileID: 0}
+    TargetScore: {fileID: 0}
+    ScoreBar: {fileID: 0}
+    ScoreCheck: {fileID: 0}
+  mountainScore:
+    UIObject: {fileID: 0}
+    ActualScore: {fileID: 0}
+    TargetScore: {fileID: 0}
+    ScoreBar: {fileID: 0}
+    ScoreCheck: {fileID: 0}
+  waterScore:
+    UIObject: {fileID: 0}
+    ActualScore: {fileID: 0}
+    TargetScore: {fileID: 0}
+    ScoreBar: {fileID: 0}
+    ScoreCheck: {fileID: 0}
+  snowScore:
+    UIObject: {fileID: 0}
+    ActualScore: {fileID: 0}
+    TargetScore: {fileID: 0}
+    ScoreBar: {fileID: 0}
+    ScoreCheck: {fileID: 0}
+  fireScore:
+    UIObject: {fileID: 0}
+    ActualScore: {fileID: 0}
+    TargetScore: {fileID: 0}
+    ScoreBar: {fileID: 0}
+    ScoreCheck: {fileID: 0}
+  bronzeStar: {fileID: 0}
+  silverStar: {fileID: 0}
+  goldStar: {fileID: 0}
+  filledStar: {fileID: 21300000, guid: cd9b2106c30204ee7b4f388b44329157, type: 3}
+  emptyStar: {fileID: 21300000, guid: 712c55b13e5554e3dbce76401035df1d, type: 3}
   totalScoreText: {fileID: 0}
-  grassScoreText: {fileID: 0}
-  mountainScoreText: {fileID: 0}
-  forestScoreText: {fileID: 0}
-  waterScoreText: {fileID: 0}
-  snowScoreText: {fileID: 0}
-  fireScoreText: {fileID: 0}
   totalTargetText: {fileID: 0}
-  grassTargetText: {fileID: 0}
-  mountainTargetText: {fileID: 0}
-  forestTargetText: {fileID: 0}
-  waterTargetText: {fileID: 0}
-  snowTargetText: {fileID: 0}
-  fireTargetText: {fileID: 0}
+  Checkmark: {fileID: 21300000, guid: be340a165cb9c8d4cb50f1deeb51d4ea, type: 3}
+  Empty: {fileID: 21300000, guid: 2388773e582af4b05a310683d237e86c, type: 3}
   floatText: {fileID: 0}

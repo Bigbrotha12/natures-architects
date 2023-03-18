@@ -32,7 +32,7 @@ MonoBehaviour:
     Uses: 16
   - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
     Uses: 12
-  - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
+  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
     Uses: 12
   levelTargets:
     GrassTargets: 14000000140000001e000000

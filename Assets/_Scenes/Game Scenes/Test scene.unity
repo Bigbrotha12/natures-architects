@@ -3294,9 +3294,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3934135188670148541, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+      propertyPath: m_text
+      value: Level Select
+      objectReference: {fileID: 0}
     - target: {fileID: 3961771656414107392, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528283253180946157, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+      propertyPath: m_text
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 5248093511876314815, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
       propertyPath: m_AnchorMax.y

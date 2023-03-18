@@ -56,18 +56,17 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public bool SetLevelIndex(int newLevel)
+    public bool SetLevelIndex(int newLevelIndex)
     {
-        Debug.Log("Setting Level Index: " + newLevel.ToString());
-        currentLevelIndex = newLevel - 1;
-        Debug.Log("Index result: " + currentLevelIndex.ToString());
+        if (newLevelIndex >= levels.Length) return false;
+
+        currentLevelIndex = newLevelIndex;
         return true;
     }
 
     public void InitializeLevel()
     {
         Debug.Log("Index result: " + currentLevelIndex.ToString());
-        Debug.Log("Initializing Level Index: " + CurrentLevelSO.levelID.ToString());
         scorer.ResetScores();
         player.ShowCharacter(false);
         currentCharacterID = 0;

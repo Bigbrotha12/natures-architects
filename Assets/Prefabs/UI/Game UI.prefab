@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Chapter 1 Select Level
+  m_text: Select Level
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -469,7 +469,7 @@ RectTransform:
   - {fileID: 665248526}
   - {fileID: 867193629}
   m_Father: {fileID: 1352161690}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1839,7 +1839,7 @@ RectTransform:
   - {fileID: 703646736}
   - {fileID: 837074116}
   m_Father: {fileID: 1352161690}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6684,8 +6684,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 135910211}
   - {fileID: 400885046}
+  - {fileID: 135910211}
   m_Father: {fileID: 1407958759}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7842,7 +7842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1617438078
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7914,13 +7914,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abbb9d32d119b654ebf117009c4b8687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
   filledStar: {fileID: 21300000, guid: cd9b2106c30204ee7b4f388b44329157, type: 3}
   emptyStar: {fileID: 21300000, guid: 712c55b13e5554e3dbce76401035df1d, type: 3}
   levelAvailable: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   levelCompletedColor: {r: 0.203374, g: 0.7169812, b: 0.064257726, a: 0}
+  levelDetailsTitle: {fileID: 650231581}
   creaturePrefab: {fileID: 8578328562194467277, guid: 2c4333e5b1d014e43b05a20cca2fdc0c, type: 3}
   levelPrefab: {fileID: 2167624659929691026, guid: e5772a01910e5d24580828e0a6f9df5f, type: 3}
-  levelManager: {fileID: 0}
 --- !u!1 &1617645263
 GameObject:
   m_ObjectHideFlags: 0
@@ -11609,9 +11610,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5248093511876314815}
-  - {fileID: 5618066662500466895}
   - {fileID: 2474420166344196113}
+  - {fileID: 5618066662500466895}
+  - {fileID: 5248093511876314815}
   m_Father: {fileID: 2085547969595751244}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16956,7 +16957,7 @@ RectTransform:
   - {fileID: 132507426061955264}
   - {fileID: 7462002178312304139}
   m_Father: {fileID: 885803305147818530}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -17496,7 +17497,7 @@ RectTransform:
   - {fileID: 5807688216562099402}
   - {fileID: 5000182129420262962}
   m_Father: {fileID: 885803305147818530}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}

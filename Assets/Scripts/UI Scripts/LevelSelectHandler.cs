@@ -4,14 +4,19 @@ using UnityEngine.UI;
 using TMPro;
 
 public class LevelSelectHandler: MonoBehaviour {
+    [SerializeField] LevelManager levelManager;
+
     [SerializeField] Sprite filledStar;
     [SerializeField] Sprite emptyStar;
     [SerializeField] Sprite levelAvailable;
     [SerializeField] Color levelCompletedColor;
+
+    [SerializeField] TextMeshProUGUI levelDetailsTitle;
+
     [SerializeField] GameObject creaturePrefab;
     [SerializeField] GameObject levelPrefab;
-    [SerializeField] LevelManager levelManager;
-    [SerializeField] IPlayerProgressData playerProgress;
+
+    IPlayerProgressData playerProgress;
 
     void OnEnable() 
     {
@@ -53,13 +58,19 @@ public class LevelSelectHandler: MonoBehaviour {
             .RemoveAllListeners();
     }
 
-    void UpdateLevelInfoPanels(GameLevelSO level)
+    void UpdateLevelInfoPanels(GameLevelSO level, int levelIndex)
     {
+        DisplayLevelTitle(levelIndex);
         ClearLevelScore();
         DisplayLevelScore(level);
         ClearCreatureQueue();
         DisplayCreatureQueue(level);
         DisplayScoreTargets(level);
+    }
+
+    void DisplayLevelTitle(int index)
+    {
+        levelDetailsTitle.text = "Level " + (index + 1);
     }
 
     void DisplayLevelScore(GameLevelSO level)
@@ -343,7 +354,8 @@ public class LevelSelectHandler: MonoBehaviour {
                 .Find("Border")
                 .Find("LevelText")
                 .GetComponent<TMP_Text>()
-                .text = level.levelID.ToString();
+                .text = (i + 1).ToString();
+            item.GetComponent<LevelItem>().LevelIndex = i;
 
             if (playerProgress == null || i <= playerProgress.LevelsCompleted)
             {
@@ -358,8 +370,10 @@ public class LevelSelectHandler: MonoBehaviour {
                     .color = Color.white;
                 item.GetComponent<Button>().onClick.AddListener(() => 
                 {
-                    UpdateLevelInfoPanels(level);
-                    levelManager.SetLevelIndex(level.levelID);
+                    LevelItem levelItem = item.GetComponent<LevelItem>();
+
+                    UpdateLevelInfoPanels(level, levelItem.LevelIndex);
+                    levelManager.SetLevelIndex(levelItem.LevelIndex);
                     startButton.onClick.RemoveAllListeners();
                     startButton.onClick.AddListener(() => 
                     {

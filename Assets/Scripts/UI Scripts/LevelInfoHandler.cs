@@ -90,6 +90,10 @@ public class LevelInfoHandler : MonoBehaviour
 
         foreach(TerrainTile availableTiles in map.TerrainIndex)
         {
+            if (availableTiles.tileType == TerrainTypes.None || availableTiles.tileType == TerrainTypes.Blocked)
+            {
+                continue;
+            }
             List<(TerrainTypes, int)> terrainScores = availableTiles.GetScoringKey();
             GameObject item = GameObject.Instantiate(scoringKeyPrefab, container);
 

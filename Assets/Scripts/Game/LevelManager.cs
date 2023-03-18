@@ -144,7 +144,10 @@ public class LevelManager : MonoBehaviour
                                                             Available = true, 
                                                             Completed = result != Medals.NONE, 
                                                             HighScore = scorer.GetTotalScore() };
-        SaveData.Instance.LevelPlayed(levels[currentLevelIndex].levelID, levelProgress); 
+        if (SaveData.Instance != null)
+        {
+            SaveData.Instance.LevelPlayed(levels[currentLevelIndex].levelID, levelProgress); 
+        }
         if (result != Medals.NONE)
         {
             EventBroker.CallLevelCompleted(result);

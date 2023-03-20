@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Level_03
   m_EditorClassIdentifier: 
   levelID: 3
-  flavorTexts:
-  - However, not all Creators cherished Their work. There were Those saddened by
-    the sacrifices of their brethrens and came to resent this new world; and its
-    inhabitants.
-  - And so the land burned brightly once more, consuming all of creation.
-  - And so, the Resenters worked slowly and tirelessly to undo Their work and, eventually,
-    brought the world to its End.
+  FlavorTexts:
+    IntroText: However, not all Creators cherished Their work. There were Those saddened
+      by the sacrifices of their brethrens and came to resent this new world; and
+      its inhabitants.
+    SuccessText: And so the land burned brightly once more, consuming all of creation.
+    FailText: And so, the Resenters worked slowly and tirelessly to undo Their work
+      and, eventually, brought the world to its End.
+    TutorialText: 
+  ShowTutorialText: 0
   music: {fileID: 8300000, guid: f1f5b7daa3bec2647bb25cd71cdf0d2a, type: 3}
   map: {fileID: 8259568037166387696, guid: c45fa09a5ce91fb4888ff1215c21b70a, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}

@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: Rich Level 1
   m_EditorClassIdentifier: 
   levelID: 1
-  flavorTexts:
-  - When you place a water tile, it scores 1 point for each adjacent water tile
+  FlavorTexts:
+    IntroText: 'After the end, what once was full of life and vibrant energy, now
+      laid bare and dead. The Creators mourned their loss and descended upon the
+      land as they had done eons ago. '
+    SuccessText: 
+    FailText: 
+    TutorialText: Press 'Space' to build terrain <br>Move with WASD / Arrow keys
+  ShowTutorialText: 1
   music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
   map: {fileID: 8259568037166387696, guid: 137cb719195868245b4ba9852a82aafc, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}

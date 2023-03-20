@@ -11,6 +11,18 @@ public class LevelInfoHandler : MonoBehaviour
     [SerializeField] LevelManager levelManager;
     [SerializeField] MapGrid map;
 
+    TMP_Text storyText;
+
+    void Awake()
+    {
+        storyText = transform
+            .Find("Border")
+            .Find("StoryBoard")
+            .Find("Border")
+            .Find("StoryText")
+            .GetComponent<TMP_Text>();
+    }
+
     void OnEnable()
     {
         ClearCreatureQueue();
@@ -22,25 +34,12 @@ public class LevelInfoHandler : MonoBehaviour
 
     void DisplayStoryText(GameLevelSO level)
     {
-        string story = level.flavorTexts[0];
-         transform
-            .Find("Border")
-            .Find("StoryBoard")
-            .Find("Border")
-            .Find("StoryText")
-            .GetComponent<TMP_Text>()
-            .text = story;
+        storyText.text = level.FlavorTexts.IntroText;
     }
 
     void ClearStoryText()
     {
-        transform
-            .Find("Border")
-            .Find("StoryBoard")
-            .Find("Border")
-            .Find("StoryText")
-            .GetComponent<TMP_Text>()
-            .text = "";
+        storyText.text = "";
     }
 
     void DisplayCreatureQueue(GameLevelSO level)

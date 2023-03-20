@@ -377,7 +377,7 @@ public class LevelSelectHandler: MonoBehaviour {
                     startButton.onClick.RemoveAllListeners();
                     startButton.onClick.AddListener(() => 
                     {
-                        levelManager.InitializeLevel();
+                        levelManager.InitializeLevel(true);
                         gameObject.SetActive(false);
                     });
                 }); 

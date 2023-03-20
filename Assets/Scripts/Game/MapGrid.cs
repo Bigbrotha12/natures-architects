@@ -52,6 +52,8 @@ public class MapGrid : MonoBehaviour
 
     public bool CheckPositionIsOnMapGrid(Vector3Int position)
     {
+        if(mutableMap.GetTile<TerrainTile>(position) is not null && !mutableMap.GetTile<TerrainTile>(position).walkable) return false;
+
         if(position.x < 0 || position.x >= gameLevel.columns || position.y < 0 || position.y >= gameLevel.rows) 
         {
             return false;

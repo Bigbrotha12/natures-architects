@@ -9,6 +9,7 @@ public class TerrainTile : TileBase
 {
     public TerrainTypes tileType;
     public Tile tileSprite;
+    public bool walkable;
     public int adjacentGrassValue;
     public int adjacentWaterValue;
     public int adjacentMountainValue;
@@ -17,13 +18,13 @@ public class TerrainTile : TileBase
     public int adjacentFireValue;
 
     // Tile Animation
-    public Sprite[] Grass_animatedSprites;
     public float AnimationSpeed = 1f;
     public float AnimationStartTime = 0f;
 
     // Tile Rule
     [System.Serializable]
     class AnimatedTileRule {
+        public TerrainTypes targetTerrain;
         public Sprite[] Base;
         public Sprite[] UpOnly, LeftOnly, DownOnly, RightOnly;
         public Sprite[] UpLeft, LeftDown, DownRight, RightUp, LeftRight, UpDown;
@@ -105,7 +106,7 @@ public class TerrainTile : TileBase
         if(currentAnimatedTile is not null) {
             tileAnimationData.animatedSprites = currentAnimatedTile;
         } else {
-            (bool Up, bool Left, bool Down, bool Right) = GetWaterLocations(position, tilemap);
+            (bool Up, bool Left, bool Down, bool Right) = GetTileRuleLocations(position, tilemap, tileRule.targetTerrain);
             tileAnimationData.animatedSprites = tileRule.GetRuleSprite(Up, Left, Down, Right);
         }
         tileAnimationData.animationSpeed = AnimationSpeed;
@@ -136,30 +137,29 @@ public class TerrainTile : TileBase
 
     public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
     {
-        if(tileType == TerrainTypes.Grass) 
+        if(tileRule is not null && tileRule.targetTerrain != TerrainTypes.None) 
         {
-            (bool Up, bool Left, bool Down, bool Right) = GetWaterLocations(position, tilemap);
+            (bool Up, bool Left, bool Down, bool Right) = GetTileRuleLocations(position, tilemap, tileRule.targetTerrain);
             Sprite[] ruledTile = tileRule.GetRuleSprite(Up, Left, Down, Right);
             currentAnimatedTile = ruledTile;
-            tileData.sprite = ruledTile[0];
+            tileData.sprite = ruledTile.Length > 0 ? ruledTile[0] : tileSprite.sprite;
 
         } else
         {
             tileSprite.GetTileData(position, tilemap, ref tileData);
         }
-        
     }
 
-    (bool, bool, bool, bool) GetWaterLocations(Vector3Int position, ITilemap tilemap) 
+    (bool, bool, bool, bool) GetTileRuleLocations(Vector3Int position, ITilemap tilemap, TerrainTypes targetTile) 
     {
         TerrainTile terrainUp = tilemap.GetTile<TerrainTile>(new Vector3Int(position.x, position.y + 1, 0));
         TerrainTile terrainLeft = tilemap.GetTile<TerrainTile>(new Vector3Int(position.x - 1, position.y, 0));
         TerrainTile terrainDown = tilemap.GetTile<TerrainTile>(new Vector3Int(position.x, position.y - 1, 0));
         TerrainTile terrainRight = tilemap.GetTile<TerrainTile>(new Vector3Int(position.x + 1, position.y, 0));
-        bool Up = terrainUp is not null ? terrainUp.tileType == TerrainTypes.Water : false;
-        bool Left = terrainLeft is not null ? terrainLeft.tileType == TerrainTypes.Water : false;
-        bool Down = terrainDown is not null ? terrainDown.tileType == TerrainTypes.Water : false;
-        bool Right = terrainRight is not null ? terrainRight.tileType == TerrainTypes.Water : false;
+        bool Up = terrainUp is not null ? terrainUp.tileType == targetTile : false;
+        bool Left = terrainLeft is not null ? terrainLeft.tileType == targetTile : false;
+        bool Down = terrainDown is not null ? terrainDown.tileType == targetTile : false;
+        bool Right = terrainRight is not null ? terrainRight.tileType == targetTile : false;
         return (Up, Left, Down, Right);
     }
 

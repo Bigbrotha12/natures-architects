@@ -10,24 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e39c03027e623b04f9de37ee7b260f64, type: 3}
-  m_Name: Water
+  m_Name: Blocker
   m_EditorClassIdentifier: 
-  tileType: 3
-  tileSprite: {fileID: 11400000, guid: 0cdb2d030df6d3041abd940b71aebfd0, type: 2}
+  tileType: 0
+  tileSprite: {fileID: 0}
+  walkable: 0
   adjacentGrassValue: 0
-  adjacentWaterValue: 1
-  adjacentMountainValue: 2
+  adjacentWaterValue: 0
+  adjacentMountainValue: 0
   adjacentForestValue: 0
-  adjacentSnowValue: -2
-  adjacentFireValue: 3
-  Grass_animatedSprites: []
+  adjacentSnowValue: 0
+  adjacentFireValue: 0
   AnimationSpeed: 1
   AnimationStartTime: 0
   tileRule:
-    Base:
-    - {fileID: -184222074, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
-    - {fileID: -354795047, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
-    - {fileID: 1760933410, guid: b16a2e20a0d39bc4f95be692255223ee, type: 3}
+    targetTerrain: 0
+    Base: []
     UpOnly: []
     LeftOnly: []
     DownOnly: []

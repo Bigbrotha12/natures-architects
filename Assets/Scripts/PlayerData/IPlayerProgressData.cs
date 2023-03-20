@@ -15,5 +15,4 @@ public interface ILevelProgressData
     public int HighScore { get; set; }
     public bool Completed { get; set; }
     public bool Available { get; set; }
-    public Sprite MapImage { get; set; }
 }

@@ -836,6 +836,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
+--- !u!114 &449577390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1843845594924854134, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
+  m_PrefabInstance: {fileID: 449577389}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59f88b6b8fff48279a7f436358939ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &648213836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1843845594924854135, guid: ab3c6dd83dcc0d14da7cd6a4a94dcab8, type: 3}
@@ -2301,7 +2312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1080194892, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1083532092, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3561,6 +3572,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+--- !u!1 &1328948688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1617438077, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+  m_PrefabInstance: {fileID: 1328948687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1328948689 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3769024385746773185, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
@@ -3721,9 +3737,17 @@ PrefabInstance:
       value: Level Manager
       objectReference: {fileID: 0}
     - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 449577390}
+    - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
       propertyPath: mapGrid
       value: 
       objectReference: {fileID: 148080784}
+    - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
+      propertyPath: levelSelectMenu
+      value: 
+      objectReference: {fileID: 1328948688}
     - target: {fileID: 4003986231188321077, guid: 16f77ccebbcec1b45af85a4f8b69f456, type: 3}
       propertyPath: levels.Array.data[0]
       value: 

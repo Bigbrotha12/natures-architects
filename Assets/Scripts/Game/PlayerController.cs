@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         {
             canBuild = false;
             canMove = false;
-            PlaceTile();
+            PlaceTileAttempt();
             return;
         }
 
@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
         actionCounterText.text = actionCounter.ToString();
     }
 
-    void PlaceTile()
+    void PlaceTileAttempt()
     {
         if (player is null || mapGrid is null || character.TerrainTile is null)
         {
@@ -136,29 +136,11 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector3Int position = new Vector3Int((int)player.position.x, (int)player.position.y, 0);
-        // Only allow tile placement over "Empty" or "Fire" tiles, except for Fire which can place on top of any except other Fire.
         TerrainTypes targetTerrain = mapGrid.CheckTile(position);
-        if (character.TerrainTile.tileType != TerrainTypes.Fire && (targetTerrain == TerrainTypes.None || targetTerrain == TerrainTypes.Fire))
-        {
-            mapGrid.CreateTile(position.x, position.y, character.TerrainTile);
-            mapGrid.ScoreTile(position);
-            EventBroker.CallPlaceTerrain();
 
-            if (placingTileUsesAction)
-            {
-                IncrementActionCount();
-            }
-        } 
-        else if(character.TerrainTile.tileType == TerrainTypes.Fire && targetTerrain != TerrainTypes.Fire)
+        if (CanPlaceTile(targetTerrain))
         {
-            mapGrid.CreateTile(position.x, position.y, character.TerrainTile);
-            mapGrid.ScoreTile(position);
-            EventBroker.CallPlaceTerrain();
-
-            if (placingTileUsesAction)
-            {
-                IncrementActionCount();
-            }
+            PlaceTile(position);
         }
         else
         {
@@ -166,6 +148,29 @@ public class PlayerController : MonoBehaviour
            
         }
         StartCoroutine("InputCooldown");
+    }
+
+    bool CanPlaceTile(TerrainTypes targetTerrain)
+    {
+        // Only allow tile placement over "Empty" or "Fire" tiles, except for Fire which can place on top of any except other Fire.
+        if (character.TerrainTile.tileType != TerrainTypes.Fire && (targetTerrain == TerrainTypes.None || targetTerrain == TerrainTypes.Fire))
+            return true;
+        if (character.TerrainTile.tileType == TerrainTypes.Fire && targetTerrain != TerrainTypes.Fire)
+            return true;
+
+        return false;
+    }
+
+    void PlaceTile(Vector3Int position)
+    {
+        mapGrid.CreateTile(position.x, position.y, character.TerrainTile);
+        mapGrid.ScoreTile(position);
+        EventBroker.CallPlaceTerrain();
+
+        if (placingTileUsesAction)
+        {
+            IncrementActionCount();
+        }
     }
 
     void Move(Vector3 direction)
@@ -178,7 +183,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3Int newPosition = new Vector3Int((int)player.position.x + (int)direction.x, (int)player.position.y + (int)direction.y, (int)player.position.z);
 
-        if (mapGrid.CheckPositionIsOnMapGrid(newPosition))
+        if (CanMoveToTile(newPosition))
         {
             IncrementActionCount();
             mover.movementCompletedEvent += OnMovementCompleted;
@@ -190,6 +195,13 @@ public class PlayerController : MonoBehaviour
             EventBroker.CallPlayerMoveBlocked();
             StartCoroutine(InputCooldown());
         }
+    }
+
+    bool CanMoveToTile(Vector3Int newPosition)
+    {
+        if (!mapGrid.CheckPositionIsOnMapGrid(newPosition)) return false;
+        if (mapGrid.CheckTile(newPosition) == TerrainTypes.Blocked) return false;
+        return true;
     }
 
     void OnMovementCompleted()

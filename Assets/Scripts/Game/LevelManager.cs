@@ -40,6 +40,7 @@ public class LevelManager : MonoBehaviour
         EventBroker.CharacterDeath -= OnCharacterDeath;
         EventBroker.LoadNextLevel -= LoadNextLevel;
         EventBroker.RestartLevel -= RestartLevel;
+        uiController.IntroPanelDismissedEvent -= OnIntroPanelDismissed;
     }
 
     void Start()
@@ -56,18 +57,17 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public bool SetLevelIndex(int newLevel)
+    public bool SetLevelIndex(int newLevelIndex)
     {
-        Debug.Log("Setting Level Index: " + newLevel.ToString());
-        currentLevelIndex = newLevel - 1;
-        Debug.Log("Index result: " + currentLevelIndex.ToString());
+        if (newLevelIndex >= levels.Length) return false;
+
+        currentLevelIndex = newLevelIndex;
         return true;
     }
 
-    public void InitializeLevel()
+    public void InitializeLevel(bool showIntro)
     {
         Debug.Log("Index result: " + currentLevelIndex.ToString());
-        Debug.Log("Initializing Level Index: " + CurrentLevelSO.levelID.ToString());
         scorer.ResetScores();
         player.ShowCharacter(false);
         currentCharacterID = 0;
@@ -78,16 +78,18 @@ public class LevelManager : MonoBehaviour
         uiController.SetLevelInformation(CurrentLevelSO);
 
         PlayLevelMusic();
-        SetupCurrentCharacter();
+        if (showIntro)
+        {
+            uiController.ShowIntroPanel();
+        }
+        SetupCurrentCharacter(showIntro);
     }
 
-    void SetupCurrentCharacter()
+    void SetupCurrentCharacter(bool showIntro)
     {
         CharacterSO currentCharacter = CurrentLevelSO.AvailableCharacters[currentCharacterID].CharacterSO;
         if (currentCharacter != null)
         {
-            player.SetCharacter(currentCharacter, CurrentLevelSO.AvailableCharacters[currentCharacterID].Uses);
-
             uiController.SetNextCharacterSprites(currentCharacterID, CurrentLevelSO);
             uiController.DisplayScoringKey(currentCharacter);
             if (currentCharacter.terrainTile != null)
@@ -98,12 +100,34 @@ public class LevelManager : MonoBehaviour
             {
                 uiController.SetCurrentTileType("");
             }
+
+            if (showIntro)
+            {
+                uiController.IntroPanelDismissedEvent += OnIntroPanelDismissed;
+                return;
+            }
+            player.SetCharacter(currentCharacter, CurrentLevelSO.AvailableCharacters[currentCharacterID].Uses);
+        }
+    }
+
+    void OnIntroPanelDismissed()
+    {
+        player.SetCharacter(CurrentLevelSO.AvailableCharacters[currentCharacterID].CharacterSO, CurrentLevelSO.AvailableCharacters[currentCharacterID].Uses);
+        uiController.IntroPanelDismissedEvent -= OnIntroPanelDismissed;
+        ShowTutorialPanel();
+    }
+
+    void ShowTutorialPanel()
+    {
+        if (CurrentLevelSO.ShowTutorialText)
+        {
+            uiController.ShowTutorialPanel(CurrentLevelSO.FlavorTexts.TutorialText);
         }
     }
 
     void SetLevelText(GameLevelSO levelSO)
     {
-        uiController.SetLevelText(levelSO.flavorTexts);
+        uiController.SetLevelText(currentLevelIndex + 1, levelSO.FlavorTexts);
     }
 
     void PlayLevelMusic()
@@ -134,18 +158,21 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        SetupCurrentCharacter();
+        SetupCurrentCharacter(false);
     }
 
     void LevelEnd()
     {
         PlayGameOverMusic();
         Medals result = scorer.CheckWinCondition();
-        LevelProgress levelProgress = new LevelProgress { StarsAwarded = (int)result, 
+        LevelProgress_SO levelProgress = new LevelProgress_SO { StarsAwarded = (int)result, 
                                                             Available = true, 
                                                             Completed = result != Medals.NONE, 
                                                             HighScore = scorer.GetTotalScore() };
-        SaveData.Instance.LevelPlayed(levels[currentLevelIndex].levelID, levelProgress); 
+        if (SaveData.Instance != null)
+        {
+            SaveData.Instance.LevelPlayed(levels[currentLevelIndex].levelID, levelProgress); 
+        }
         if (result != Medals.NONE)
         {
             EventBroker.CallLevelCompleted(result);
@@ -170,12 +197,12 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        InitializeLevel();
+        InitializeLevel(true);
     }
 
     void RestartLevel()
     {
-        InitializeLevel();
+        InitializeLevel(false);
     }
 
     void NoMoreLevels()

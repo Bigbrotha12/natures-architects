@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: Level_04
   m_EditorClassIdentifier: 
   levelID: 4
-  flavorTexts:
-  - The Creators were devastated, their energy spent, their mission failed. But something
-    unexpected began to happen, Their Power somehow reawakened.
-  - The trees started to regrow, the mountains refilled the lakes and streams, and
-    the world's energy healed the Creators themselves.
-  - However, it was not enough. The devastation  was too great and their Spirit broke.
+  FlavorTexts:
+    IntroText: The Creators were devastated, their energy spent, their mission failed.
+      But something unexpected began to happen, Their Power somehow reawakened.
+    SuccessText: The trees started to regrow, the mountains refilled the lakes and
+      streams, and the world's energy healed the Creators themselves.
+    FailText: However, it was not enough. The devastation  was too great and their
+      Spirit broke.
+    TutorialText: 
+  ShowTutorialText: 0
   music: {fileID: 8300000, guid: 5bc89260206ebfe459233f75f373c32b, type: 3}
   map: {fileID: 8259568037166387696, guid: c45fa09a5ce91fb4888ff1215c21b70a, type: 3}
   starterTile: {fileID: 11400000, guid: e9a83d52c25db2a4b9fc1bd269a32ad1, type: 2}

@@ -16,7 +16,8 @@ public class GameLevelSO : ScriptableObject
         public int[] FireTargets = new int[3];
     }
 
-    public string[] flavorTexts;
+    public FlavorTexts FlavorTexts;
+    public bool ShowTutorialText;
     public AudioClip music;
     
     [Header("Grid")]
@@ -42,4 +43,13 @@ public class CharacterUses
 {
     public CharacterSO CharacterSO;
     public int Uses; 
+}
+
+[System.Serializable]
+public struct FlavorTexts
+{
+    public string IntroText;
+    public string SuccessText;
+    public string FailText;
+    public string TutorialText;
 }

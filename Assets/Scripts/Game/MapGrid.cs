@@ -19,12 +19,6 @@ public class MapGrid : MonoBehaviour
         SetTargets();
     }
 
-    public void DisplayStoryText()
-    {
-        string story = gameLevel.flavorTexts.Length > 0 ? gameLevel.flavorTexts[0] : "";
-        storyText.text = story;
-    }
-
     void SetTargets()
     {
         ScoreBoard.SetTargetScore(TerrainTypes.Grass, (gameLevel.levelTargets.GrassTargets[0], gameLevel.levelTargets.GrassTargets[1], gameLevel.levelTargets.GrassTargets[2]));
@@ -67,7 +61,7 @@ public class MapGrid : MonoBehaviour
         {
             return mutableMap.GetTile<TerrainTile>(position).tileType;
         }
-        return TerrainTypes.None;
+        return TerrainTypes.Blocked;
     }
 
     public void ScoreTile(Vector3Int position)

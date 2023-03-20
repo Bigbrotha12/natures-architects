@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Level_01
   m_EditorClassIdentifier: 
   levelID: 1
-  flavorTexts:
-  - 'After the end, what once was full of life and vibrant energy, now laid bare
-    and dead. The Creators mourned their loss and descended upon the land as they
-    had done eons ago. '
-  - They healed the world for their new children. They planted trees to shelter them,
-    streams to quench their thirst, mountains to keep them warm.
-  - But in the end, the world was too far gone, and their life energy was spent in
-    vain...
+  FlavorTexts:
+    IntroText: 'After the end, what once was full of life and vibrant energy, now
+      laid bare and dead. The Creators mourned their loss and descended upon the
+      land as they had done eons ago. '
+    SuccessText: They healed the world for their new children. They planted trees
+      to shelter them, streams to quench their thirst, mountains to keep them warm.
+    FailText: But in the end, the world was too far gone, and their life energy was
+      spent in vain...
+    TutorialText: 
+  ShowTutorialText: 0
   music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
   map: {fileID: 8259568037166387696, guid: c45fa09a5ce91fb4888ff1215c21b70a, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
@@ -32,7 +34,7 @@ MonoBehaviour:
     Uses: 16
   - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
     Uses: 12
-  - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
+  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
     Uses: 12
   levelTargets:
     GrassTargets: 14000000140000001e000000

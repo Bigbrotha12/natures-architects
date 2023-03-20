@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class Scorer : MonoBehaviour
 {
@@ -23,13 +24,22 @@ public class Scorer : MonoBehaviour
     [SerializeField] ScoreUI snowScore;
     [SerializeField] ScoreUI fireScore;
 
+    [SerializeField] Image bronzeStar;
+    [SerializeField] Image silverStar;
+    [SerializeField] Image goldStar;
+    [SerializeField] Sprite filledStar;
+    [SerializeField] Sprite emptyStar;
+
     [SerializeField] TMP_Text totalScoreText;
     [SerializeField] TMP_Text totalTargetText;
     [SerializeField] Sprite Checkmark;
     [SerializeField] Sprite Empty;
     [SerializeField] FloatingTextManager floatText;
-    int totalScore = 0;
-    int totalScoreTarget = 0;
+    int currentTotalScore = 0;
+    int bronzeTotalTarget = 0;
+    int silverTotalTarget = 0;
+    int goldTotalTarget = 0;
+    
     Dictionary<TerrainTypes, int> terrainScores = new Dictionary<TerrainTypes, int>();
     Dictionary<TerrainTypes, (int, int, int)> terrainTarget = new Dictionary<TerrainTypes, (int, int, int)>();
     Dictionary<TerrainTypes, ScoreUI> UIElement;
@@ -50,8 +60,10 @@ public class Scorer : MonoBehaviour
     public void ResetScores()
     {
         terrainScores = new Dictionary<TerrainTypes, int>();
-        totalScoreTarget = 0;
-        totalScore = 0;
+        bronzeTotalTarget = 0;
+        silverTotalTarget = 0;
+        goldTotalTarget = 0;
+        currentTotalScore = 0;
 
         foreach(TerrainTypes terrain in UIElement.Keys)
         {
@@ -61,43 +73,41 @@ public class Scorer : MonoBehaviour
     
     public Medals CheckWinCondition() 
     {
-        Medals achieved = Medals.GOLD;
+        if (!CheckAllTerrainsCompleted()) return Medals.NONE;
+
+        if (currentTotalScore >= goldTotalTarget) return Medals.GOLD;
+        if (currentTotalScore >= silverTotalTarget) return Medals.SILVER;
+        return Medals.BRONZE;
+    }
+
+    bool CheckAllTerrainsCompleted()
+    {
         foreach (KeyValuePair<TerrainTypes, (int, int, int)> target in terrainTarget)
         {
-            if(target.Value.Item1 == 0) continue;
-            if(!terrainScores.ContainsKey(target.Key)) 
-            { 
-                achieved = Medals.NONE;
-                return achieved; 
-            }  
-            
-            if(terrainScores[target.Key] >= target.Value.Item3 && achieved == Medals.GOLD) { continue; }
-            if(terrainScores[target.Key] >= target.Value.Item2 && achieved >= Medals.SILVER) 
-            { 
-                achieved = Medals.SILVER;
-                continue;
+            if (target.Value.Item1 == 0) continue;
+            if (!terrainScores.ContainsKey(target.Key))
+            {
+                return false;
             }
-            if(terrainScores[target.Key] >= target.Value.Item1 && achieved >= Medals.BRONZE) 
-            { 
-                achieved = Medals.BRONZE;
-                continue;
+            if (terrainScores[target.Key] < target.Value.Item1)
+            {
+                return false;
             }
-            achieved = Medals.NONE;
-            return achieved;
         }
-        return achieved;
+        return true;
     }
 
     public void SetTargetScore(TerrainTypes type, (int, int, int) targets)
     {
         terrainTarget[type] = (targets.Item1, targets.Item2, targets.Item3);
-        totalScoreTarget += targets.Item1;
+
+        bronzeTotalTarget += targets.Item1;
+        silverTotalTarget += targets.Item2;
+        goldTotalTarget += targets.Item3;
 
         ScoreUI scoreBoard = UIElement[type];
         scoreBoard.TargetScore.text = targets.Item1.ToString();
         DisplayScore(type);
-
-        totalTargetText.text = totalScoreTarget.ToString();
     }
 
     public void ScoreTile(TerrainTile scoringTile, TerrainTile[] adjacentTiles)
@@ -126,7 +136,7 @@ public class Scorer : MonoBehaviour
 
     public int GetTotalScore()
     {
-        return totalScore;
+        return currentTotalScore;
     }
 
     void UpdateScore(TerrainTypes tileType, int score)
@@ -138,7 +148,7 @@ public class Scorer : MonoBehaviour
         {
             terrainScores[tileType] += score;
         }
-        totalScore += score;
+        currentTotalScore += score;
     
         floatText.Show((score > 0 ? "+" : "") + score.ToString() + " points", score >= 0);
     }
@@ -167,7 +177,52 @@ public class Scorer : MonoBehaviour
         if(score >= target.Item1) { scoreBoard.ScoreCheck.sprite = Checkmark; }
         else { scoreBoard.ScoreCheck.sprite = Empty; }
 
-        totalScoreText.text = totalScore.ToString();
+        totalScoreText.text = currentTotalScore.ToString();
+        Medals currentMedal = CheckWinCondition();
+        totalTargetText.text = CheckAllTerrainsCompleted() ? "Next star: " + GetNextStarTargetScore(currentMedal) : "";
+        ShowCurrentMedals(currentMedal);
     }
 
+    void ShowCurrentMedals(Medals currentMedal)
+    {
+        switch (currentMedal)
+        {
+            case Medals.BRONZE:
+                bronzeStar.sprite = filledStar;
+                silverStar.sprite = emptyStar;
+                goldStar.sprite = emptyStar;
+                break;
+            case Medals.SILVER:
+                bronzeStar.sprite = filledStar;
+                silverStar.sprite = filledStar;
+                goldStar.sprite = emptyStar;
+                break;
+            case Medals.GOLD:
+                bronzeStar.sprite = filledStar;
+                silverStar.sprite = filledStar;
+                goldStar.sprite = filledStar;
+                break;
+            default:
+                bronzeStar.sprite = emptyStar;
+                silverStar.sprite = emptyStar;
+                goldStar.sprite = emptyStar;
+                break;
+        }
+    }
+
+    int GetNextStarTargetScore(Medals currentMedal)
+    {
+        switch (currentMedal)
+        {
+            case Medals.BRONZE:
+                return silverTotalTarget;
+            case Medals.SILVER:
+                return goldTotalTarget;
+            case Medals.GOLD:
+                return 0;
+            default:
+                break;
+        }
+        return 0;
+    }
 }

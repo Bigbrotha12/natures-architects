@@ -9,6 +9,16 @@ public class UIController : MonoBehaviour
     [SerializeField] string defaultMessageText;
     [SerializeField] TextMeshProUGUI levelMessageText;
 
+    [Header("Intro Panel")]
+    [SerializeField] string defaultIntroText;
+    [SerializeField] TextMeshProUGUI levelIntroText;
+    [SerializeField] TextMeshProUGUI levelIntroTitle;
+    [SerializeField] GameObject LevelIntroPanel;
+
+    [Header("Tutorial Panel")]
+    [SerializeField] GameObject tutorialPanel;
+    [SerializeField] TextMeshProUGUI tutorialTextObject;
+
     [Header("Level End Panels")]
     [SerializeField] GameObject gameOverPanel;
     [SerializeField] string defaultGameOverText;
@@ -33,6 +43,8 @@ public class UIController : MonoBehaviour
     [SerializeField] Transform ScoringKeyContainer;
     [SerializeField] GameObject ScoringKeyPrefab;
 
+    public event Action IntroPanelDismissedEvent;
+
     void Awake()
     {
         gameOverPanel.SetActive(false);
@@ -56,15 +68,36 @@ public class UIController : MonoBehaviour
         EventBroker.LevelCompleted -= OnLevelCompleted;
     }
 
-    public void SetLevelText(string[] messages)
+    public void SetLevelText(int levelNumber, FlavorTexts flavorTexts)
     {
         SetDefaultText();
-        if (messages.Length > 0)
-            levelMessageText.text = messages[0];
-        if (messages.Length > 1)
-            successText.text = messages[1];
-        if (messages.Length > 2)
-            gameOverText.text = messages[2];
+        levelIntroTitle.text = "Level " + levelNumber;
+        if (flavorTexts.IntroText != "default")
+        {
+            levelIntroText.text = flavorTexts.IntroText;
+            levelMessageText.text = flavorTexts.IntroText;
+        }
+        if (flavorTexts.SuccessText != "default")
+            successText.text = flavorTexts.SuccessText;
+        if (flavorTexts.FailText != "default")
+            gameOverText.text = flavorTexts.IntroText;
+    }
+
+    public void ShowIntroPanel()
+    {
+        LevelIntroPanel.SetActive(true);
+    }
+
+    public void DismissIntroPanel()
+    {
+        LevelIntroPanel.SetActive(false);
+        IntroPanelDismissedEvent?.Invoke();
+    }
+
+    public void ShowTutorialPanel(string text)
+    {
+        tutorialTextObject.text = text;
+        tutorialPanel.SetActive(true);
     }
 
     private void SetDefaultText()
@@ -93,11 +126,13 @@ public class UIController : MonoBehaviour
     public void OnGameOver()
     {
         ShowGameOverPanel(true);
+        tutorialPanel.SetActive(false);
     }
 
     public void OnLevelCompleted(Medals achieved)
     {
         ShowSuccessPanel(true, achieved);
+        tutorialPanel.SetActive(false);
     }
 
     void HideGameOverPanels()

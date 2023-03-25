@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
-  m_Name: Rich Level 3
+  m_Name: Fish Level 1
   m_EditorClassIdentifier: 
-  levelID: 3
+  levelID: 1
   FlavorTexts:
-    IntroText: Check the score panel to see the points needed to progress
-    SuccessText: Now you're just fishing for compliments!
-    FailText: 
-    TutorialText: 
-  ShowTutorialText: 0
+    IntroText: Favian Fish was the first of the creators to attempt to transform
+      the land by bringing water; the essence of life.
+    SuccessText: You took to this like a fish to water!
+    FailText: Place water tiles next to other water tiles to score points
+    TutorialText: Press 'Space' to build terrain <br>Move with WASD / Arrow keys
+  ShowTutorialText: 1
   music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
-  map: {fileID: 8259568037166387696, guid: 12b133ed6e3d5cb4783195437ae29880, type: 3}
+  map: {fileID: 8259568037166387696, guid: 137cb719195868245b4ba9852a82aafc, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
-  rows: 2
-  columns: 3
-  StartCoordinates: {x: 0, y: 1, z: 0}
+  rows: 1
+  columns: 5
+  StartCoordinates: {x: 0, y: 0, z: 0}
   AvailableCharacters:
   - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
     Uses: 4
@@ -32,6 +33,6 @@ MonoBehaviour:
     GrassTargets: 000000000000000000000000
     ForestTargets: 000000000000000000000000
     MountainTargets: 000000000000000000000000
-    WaterTargets: 020000000300000004000000
+    WaterTargets: 010000000200000003000000
     SnowTargets: 000000000000000000000000
     FireTargets: 000000000000000000000000

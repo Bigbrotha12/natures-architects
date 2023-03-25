@@ -15,7 +15,7 @@ MonoBehaviour:
   levelID: 9
   FlavorTexts:
     IntroText: 
-    SuccessText: I'm so hoppy you managed to finish that level
+    SuccessText: Sorry, there'll be no rabbit puns now, they're just not bunny.
     FailText: Try to place the grass tiles next to water tiles to score maximum points
     TutorialText: 
   ShowTutorialText: 0

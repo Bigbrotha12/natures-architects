@@ -16,7 +16,7 @@ MonoBehaviour:
   FlavorTexts:
     IntroText: Regina Rabbit was next to take up the mantle; transforming the dirt
       into lush meadows
-    SuccessText: Sorry, there'll be no rabbit puns now, they're just not bunny.
+    SuccessText: I'm so hoppy you managed to finish that level
     FailText: Grass tiles score more points when placed next to water
     TutorialText: Grass tiles score more points when placed next to water
   ShowTutorialText: 1

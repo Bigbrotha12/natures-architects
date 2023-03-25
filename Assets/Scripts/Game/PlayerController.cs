@@ -140,24 +140,28 @@ public class PlayerController : MonoBehaviour
         if (player is null )
         {
             Debug.Log("player reference not set.");
+            StartCoroutine(InputCooldown());
             return;
         }
 
         if (mapGrid is null)
         {
             Debug.Log("Map grid reference not set.");
+            StartCoroutine(InputCooldown());
             return;
         }
 
         if (character is null)
         {
             Debug.Log("Character reference not set.");
+            StartCoroutine(InputCooldown());
             return;
         }
 
         if (character.TerrainTile is null)
         {
             Debug.Log("Terrain tile reference not set.");
+            StartCoroutine(InputCooldown());
             return;
         }
 

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39c03027e623b04f9de37ee7b260f64, type: 3}
   m_Name: Blocker
   m_EditorClassIdentifier: 
-  tileType: 0
-  tileSprite: {fileID: 0}
+  tileType: 7
+  tileSprite: {fileID: 11400000, guid: b9889fbb1ac05ea4ca9e5f197c4cf7b7, type: 2}
   walkable: 0
   adjacentGrassValue: 0
   adjacentWaterValue: 0

@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelID: 1
   FlavorTexts:
-    IntroText: 'After the end, what once was full of life and vibrant energy, now
-      laid bare and dead. The Creators mourned their loss and descended upon the
-      land as they had done eons ago. '
-    SuccessText: 
-    FailText: 
+    IntroText: Favian Fish was the first of the creators to attempt to transform
+      the land by bringing water; the essence of life.
+    SuccessText: You took to this like a fish to water!
+    FailText: Place water tiles next to other water tiles to score points
     TutorialText: Press 'Space' to build terrain <br>Move with WASD / Arrow keys
   ShowTutorialText: 1
   music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}

@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Rich Level 5
   m_EditorClassIdentifier: 
   levelID: 5
-  flavorTexts:
-  - When you place a water tile, it scores 1 point for each adjacent water tile
+  FlavorTexts:
+    IntroText: 
+    SuccessText: You're really flowing now!
+    FailText: 
+    TutorialText: 
+  ShowTutorialText: 0
   music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
   map: {fileID: 8259568037166387696, guid: 30b9d0446024bd54daa9139942c7faf2, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}

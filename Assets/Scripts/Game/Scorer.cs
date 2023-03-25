@@ -24,6 +24,7 @@ public class Scorer : MonoBehaviour
     [SerializeField] ScoreUI snowScore;
     [SerializeField] ScoreUI fireScore;
 
+    [Header("Current stars")]
     [SerializeField] Image bronzeStar;
     [SerializeField] Image silverStar;
     [SerializeField] Image goldStar;

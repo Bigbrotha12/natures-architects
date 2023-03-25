@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Rich Level 4
   m_EditorClassIdentifier: 
   levelID: 4
-  flavorTexts:
-  - When you place a water tile, it scores 1 point for each adjacent water tile
+  FlavorTexts:
+    IntroText: Some levels require you to score maximum points in order to progress
+    SuccessText: That's what I call e-fish-ency!
+    FailText: 
+    TutorialText: 
+  ShowTutorialText: 0
   music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
   map: {fileID: 8259568037166387696, guid: 0a12902b3c863a04b94996caffb15d94, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}

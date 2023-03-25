@@ -63,7 +63,11 @@ public class GameManager : Singleton<GameManager>
     IEnumerator LoadGameRoutine(SceneIndex previousScene)
     {
         yield return StartCoroutine(sceneLoader.LoadScene(SceneIndex.GAME_SCENE, previousScene));
-        currentState = GameState.RUNNING;
+    }
+
+    public void ChangeGameState(GameState newState)
+    {
+        currentState = newState;
     }
 
     void ReturnToStartMenu()

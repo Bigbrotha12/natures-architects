@@ -80,7 +80,7 @@ public class UIController : MonoBehaviour
         if (flavorTexts.SuccessText != "default")
             successText.text = flavorTexts.SuccessText;
         if (flavorTexts.FailText != "default")
-            gameOverText.text = flavorTexts.IntroText;
+            gameOverText.text = flavorTexts.FailText;
     }
 
     public void ShowIntroPanel()

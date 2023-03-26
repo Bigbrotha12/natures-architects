@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
-  m_Name: Level_01
+  m_Name: Story Level_01
   m_EditorClassIdentifier: 
   levelID: 1
   FlavorTexts:
@@ -24,7 +24,7 @@ MonoBehaviour:
     TutorialText: 
   ShowTutorialText: 0
   music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
-  map: {fileID: 8259568037166387696, guid: c45fa09a5ce91fb4888ff1215c21b70a, type: 3}
+  map: {fileID: 8259568037166387696, guid: 47a6bdabdad9a024084aea8beff34159, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 8
   columns: 7
@@ -40,6 +40,6 @@ MonoBehaviour:
     GrassTargets: 14000000140000001e000000
     ForestTargets: 14000000140000001e000000
     MountainTargets: 000000000000000000000000
-    WaterTargets: 0f0000000f0000001e000000
+    WaterTargets: 0f0000000f00000019000000
     SnowTargets: 000000000000000000000000
     FireTargets: 000000000000000000000000

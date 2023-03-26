@@ -10,30 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
-  m_Name: Rabbit Level 4
+  m_Name: Squirrel Level 3
   m_EditorClassIdentifier: 
-  levelID: 9
+  levelID: 11
   FlavorTexts:
-    IntroText: 
-    SuccessText: Sorry, there'll be no more rabbit puns now, they're just not bunny.
-    FailText: Try to place the grass tiles next to water tiles to score maximum points
+    IntroText: Trees love the company of other trees
+    SuccessText: 
+    FailText: Try placing more forest tiles next to other forest tiles
     TutorialText: 
   ShowTutorialText: 0
   music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
-  map: {fileID: 8259568037166387696, guid: 5e7a0fae36e760f429f262801828afaf, type: 3}
+  map: {fileID: 8259568037166387696, guid: 8c3fad45967f3d147a13521d970eb38e, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 3
   columns: 5
-  StartCoordinates: {x: 0, y: 1, z: 0}
+  StartCoordinates: {x: 2, y: 2, z: 0}
   AvailableCharacters:
-  - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
-    Uses: 11
-  - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
-    Uses: 3
+  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
+    Uses: 4
   levelTargets:
-    GrassTargets: 0e0000000e0000000e000000
-    ForestTargets: 000000000000000000000000
+    GrassTargets: 000000000000000000000000
+    ForestTargets: 07000000070000000a000000
     MountainTargets: 000000000000000000000000
-    WaterTargets: 080000000a0000000b000000
+    WaterTargets: 000000000000000000000000
     SnowTargets: 000000000000000000000000
     FireTargets: 000000000000000000000000

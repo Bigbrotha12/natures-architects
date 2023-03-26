@@ -242,7 +242,7 @@ public class PlayerController : MonoBehaviour
             CharacterDeath();
             return;
         }
-        canMove = true;
+        StartCoroutine(InputCooldown());
     }
 
     void IncrementActionCount()
@@ -254,7 +254,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            actionCounterText.text = "Dead";
+            actionCounterText.text = "0";
             isDead = true;
         }
     }

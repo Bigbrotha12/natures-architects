@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Blocker
   m_EditorClassIdentifier: 
   tileType: 0
-  tileSprite: {fileID: 0}
+  tileSprite: {fileID: 11400000, guid: b9889fbb1ac05ea4ca9e5f197c4cf7b7, type: 2}
   walkable: 0
   adjacentGrassValue: 0
   adjacentWaterValue: 0
@@ -25,7 +25,8 @@ MonoBehaviour:
   AnimationStartTime: 0
   tileRule:
     targetTerrain: 0
-    Base: []
+    Base:
+    - {fileID: 21300000, guid: 900148ada8d2749a09b218926b156e6b, type: 3}
     UpOnly: []
     LeftOnly: []
     DownOnly: []

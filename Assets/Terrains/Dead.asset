@@ -14,9 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 0
   tileSprite: {fileID: 11400000, guid: ff72c0f220302424c8a7b7b351e343f9, type: 2}
+  walkable: 1
   adjacentGrassValue: 0
   adjacentWaterValue: 0
   adjacentMountainValue: 0
   adjacentForestValue: 0
   adjacentSnowValue: 0
   adjacentFireValue: 0
+  AnimationSpeed: 1
+  AnimationStartTime: 0
+  tileRule:
+    targetTerrain: 0
+    Base: []
+    UpOnly: []
+    LeftOnly: []
+    DownOnly: []
+    RightOnly: []
+    UpLeft: []
+    LeftDown: []
+    DownRight: []
+    RightUp: []
+    LeftRight: []
+    UpDown: []
+    UpLeftDown: []
+    LeftDownRight: []
+    DownRightUp: []
+    RightUpLeft: []
+    AllSides: []

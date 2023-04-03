@@ -16,7 +16,7 @@ MonoBehaviour:
   tileSprite: {fileID: 11400000, guid: 07d2faa6657e064469c16f4fcfc038be, type: 2}
   walkable: 1
   adjacentGrassValue: 1
-  adjacentWaterValue: 1
+  adjacentWaterValue: 2
   adjacentMountainValue: 1
   adjacentForestValue: 1
   adjacentSnowValue: 0

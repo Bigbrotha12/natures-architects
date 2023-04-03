@@ -10,24 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
-  m_Name: Rich Level 3
+  m_Name: Fish Level 5
   m_EditorClassIdentifier: 
-  levelID: 3
-  flavorTexts:
-  - When you place a water tile, it scores 1 point for each adjacent water tile
+  levelID: 5
+  FlavorTexts:
+    IntroText: 
+    SuccessText: You're really flowing now!
+    FailText: 
+    TutorialText: 
+  ShowTutorialText: 0
   music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
-  map: {fileID: 8259568037166387696, guid: 12b133ed6e3d5cb4783195437ae29880, type: 3}
+  map: {fileID: 8259568037166387696, guid: 30b9d0446024bd54daa9139942c7faf2, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
-  rows: 2
-  columns: 3
+  rows: 3
+  columns: 7
   StartCoordinates: {x: 0, y: 1, z: 0}
   AvailableCharacters:
   - CharacterSO: {fileID: 11400000, guid: 7462c5adf89221d40ac12218adda2dc9, type: 2}
-    Uses: 4
+    Uses: 10
   levelTargets:
     GrassTargets: 000000000000000000000000
     ForestTargets: 000000000000000000000000
     MountainTargets: 000000000000000000000000
-    WaterTargets: 020000000300000004000000
+    WaterTargets: 0b0000000b0000000c000000
     SnowTargets: 000000000000000000000000
     FireTargets: 000000000000000000000000

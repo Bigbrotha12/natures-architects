@@ -24,6 +24,7 @@ public class Scorer : MonoBehaviour
     [SerializeField] ScoreUI snowScore;
     [SerializeField] ScoreUI fireScore;
 
+    [Header("Current stars")]
     [SerializeField] Image bronzeStar;
     [SerializeField] Image silverStar;
     [SerializeField] Image goldStar;
@@ -179,7 +180,14 @@ public class Scorer : MonoBehaviour
 
         totalScoreText.text = currentTotalScore.ToString();
         Medals currentMedal = CheckWinCondition();
-        totalTargetText.text = CheckAllTerrainsCompleted() ? "Next star: " + GetNextStarTargetScore(currentMedal) : "";
+        if (currentMedal == Medals.GOLD || !CheckAllTerrainsCompleted())
+        {
+            totalTargetText.text = "";
+        }
+        else
+        {
+            totalTargetText.text = "Next star: " + GetNextStarTargetScore(currentMedal);
+        }
         ShowCurrentMedals(currentMedal);
     }
 

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
+  m_Name: Rabbit Level 1
+  m_EditorClassIdentifier: 
+  levelID: 6
+  FlavorTexts:
+    IntroText: Regina Rabbit was next to take up the mantle; transforming the dirt
+      into lush meadows
+    SuccessText: I'm so hoppy you managed to finish that level
+    FailText: Grass tiles score more points when placed next to water
+    TutorialText: Grass tiles score more points when placed next to water
+  ShowTutorialText: 1
+  music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
+  map: {fileID: 8259568037166387696, guid: be3d53c16d0ca6148813e32c62ed1d44, type: 3}
+  starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
+  rows: 1
+  columns: 5
+  StartCoordinates: {x: 0, y: 0, z: 0}
+  AvailableCharacters:
+  - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
+    Uses: 4
+  levelTargets:
+    GrassTargets: 010000000200000005000000
+    ForestTargets: 000000000000000000000000
+    MountainTargets: 000000000000000000000000
+    WaterTargets: 000000000000000000000000
+    SnowTargets: 000000000000000000000000
+    FireTargets: 000000000000000000000000

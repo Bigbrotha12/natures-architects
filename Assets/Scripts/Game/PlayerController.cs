@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!GameStateCheck()) return;
+
         if (paused) return;
         if (actionCounter <= 0) return;
 
@@ -106,6 +108,12 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(CheckCharacterSetupComplete());
     }
 
+    bool GameStateCheck()
+    {
+        if (GameManager.Instance == null) return true;
+        return GameManager.Instance.CurrentState == GameState.RUNNING;
+    }
+
     IEnumerator CheckCharacterSetupComplete()
     {
         while(!character.IsReady)
@@ -129,14 +137,36 @@ public class PlayerController : MonoBehaviour
 
     void PlaceTileAttempt()
     {
-        if (player is null || mapGrid is null || character.TerrainTile is null)
+        if (player is null )
         {
-            Debug.Log("Character, tilemap, or tile reference not set.");
+            Debug.Log("player reference not set.");
+            StartCoroutine(InputCooldown());
+            return;
+        }
+
+        if (mapGrid is null)
+        {
+            Debug.Log("Map grid reference not set.");
+            StartCoroutine(InputCooldown());
+            return;
+        }
+
+        if (character is null)
+        {
+            Debug.Log("Character reference not set.");
+            StartCoroutine(InputCooldown());
+            return;
+        }
+
+        if (character.TerrainTile is null)
+        {
+            Debug.Log("Terrain tile reference not set.");
+            StartCoroutine(InputCooldown());
             return;
         }
 
         Vector3Int position = new Vector3Int((int)player.position.x, (int)player.position.y, 0);
-        TerrainTypes targetTerrain = mapGrid.CheckTile(position);
+        TerrainTypes targetTerrain = mapGrid.GetTileType(position);
 
         if (CanPlaceTile(targetTerrain))
         {
@@ -200,8 +230,7 @@ public class PlayerController : MonoBehaviour
     bool CanMoveToTile(Vector3Int newPosition)
     {
         if (!mapGrid.CheckPositionIsOnMapGrid(newPosition)) return false;
-        if (mapGrid.CheckTile(newPosition) == TerrainTypes.Blocked) return false;
-        return true;
+        return mapGrid.CheckTileIsWalkable(newPosition);
     }
 
     void OnMovementCompleted()
@@ -213,7 +242,7 @@ public class PlayerController : MonoBehaviour
             CharacterDeath();
             return;
         }
-        canMove = true;
+        StartCoroutine(InputCooldown());
     }
 
     void IncrementActionCount()
@@ -225,7 +254,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            actionCounterText.text = "Dead";
+            actionCounterText.text = "0";
             isDead = true;
         }
     }

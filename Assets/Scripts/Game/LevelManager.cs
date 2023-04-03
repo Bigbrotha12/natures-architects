@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] AudioClip levelSelectMusic;
     [SerializeField] PlayerController player;
     [SerializeField] GameObject levelSelectMenu;
+    [SerializeField] GameObject storyEndText;
 
     Scorer scorer;
     UIController uiController;
@@ -207,6 +208,10 @@ public class LevelManager : MonoBehaviour
 
     void NoMoreLevels()
     {
-        EventBroker.CallGameCompleted();
+        storyEndText.SetActive(true);
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.ChangeGameState(GameState.ENDGAME);
+        }
     }
 }

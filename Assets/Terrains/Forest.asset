@@ -18,7 +18,7 @@ MonoBehaviour:
   adjacentGrassValue: 0
   adjacentWaterValue: 1
   adjacentMountainValue: 2
-  adjacentForestValue: 1
+  adjacentForestValue: 2
   adjacentSnowValue: 0
   adjacentFireValue: -1
   AnimationSpeed: 1

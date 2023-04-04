@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelID: 7
   FlavorTexts:
-    IntroText: Regina was no ordinary Rabbit; crossing rivers and lakes was not a
-      problem for her.
+    IntroText: Rennie was no ordinary Rabbit; crossing rivers and lakes was not a
+      problem for him.
     SuccessText: Keep this up and you there'll be a hoppy ending
     FailText: Try to place the grass tiles next to water tiles to score maximum points
     TutorialText: 

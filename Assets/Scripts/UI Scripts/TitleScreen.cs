@@ -17,7 +17,7 @@ public class TitleScreen : MonoBehaviour
 
     void OnEnable()
     {
-        if (GameManager.Instance.GameCompleted)
+        if (GameManager.Instance is not null && GameManager.Instance.GameCompleted)
         {
             SetupNewBeginning();
         }

@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     bool isDead;
     bool canBuild = true;
 
+    Coroutine cooldownRoutine;
+
     void Awake()
     {
         if (player == null)
@@ -140,28 +142,28 @@ public class PlayerController : MonoBehaviour
         if (player is null )
         {
             Debug.Log("player reference not set.");
-            StartCoroutine(InputCooldown());
+            StartInputCooldown();
             return;
         }
 
         if (mapGrid is null)
         {
             Debug.Log("Map grid reference not set.");
-            StartCoroutine(InputCooldown());
+            StartInputCooldown();
             return;
         }
 
         if (character is null)
         {
             Debug.Log("Character reference not set.");
-            StartCoroutine(InputCooldown());
+            StartInputCooldown();
             return;
         }
 
         if (character.TerrainTile is null)
         {
             Debug.Log("Terrain tile reference not set.");
-            StartCoroutine(InputCooldown());
+            StartInputCooldown();
             return;
         }
 
@@ -177,7 +179,7 @@ public class PlayerController : MonoBehaviour
             EventBroker.CallPlayerMoveBlocked();
            
         }
-        StartCoroutine("InputCooldown");
+        StartInputCooldown();
     }
 
     bool CanPlaceTile(TerrainTypes targetTerrain)
@@ -215,7 +217,6 @@ public class PlayerController : MonoBehaviour
 
         if (CanMoveToTile(newPosition))
         {
-            IncrementActionCount();
             mover.movementCompletedEvent += OnMovementCompleted;
             mover.MoveToLocation(player, newPosition);
             EventBroker.CallPlayerMove();
@@ -223,7 +224,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             EventBroker.CallPlayerMoveBlocked();
-            StartCoroutine(InputCooldown());
+            StartInputCooldown();
         }
     }
 
@@ -236,13 +237,14 @@ public class PlayerController : MonoBehaviour
     void OnMovementCompleted()
     {
         mover.movementCompletedEvent -= OnMovementCompleted;
+        IncrementActionCount();
 
         if (isDead)
         {
             CharacterDeath();
             return;
         }
-        StartCoroutine(InputCooldown());
+        StartInputCooldown();
     }
 
     void IncrementActionCount()
@@ -265,9 +267,17 @@ public class PlayerController : MonoBehaviour
         EventBroker.CallCharacterDeath();
     }
 
-    IEnumerator InputCooldown() 
+    void StartInputCooldown()
     {
-        yield return new WaitForSeconds(inputDelay);
+        if (cooldownRoutine is not null) StopCoroutine(cooldownRoutine);
+        canMove = false;
+        canBuild = false;
+        cooldownRoutine = StartCoroutine(InputCooldownRoutine(inputDelay));
+    }
+
+    IEnumerator InputCooldownRoutine(float duration) 
+    {
+        yield return new WaitForSeconds(duration);
         canMove = true;
         canBuild = true;
     }

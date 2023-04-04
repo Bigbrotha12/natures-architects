@@ -15,11 +15,11 @@ MonoBehaviour:
   levelID: 11
   FlavorTexts:
     IntroText: Trees love the company of other trees
-    SuccessText: 
+    SuccessText: No time for-rest for you, on with the next level!
     FailText: Try placing more forest tiles next to other forest tiles
     TutorialText: 
   ShowTutorialText: 0
-  music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
+  music: {fileID: 0}
   map: {fileID: 8259568037166387696, guid: 320503ae0a24dde429e10679c35673fd, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 3

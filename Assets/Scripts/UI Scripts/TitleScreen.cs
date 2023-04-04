@@ -26,8 +26,6 @@ public class TitleScreen : MonoBehaviour
     private void SetupNewBeginning()
     {
         backgroundImage.sprite = gameCompletedBackgroundImage;
-        originalTitleText.SetActive(false);
-        startAgainTitleText.SetActive(true);
         startButton.GetComponentInChildren<TextMeshProUGUI>().text = startAgainButtonText;
     }
 }

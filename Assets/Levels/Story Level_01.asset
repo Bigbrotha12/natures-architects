@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
   m_Name: Story Level_01
   m_EditorClassIdentifier: 
-  levelID: 1
+  levelID: 101
+  StoryText: 
   FlavorTexts:
-    IntroText: 'After the end, what once was full of life and vibrant energy, now
-      laid bare and dead. The Creators mourned their loss and descended upon the
-      land as they had done eons ago. '
+    IntroText: 
     SuccessText: They healed the world for their new children. They planted trees
       to shelter them, streams to quench their thirst, mountains to keep them warm.
     FailText: But in the end, the world was too far gone, and their life energy was

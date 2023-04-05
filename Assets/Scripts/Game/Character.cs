@@ -64,7 +64,6 @@ public class Character : MonoBehaviour
 
     public void SpawnAnimationComplete()
     {
-        print("Spawn complete");
         isReady = true;
     }
 }

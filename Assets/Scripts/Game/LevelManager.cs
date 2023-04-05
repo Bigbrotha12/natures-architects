@@ -69,7 +69,6 @@ public class LevelManager : MonoBehaviour
 
     public void InitializeLevel(bool showIntro)
     {
-        Debug.Log("Index result: " + currentLevelIndex.ToString());
         scorer.ResetScores();
         player.ShowCharacter(false);
         currentCharacterID = 0;
@@ -81,7 +80,10 @@ public class LevelManager : MonoBehaviour
 
         if (!String.IsNullOrEmpty(CurrentLevelSO.StoryText))
         {
-            GameManager.Instance.ChangeGameState(GameState.PAUSE);
+            if (GameManager.Instance is not null)
+            {
+                GameManager.Instance.ChangeGameState(GameState.PAUSE);
+            }
             storyText.GetComponent<Dialogue>().lines[0] = CurrentLevelSO.StoryText;
             storyText.SetActive(true);
         }

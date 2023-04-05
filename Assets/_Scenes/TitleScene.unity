@@ -309,8 +309,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2018870520564223263, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
       propertyPath: m_Volume
-      value: 0.55
+      value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: -2018870520564223263, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3112114532668809441, guid: f0d9499019b71b14e91d98bf56868a0c, type: 2}
     - target: {fileID: 70958639537538643, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
       propertyPath: normalColor.a
       value: 1
@@ -1375,8 +1379,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2018870520564223263, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
       propertyPath: m_Volume
-      value: 0.55
+      value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: -2018870520564223263, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3112114532668809441, guid: f0d9499019b71b14e91d98bf56868a0c, type: 2}
     - target: {fileID: 70958639537538643, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
       propertyPath: normalColor.a
       value: 1
@@ -1855,8 +1863,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2018870520564223263, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
       propertyPath: m_Volume
-      value: 0.55
+      value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: -2018870520564223263, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3112114532668809441, guid: f0d9499019b71b14e91d98bf56868a0c, type: 2}
     - target: {fileID: 70958639537538643, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
       propertyPath: normalColor.a
       value: 1
@@ -2288,7 +2300,7 @@ AudioSource:
   m_GameObject: {fileID: 1994526340}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -2033381835610754486, guid: f0d9499019b71b14e91d98bf56868a0c, type: 2}
+  OutputAudioMixerGroup: {fileID: -8764712303387552067, guid: f0d9499019b71b14e91d98bf56868a0c, type: 2}
   m_audioClip: {fileID: 8300000, guid: 219258d6edefa4d41bc8f8bf234f3020, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
@@ -2403,8 +2415,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2018870520564223263, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
       propertyPath: m_Volume
-      value: 0.55
+      value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: -2018870520564223263, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3112114532668809441, guid: f0d9499019b71b14e91d98bf56868a0c, type: 2}
     - target: {fileID: 70958639537538643, guid: 694af2bef364c8241b9a723259a6dcd1, type: 3}
       propertyPath: normalColor.a
       value: 1
@@ -2784,10 +2800,10 @@ AudioSource:
   m_GameObject: {fileID: 1907327809}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -6477841104205675088, guid: f0d9499019b71b14e91d98bf56868a0c, type: 2}
+  OutputAudioMixerGroup: {fileID: 3112114532668809441, guid: f0d9499019b71b14e91d98bf56868a0c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.49
+  m_Volume: 0.2
   m_Pitch: 2.5
   Loop: 0
   Mute: 0

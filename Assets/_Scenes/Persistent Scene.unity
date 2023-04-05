@@ -208,15 +208,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
       propertyPath: audioGroups.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
       propertyPath: audioGroups.Array.data[0].displayName
-      value: Menu Music
+      value: Music
       objectReference: {fileID: 0}
     - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
       propertyPath: audioGroups.Array.data[1].displayName
-      value: Menu SFX
+      value: Sound FX
       objectReference: {fileID: 0}
     - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
       propertyPath: audioGroups.Array.data[2].displayName
@@ -260,11 +260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
       propertyPath: audioGroups.Array.data[0].audioGroupName
-      value: MenuMusic
+      value: Music
       objectReference: {fileID: 0}
     - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
       propertyPath: audioGroups.Array.data[1].audioGroupName
-      value: MenuSFX
+      value: SoundFX
       objectReference: {fileID: 0}
     - target: {fileID: 2078689757698872887, guid: 764f333aa4bbf9d4d89fcd765633bf7f, type: 3}
       propertyPath: audioGroups.Array.data[2].audioGroupName

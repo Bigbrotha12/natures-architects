@@ -17,15 +17,13 @@ MonoBehaviour:
     heal once more. They were overjoyed at the return of their children.
   FlavorTexts:
     IntroText: 
-    SuccessText: And They now understood that their gift to the world, was not all
-      that was seen, but the Determination and Hope to continue living even after
-      the End.
+    SuccessText: 
     FailText: But they lacked the Determination that Their world had shown them,
       and so They failed their mission.
     TutorialText: 
   ShowTutorialText: 0
   music: {fileID: 8300000, guid: 526eab355c20a254a9469e5874e65056, type: 3}
-  map: {fileID: 8259568037166387696, guid: c45fa09a5ce91fb4888ff1215c21b70a, type: 3}
+  map: {fileID: 8259568037166387696, guid: d4160eb949239fc4dabe24b2c0f96983, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 25
   columns: 25
@@ -40,7 +38,7 @@ MonoBehaviour:
   - CharacterSO: {fileID: 11400000, guid: 96327b4f211644c4bba7cadfad9be1bb, type: 2}
     Uses: 12
   - CharacterSO: {fileID: 11400000, guid: a3907f2873f20c14187a6f96d460d7a0, type: 2}
-    Uses: 10
+    Uses: 12
   - CharacterSO: {fileID: 11400000, guid: 853d5c66c8ec0fd4e84e56263b35b588, type: 2}
     Uses: 5
   - CharacterSO: {fileID: 11400000, guid: 715d44fd46731394ea2d04a29c13f3bc, type: 2}
@@ -50,13 +48,13 @@ MonoBehaviour:
   - CharacterSO: {fileID: 11400000, guid: 96327b4f211644c4bba7cadfad9be1bb, type: 2}
     Uses: 8
   - CharacterSO: {fileID: 11400000, guid: a3907f2873f20c14187a6f96d460d7a0, type: 2}
-    Uses: 14
+    Uses: 15
   - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
     Uses: 3
   levelTargets:
-    GrassTargets: 1e0000001e0000001e000000
-    ForestTargets: 0f0000000f0000000f000000
-    MountainTargets: 280000002800000028000000
-    WaterTargets: 0f0000000f0000000f000000
-    SnowTargets: 500000005000000050000000
-    FireTargets: 640000006400000064000000
+    GrassTargets: 14000000190000001e000000
+    ForestTargets: 0f0000001400000019000000
+    MountainTargets: 140000001e00000028000000
+    WaterTargets: 0f0000001400000019000000
+    SnowTargets: 28000000320000003c000000
+    FireTargets: 3c0000005000000064000000

@@ -141,28 +141,28 @@ public class PlayerController : MonoBehaviour
     {
         if (player is null )
         {
-            Debug.Log("player reference not set.");
+            Debug.LogError("player reference not set.");
             StartBuildInputCooldown();
             return;
         }
 
         if (mapGrid is null)
         {
-            Debug.Log("Map grid reference not set.");
+            Debug.LogError("Map grid reference not set.");
             StartBuildInputCooldown();
             return;
         }
 
         if (character is null)
         {
-            Debug.Log("Character reference not set.");
+            Debug.LogError("Character reference not set.");
             StartBuildInputCooldown();
             return;
         }
 
         if (character.TerrainTile is null)
         {
-            Debug.Log("Terrain tile reference not set.");
+            Debug.LogError("Terrain tile reference not set.");
             StartBuildInputCooldown();
             return;
         }
@@ -209,7 +209,7 @@ public class PlayerController : MonoBehaviour
     {
         if (player is null)
         {
-            Debug.Log("Character transform not set.");
+            Debug.LogError("Character transform not set.");
             return;
         }
 

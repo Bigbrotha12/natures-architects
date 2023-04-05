@@ -26,6 +26,5 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(gap);
         }
         float spawningTime = Time.time - startTime;
-        print("Spawning completed in " + spawningTime + " seconds");
     }
 }

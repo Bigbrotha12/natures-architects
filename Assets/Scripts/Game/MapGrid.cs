@@ -13,7 +13,6 @@ public class MapGrid : MonoBehaviour
     
     public void SetLevel(GameLevelSO levelSO)
     {
-        Debug.Log("MapGrid: Setting level to " + levelSO.levelID.ToString());
         gameLevel = levelSO;
         GenerateTileMap();
         SetTargets();

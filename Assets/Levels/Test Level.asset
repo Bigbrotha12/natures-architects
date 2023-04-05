@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
   m_Name: Test Level
   m_EditorClassIdentifier: 
-  levelID: 6
+  levelID: 200
+  StoryText: 
   FlavorTexts:
     IntroText: 
-    SuccessText: 
-    FailText: 
+    SuccessText: They healed the world for their new children. They planted trees
+      to shelter them, streams to quench their thirst, mountains to keep them warm.
+    FailText: But in the end, the world was too far gone, and their life energy was
+      spent in vain...
     TutorialText: 
   ShowTutorialText: 0
   music: {fileID: 8300000, guid: a8ad032ddc83ba74781ca486813a65fd, type: 3}
@@ -27,14 +30,10 @@ MonoBehaviour:
   StartCoordinates: {x: 0, y: 0, z: 0}
   AvailableCharacters:
   - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
-    Uses: 10
-  - CharacterSO: {fileID: 11400000, guid: 96327b4f211644c4bba7cadfad9be1bb, type: 2}
-    Uses: 10
-  - CharacterSO: {fileID: 11400000, guid: 3ac352a093521ca47b2914e14dff8d7a, type: 2}
-    Uses: 10
+    Uses: 2
   levelTargets:
     GrassTargets: 000000000000000000000000
-    ForestTargets: 000000000000000000000000
+    ForestTargets: 010000000100000001000000
     MountainTargets: 000000000000000000000000
     WaterTargets: 000000000000000000000000
     SnowTargets: 000000000000000000000000

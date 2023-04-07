@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mountain
   m_EditorClassIdentifier: 
   tileType: 4
-  tileSprite: {fileID: 11400000, guid: 7a7d02738cca3de49969df74587aa099, type: 2}
+  tileSprite: {fileID: 11400000, guid: f0685f0de06edee409631fa6cf72a9e2, type: 2}
   walkable: 1
   adjacentGrassValue: -2
   adjacentWaterValue: 0
@@ -24,20 +24,36 @@ MonoBehaviour:
   AnimationSpeed: 1
   AnimationStartTime: 0
   tileRule:
-    targetTerrain: 0
-    Base: []
-    UpOnly: []
-    LeftOnly: []
-    DownOnly: []
-    RightOnly: []
-    UpLeft: []
-    LeftDown: []
-    DownRight: []
-    RightUp: []
-    LeftRight: []
-    UpDown: []
-    UpLeftDown: []
-    LeftDownRight: []
-    DownRightUp: []
-    RightUpLeft: []
-    AllSides: []
+    targetTerrains: 04000000
+    Base:
+    - {fileID: 391721861, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    UpOnly:
+    - {fileID: 391721861, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    LeftOnly:
+    - {fileID: 1926200257, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    DownOnly:
+    - {fileID: 391721861, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    RightOnly:
+    - {fileID: 1925664998, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    UpLeft:
+    - {fileID: 1926200257, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    LeftDown:
+    - {fileID: 1926200257, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    DownRight:
+    - {fileID: 391721861, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    RightUp:
+    - {fileID: 1925664998, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    LeftRight:
+    - {fileID: -2078708596, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    UpDown:
+    - {fileID: 391721861, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    UpLeftDown:
+    - {fileID: 1926200257, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    LeftDownRight:
+    - {fileID: 1926200257, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    DownRightUp:
+    - {fileID: 1925664998, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    RightUpLeft:
+    - {fileID: 1925664998, guid: b71fc1753609b9747919a311794ee099, type: 3}
+    AllSides:
+    - {fileID: -2078708596, guid: b71fc1753609b9747919a311794ee099, type: 3}

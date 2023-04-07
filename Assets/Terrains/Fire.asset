@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   tileType: 5
-  tileSprite: {fileID: 11400000, guid: c7a223fed109fba4a9e5906812661820, type: 2}
+  tileSprite: {fileID: 11400000, guid: 669cc506cecc4714a9b74295080ad40b, type: 2}
   walkable: 1
   adjacentGrassValue: 0
   adjacentWaterValue: -3
@@ -24,69 +24,24 @@ MonoBehaviour:
   AnimationSpeed: 1
   AnimationStartTime: 0
   tileRule:
-    targetTerrain: 0
+    targetTerrains: 
     Base:
-    - {fileID: 1732517424, guid: 1c85037319150c0458b285c3950b236c, type: 3}
-    - {fileID: 1970464476, guid: 1c85037319150c0458b285c3950b236c, type: 3}
-    - {fileID: 2056067327, guid: 1c85037319150c0458b285c3950b236c, type: 3}
-    - {fileID: 615778959, guid: 1c85037319150c0458b285c3950b236c, type: 3}
-    UpOnly:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    LeftOnly:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    DownOnly:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    RightOnly:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    UpLeft:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    LeftDown:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    DownRight:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    RightUp:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    LeftRight:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    UpDown:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    UpLeftDown:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    LeftDownRight:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    DownRightUp:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    RightUpLeft:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    AllSides:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 789295731, guid: a2ec0184fd1aee64aa502d79f4865f0c, type: 3}
+    - {fileID: 276503123, guid: a2ec0184fd1aee64aa502d79f4865f0c, type: 3}
+    - {fileID: 120930441, guid: a2ec0184fd1aee64aa502d79f4865f0c, type: 3}
+    - {fileID: 686656162, guid: a2ec0184fd1aee64aa502d79f4865f0c, type: 3}
+    UpOnly: []
+    LeftOnly: []
+    DownOnly: []
+    RightOnly: []
+    UpLeft: []
+    LeftDown: []
+    DownRight: []
+    RightUp: []
+    LeftRight: []
+    UpDown: []
+    UpLeftDown: []
+    LeftDownRight: []
+    DownRightUp: []
+    RightUpLeft: []
+    AllSides: []

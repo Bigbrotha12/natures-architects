@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c85037319150c0458b285c3950b236c
+guid: d4bdf26dce4b25a4da0e0dc7c7d065f4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteMapForestFire_0
+      name: SpriteMapOutlineWater_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 479ddaa72db4b1e469a679e3efae09d3
-      internalID: -2086595338
+      spriteID: 47a34ba319e44ba4f92602853a6d21c6
+      internalID: -282973771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_1
+      name: SpriteMapOutlineWater_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 284f26ddef65e5d4894f9d45b7801539
-      internalID: -1517770905
+      spriteID: 1d93c3414749fa842ad3e26c1e2c3dec
+      internalID: -1960917910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_2
+      name: SpriteMapOutlineWater_2
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8931f86187f04e34da7ce423e4b295b4
-      internalID: 797225287
+      spriteID: 803fd1b1eb656914cb1507f764d0ed34
+      internalID: 121564604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_3
+      name: SpriteMapOutlineWater_3
       rect:
         serializedVersion: 2
         x: 96
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34e49dcdebf8f39499920421cd4f02da
-      internalID: 1732517424
+      spriteID: 98f02b1f19aa1cf4ea933dc9c26227d7
+      internalID: -1271109922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_4
+      name: SpriteMapOutlineWater_4
       rect:
         serializedVersion: 2
         x: 128
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 658091252b12f9d4283630f1ab38a02b
-      internalID: 1970464476
+      spriteID: c70b9317bfaa7d9498d16126d160d395
+      internalID: 1498615879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_5
+      name: SpriteMapOutlineWater_5
       rect:
         serializedVersion: 2
         x: 160
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1317e70c418020e4b840824c9b9ff8db
-      internalID: 2056067327
+      spriteID: c0c4262d1548e3a42b3daa1c3449b7ec
+      internalID: 759561564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_6
+      name: SpriteMapOutlineWater_6
       rect:
         serializedVersion: 2
         x: 192
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91039fc3275bfde4bb9e0998f363710b
-      internalID: 615778959
+      spriteID: b575b3e120926c440b1b3e3366d570cc
+      internalID: 1141363795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_7
+      name: SpriteMapOutlineWater_7
       rect:
         serializedVersion: 2
         x: 224
@@ -266,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 116f7f60079e21a42983862a69ad9e5c
-      internalID: 849094025
+      spriteID: af145a307acade94384159596804f6e2
+      internalID: 116847468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_8
+      name: SpriteMapOutlineWater_8
       rect:
         serializedVersion: 2
         x: 0
@@ -287,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cdba63ea17d3b94ab1f3a8c64aa3796
-      internalID: -2031902579
+      spriteID: 1b0e2d68f77b3804ebbf95803877d793
+      internalID: -234256681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_9
+      name: SpriteMapOutlineWater_9
       rect:
         serializedVersion: 2
         x: 32
@@ -308,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ca2ad019d838db4690c685c6fafd7b9
-      internalID: -604591783
+      spriteID: 7ee7b868348689b4cbce531136def509
+      internalID: 1203868983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_10
+      name: SpriteMapOutlineWater_10
       rect:
         serializedVersion: 2
         x: 64
@@ -329,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41b677f132029154698b36548cd921eb
-      internalID: 2087455809
+      spriteID: a1298b9d24d7e814aa27973fe0a847d4
+      internalID: -1380976580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_11
+      name: SpriteMapOutlineWater_11
       rect:
         serializedVersion: 2
         x: 96
@@ -350,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 827deb203e2fbab40a7d2f5a62a5bda7
-      internalID: 707311397
+      spriteID: 859f59427adca3f438202fc1007f303d
+      internalID: 73600016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_12
+      name: SpriteMapOutlineWater_12
       rect:
         serializedVersion: 2
         x: 128
@@ -371,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f48bd1eb2d6e7b4eb2b924b26ad9200
-      internalID: 1201282551
+      spriteID: 9c1fb424fdb5e3f4bbbb9df2696d33d8
+      internalID: -202307053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_13
+      name: SpriteMapOutlineWater_13
       rect:
         serializedVersion: 2
         x: 160
@@ -392,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61770184208dee641b561c796d3bf771
-      internalID: -616380305
+      spriteID: 580c53a78b5a9ee45a8653232c7d492a
+      internalID: 2128419906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_14
+      name: SpriteMapOutlineWater_14
       rect:
         serializedVersion: 2
         x: 192
@@ -413,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f0af6ebb23330b4a942946392858adc
-      internalID: 950146406
+      spriteID: 7f5f206099ee046468695fda78e9bff4
+      internalID: 355356027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_15
+      name: SpriteMapOutlineWater_15
       rect:
         serializedVersion: 2
         x: 224
@@ -434,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc310df97e0b585468ee33909f4dbcaf
-      internalID: -794105393
+      spriteID: 22978a393067b8248a8f13639e079985
+      internalID: 623406208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_16
+      name: SpriteMapOutlineWater_16
       rect:
         serializedVersion: 2
         x: 0
@@ -455,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f20ca95c75105349a9d1ed8998aa20b
-      internalID: -2095647453
+      spriteID: d6e8506846b57e3489dedd03e8cae543
+      internalID: 798325843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_17
+      name: SpriteMapOutlineWater_17
       rect:
         serializedVersion: 2
         x: 32
@@ -476,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97e60938ad933ee48b5683d16bc6146c
-      internalID: 693904889
+      spriteID: c560f7b7a783d2540a475212621a56c2
+      internalID: 2063487808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_18
+      name: SpriteMapOutlineWater_18
       rect:
         serializedVersion: 2
         x: 64
@@ -497,14 +497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb54c46eb9570d245850348cf385a434
-      internalID: 502565971
+      spriteID: 6f352518b2bd9654985a6737cba13249
+      internalID: -632900156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_19
+      name: SpriteMapOutlineWater_19
       rect:
         serializedVersion: 2
         x: 96
@@ -518,14 +518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f6c127f2186a0c4cadf1d7e1e2c92a9
-      internalID: 1295611176
+      spriteID: 0f4e5b94103cbbe45bf909a9635233e6
+      internalID: -1615358562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_20
+      name: SpriteMapOutlineWater_20
       rect:
         serializedVersion: 2
         x: 128
@@ -539,14 +539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e1095f9a41280e4da4a63e833e7dfe6
-      internalID: -1965121188
+      spriteID: fbe1df5f6e2558e4fbc985a2cfa99bd7
+      internalID: 1368779242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_21
+      name: SpriteMapOutlineWater_21
       rect:
         serializedVersion: 2
         x: 160
@@ -560,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 083fdc69e7f55a141a236f75f00a2f14
-      internalID: 566471444
+      spriteID: b164765bce5696d4d9a3d70efaec1f66
+      internalID: -582159443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_22
+      name: SpriteMapOutlineWater_22
       rect:
         serializedVersion: 2
         x: 192
@@ -581,14 +581,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06a24f7d98f29fb489f4fe714d723ae7
-      internalID: -56502083
+      spriteID: 7d3ae33800a27304aa006b140c8ac7cf
+      internalID: 936678081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_23
+      name: SpriteMapOutlineWater_23
       rect:
         serializedVersion: 2
         x: 224
@@ -602,14 +602,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1be53914ca8fa564fa86a4768131cf36
-      internalID: 199041810
+      spriteID: 713f5af05355a034a97c7b291199b3cd
+      internalID: -123986435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_24
+      name: SpriteMapOutlineWater_24
       rect:
         serializedVersion: 2
         x: 0
@@ -623,14 +623,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da2f8cbb7c7c0134b9972bf5827cf54b
-      internalID: -403829919
+      spriteID: 02d9216cf3605ff49865019bc6ade724
+      internalID: 1232496190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_25
+      name: SpriteMapOutlineWater_25
       rect:
         serializedVersion: 2
         x: 32
@@ -644,14 +644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1407b34e8f9f82e42b488e833fe666ed
-      internalID: -1528139564
+      spriteID: 0bb0e31334c45e1469738e0860028799
+      internalID: -1219010421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_26
+      name: SpriteMapOutlineWater_26
       rect:
         serializedVersion: 2
         x: 64
@@ -665,14 +665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67dd191df28b679478b5f4a2d934a881
-      internalID: 842797391
+      spriteID: 38ba825d0bbdac64e9aab162df4ffa97
+      internalID: -1679702708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_27
+      name: SpriteMapOutlineWater_27
       rect:
         serializedVersion: 2
         x: 96
@@ -686,14 +686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 163b8c55cb282be47bb4ffe163a62365
-      internalID: 278161812
+      spriteID: 55f71334fea895b4a875ea546e3e7785
+      internalID: 336603738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_28
+      name: SpriteMapOutlineWater_28
       rect:
         serializedVersion: 2
         x: 128
@@ -707,14 +707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c05329a228e4331438cfbc2c10c399c2
-      internalID: -1259599168
+      spriteID: e934e0a8191d7f449b1f44b4cc9ff89f
+      internalID: -147151450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_29
+      name: SpriteMapOutlineWater_29
       rect:
         serializedVersion: 2
         x: 160
@@ -728,14 +728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caf66f24ce899144bb4262720bb6ccae
-      internalID: 763598239
+      spriteID: c0af7006e1abf6341ad694442515098a
+      internalID: -354491347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_30
+      name: SpriteMapOutlineWater_30
       rect:
         serializedVersion: 2
         x: 192
@@ -749,14 +749,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d47a989be74b4524090be777be23c21a
-      internalID: 470375060
+      spriteID: 52abfcd14bcc9834881125ae86336ae7
+      internalID: 584804333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_31
+      name: SpriteMapOutlineWater_31
       rect:
         serializedVersion: 2
         x: 224
@@ -770,14 +770,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f58cdb091cdec124da2d8e026db03ac1
-      internalID: 278369613
+      spriteID: 3a5dbaa406095194aa7193cb6274ffbc
+      internalID: 1494056635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_32
+      name: SpriteMapOutlineWater_32
       rect:
         serializedVersion: 2
         x: 0
@@ -791,14 +791,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39c626b725c5cf54f903afb34aaaf993
-      internalID: -1250309182
+      spriteID: 4ce0daf3d6daa8f4b8ee33f156070b70
+      internalID: 515477011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_33
+      name: SpriteMapOutlineWater_33
       rect:
         serializedVersion: 2
         x: 32
@@ -812,14 +812,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 814b33f841af5644293cda4516d73b54
-      internalID: -1637336905
+      spriteID: 8acaf9ff26493994a88d65f932818b3a
+      internalID: -607025301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_34
+      name: SpriteMapOutlineWater_34
       rect:
         serializedVersion: 2
         x: 64
@@ -833,14 +833,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaafcc16adc3cc54b809d386b541e8ab
-      internalID: 1618357488
+      spriteID: 46b733f31d1dc6a4a8a59f8674f45bf1
+      internalID: -600789944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_35
+      name: SpriteMapOutlineWater_35
       rect:
         serializedVersion: 2
         x: 96
@@ -854,14 +854,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 363d70258e0427e4a97027361fe08e7a
-      internalID: 1477923604
+      spriteID: d31b0bf774f982a4e883fba5e9669cbf
+      internalID: -1386480458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_36
+      name: SpriteMapOutlineWater_36
       rect:
         serializedVersion: 2
         x: 128
@@ -875,14 +875,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0ebe84d0654e6748a21809886f3bbfb
-      internalID: -1365982570
+      spriteID: c36c9ad19f635fe4b80c08ebb07e085b
+      internalID: -1755953607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_37
+      name: SpriteMapOutlineWater_37
       rect:
         serializedVersion: 2
         x: 160
@@ -896,14 +896,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0103ad83ad5eead46a6ff5bfa6f4d4ea
-      internalID: 1868563134
+      spriteID: a19ce0e9dc1c4fc45912b1735841bdf0
+      internalID: -141368117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_38
+      name: SpriteMapOutlineWater_38
       rect:
         serializedVersion: 2
         x: 192
@@ -917,14 +917,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef86c3c86c6635642a52306915d765d4
-      internalID: 378402123
+      spriteID: 8704fc012b7c242469928662a1869404
+      internalID: 45788606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_39
+      name: SpriteMapOutlineWater_39
       rect:
         serializedVersion: 2
         x: 224
@@ -938,14 +938,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df9019bb6d5b0324d8df7bc75bce378b
-      internalID: 1496775747
+      spriteID: 95059e7b52fb7f74284244a83115d8a3
+      internalID: -399760471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_40
+      name: SpriteMapOutlineWater_40
       rect:
         serializedVersion: 2
         x: 0
@@ -959,14 +959,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4c56445342ecec419ab167d3483b87f
-      internalID: -484278353
+      spriteID: 3da9e7f299d734a4a9eb77ae8bae70b3
+      internalID: -141630876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_41
+      name: SpriteMapOutlineWater_41
       rect:
         serializedVersion: 2
         x: 32
@@ -980,14 +980,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0ea6462d485f044aabddd6489eb1058
-      internalID: 633486473
+      spriteID: d909f78645929c24e9138d8411c88ef5
+      internalID: 282568954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_42
+      name: SpriteMapOutlineWater_42
       rect:
         serializedVersion: 2
         x: 64
@@ -1001,14 +1001,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b178bf76c0ef0224aa5a027d1515b28e
-      internalID: -1876472280
+      spriteID: 554d42a859f01ea48883f78202803a4c
+      internalID: -1601498132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_43
+      name: SpriteMapOutlineWater_43
       rect:
         serializedVersion: 2
         x: 96
@@ -1022,14 +1022,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b47b4551374857e43b4ea27d36f35350
-      internalID: 123125584
+      spriteID: 969d540e5cdef2d498623fac9152dc9e
+      internalID: 1180758812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_44
+      name: SpriteMapOutlineWater_44
       rect:
         serializedVersion: 2
         x: 128
@@ -1043,14 +1043,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e414b709b82f609448a1cc70ae6ce6df
-      internalID: -531240749
+      spriteID: 5a8fe8102acc1fe49b685e8e1922585a
+      internalID: 996389719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_45
+      name: SpriteMapOutlineWater_45
       rect:
         serializedVersion: 2
         x: 160
@@ -1064,14 +1064,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02e8bfedc69cfdb4b9926274e36107bb
-      internalID: -1278368347
+      spriteID: 247e149511a71294fa0fb5db8fafd0d3
+      internalID: 1024432280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_46
+      name: SpriteMapOutlineWater_46
       rect:
         serializedVersion: 2
         x: 192
@@ -1085,14 +1085,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 357ac5493cc55854288031a7098097f2
-      internalID: -1200716610
+      spriteID: 5f792a4cf59a083499a7014691b2b817
+      internalID: -1038239846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_47
+      name: SpriteMapOutlineWater_47
       rect:
         serializedVersion: 2
         x: 224
@@ -1106,14 +1106,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 303b509450e928942851c6c5bd65455a
-      internalID: -2114755453
+      spriteID: 65cc0561208287748818cea89407d336
+      internalID: 899703197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_48
+      name: SpriteMapOutlineWater_48
       rect:
         serializedVersion: 2
         x: 0
@@ -1127,14 +1127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9eae79656d1cc6d4da845674abd573b2
-      internalID: 742935224
+      spriteID: 6c79d42199fd2bb48b80ebdd89480d38
+      internalID: 828691055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_49
+      name: SpriteMapOutlineWater_49
       rect:
         serializedVersion: 2
         x: 32
@@ -1148,14 +1148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac3366b62d8553b40b981c8224737cac
-      internalID: 1551820322
+      spriteID: d3a78ba84cd7d57479cec62759202588
+      internalID: -214762429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_50
+      name: SpriteMapOutlineWater_50
       rect:
         serializedVersion: 2
         x: 64
@@ -1169,14 +1169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 897908c1713b4884f871fb227784523d
-      internalID: 804708491
+      spriteID: 9bead7b6b05b5d84a96518ba111b57fd
+      internalID: -341143539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_51
+      name: SpriteMapOutlineWater_51
       rect:
         serializedVersion: 2
         x: 96
@@ -1190,14 +1190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46ccba8a265a1174aa77e9e9566df09a
-      internalID: 818051873
+      spriteID: 3661653077e312545b9f64b4c1995d32
+      internalID: -942143651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_52
+      name: SpriteMapOutlineWater_52
       rect:
         serializedVersion: 2
         x: 128
@@ -1211,14 +1211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fd12d216f80262468cd81b85f7dc29b
-      internalID: -1125367771
+      spriteID: 6d5bb1157a2472d4f8e6e52a35d5b474
+      internalID: -1558128271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_53
+      name: SpriteMapOutlineWater_53
       rect:
         serializedVersion: 2
         x: 160
@@ -1232,14 +1232,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab8a731b8aa8b414dbcd863146628a99
-      internalID: -2018199289
+      spriteID: ac426006e0d4cc8419d4b17c3b721d05
+      internalID: -448321318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_54
+      name: SpriteMapOutlineWater_54
       rect:
         serializedVersion: 2
         x: 192
@@ -1253,14 +1253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a096851820969ca48a115385ef92d2c4
-      internalID: 890473974
+      spriteID: 19c28ef001703cf4380621b29be5ed45
+      internalID: -91640101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_55
+      name: SpriteMapOutlineWater_55
       rect:
         serializedVersion: 2
         x: 224
@@ -1274,14 +1274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6599264c73800f94a889e259ca0b69a3
-      internalID: -730425345
+      spriteID: 71c5d6de40a21024788afabea00cb733
+      internalID: 2035145118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_56
+      name: SpriteMapOutlineWater_56
       rect:
         serializedVersion: 2
         x: 0
@@ -1295,14 +1295,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6875a10186941d1488f651237741b689
-      internalID: -1544930343
+      spriteID: 95f2deb4fa4f37d47bdd142e04b7f9d6
+      internalID: 74286801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_57
+      name: SpriteMapOutlineWater_57
       rect:
         serializedVersion: 2
         x: 32
@@ -1316,14 +1316,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25fc1fafd3fd43442bb39332ac0328ac
-      internalID: -1047736049
+      spriteID: 62c0ab4c462ef1648b000695b9cc3b3c
+      internalID: -369254679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_58
+      name: SpriteMapOutlineWater_58
       rect:
         serializedVersion: 2
         x: 64
@@ -1337,14 +1337,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 848e8b1bb1f136a4ca48d112d3562456
-      internalID: -863058622
+      spriteID: 07c84b9334ad5274e9c4d5df80624db3
+      internalID: -1214767555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_59
+      name: SpriteMapOutlineWater_59
       rect:
         serializedVersion: 2
         x: 96
@@ -1358,14 +1358,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3daa07744b273ae4ab67f77c4fad4523
-      internalID: 1537623437
+      spriteID: 5ee2b5a1e4ed26545a2765142fe808c4
+      internalID: -118690244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_60
+      name: SpriteMapOutlineWater_60
       rect:
         serializedVersion: 2
         x: 128
@@ -1379,14 +1379,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b03b0e1b2214f034496ed49b3585b7e6
-      internalID: -1880783766
+      spriteID: e4d434bf1d49cf042909028b8ba8324c
+      internalID: -1287616275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_61
+      name: SpriteMapOutlineWater_61
       rect:
         serializedVersion: 2
         x: 160
@@ -1400,14 +1400,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9965c7dc1d11e0c429587c23780001b5
-      internalID: 1635413145
+      spriteID: db86beef98a640e47b0443ea3c89f1b2
+      internalID: -99450632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_62
+      name: SpriteMapOutlineWater_62
       rect:
         serializedVersion: 2
         x: 192
@@ -1421,14 +1421,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a43c855f692b61549895a2ca2295f844
-      internalID: 792992971
+      spriteID: 71d8d92ec2160fa4e8cb79b41261d1cd
+      internalID: -420172176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteMapForestFire_63
+      name: SpriteMapOutlineWater_63
       rect:
         serializedVersion: 2
         x: 224
@@ -1442,8 +1442,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2a2873138574c647a29ed641f9d05a6
-      internalID: -91404566
+      spriteID: 3b77d187baf74624f8f34c82c885049f
+      internalID: 2141476523
       vertices: []
       indices: 
       edges: []
@@ -1459,70 +1459,70 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SpriteMapForestFire_55: -730425345
-      SpriteMapForestFire_50: 804708491
-      SpriteMapForestFire_0: -2086595338
-      SpriteMapForestFire_14: 950146406
-      SpriteMapForestFire_20: -1965121188
-      SpriteMapForestFire_52: -1125367771
-      SpriteMapForestFire_23: 199041810
-      SpriteMapForestFire_60: -1880783766
-      SpriteMapForestFire_63: -91404566
-      SpriteMapForestFire_35: 1477923604
-      SpriteMapForestFire_51: 818051873
-      SpriteMapForestFire_58: -863058622
-      SpriteMapForestFire_61: 1635413145
-      SpriteMapForestFire_44: -531240749
-      SpriteMapForestFire_43: 123125584
-      SpriteMapForestFire_38: 378402123
-      SpriteMapForestFire_17: 693904889
-      SpriteMapForestFire_22: -56502083
-      SpriteMapForestFire_37: 1868563134
-      SpriteMapForestFire_24: -403829919
-      SpriteMapForestFire_6: 615778959
-      SpriteMapForestFire_27: 278161812
-      SpriteMapForestFire_4: 1970464476
-      SpriteMapForestFire_2: 797225287
-      SpriteMapForestFire_39: 1496775747
-      SpriteMapForestFire_25: -1528139564
-      SpriteMapForestFire_13: -616380305
-      SpriteMapForestFire_7: 849094025
-      SpriteMapForestFire_45: -1278368347
-      SpriteMapForestFire_41: 633486473
-      SpriteMapForestFire_53: -2018199289
-      SpriteMapForestFire_19: 1295611176
-      SpriteMapForestFire_47: -2114755453
-      SpriteMapForestFire_1: -1517770905
-      SpriteMapForestFire_42: -1876472280
-      SpriteMapForestFire_28: -1259599168
-      SpriteMapForestFire_31: 278369613
-      SpriteMapForestFire_33: -1637336905
-      SpriteMapForestFire_32: -1250309182
-      SpriteMapForestFire_57: -1047736049
-      SpriteMapForestFire_10: 2087455809
-      SpriteMapForestFire_3: 1732517424
-      SpriteMapForestFire_18: 502565971
-      SpriteMapForestFire_49: 1551820322
-      SpriteMapForestFire_11: 707311397
-      SpriteMapForestFire_36: -1365982570
-      SpriteMapForestFire_48: 742935224
-      SpriteMapForestFire_9: -604591783
-      SpriteMapForestFire_21: 566471444
-      SpriteMapForestFire_34: 1618357488
-      SpriteMapForestFire_62: 792992971
-      SpriteMapForestFire_56: -1544930343
-      SpriteMapForestFire_5: 2056067327
-      SpriteMapForestFire_12: 1201282551
-      SpriteMapForestFire_30: 470375060
-      SpriteMapForestFire_26: 842797391
-      SpriteMapForestFire_16: -2095647453
-      SpriteMapForestFire_29: 763598239
-      SpriteMapForestFire_54: 890473974
-      SpriteMapForestFire_59: 1537623437
-      SpriteMapForestFire_46: -1200716610
-      SpriteMapForestFire_40: -484278353
-      SpriteMapForestFire_15: -794105393
-      SpriteMapForestFire_8: -2031902579
+      SpriteMapOutlineWater_50: -341143539
+      SpriteMapOutlineWater_21: -582159443
+      SpriteMapOutlineWater_55: 2035145118
+      SpriteMapOutlineWater_4: 1498615879
+      SpriteMapOutlineWater_19: -1615358562
+      SpriteMapOutlineWater_43: 1180758812
+      SpriteMapOutlineWater_60: -1287616275
+      SpriteMapOutlineWater_38: 45788606
+      SpriteMapOutlineWater_30: 584804333
+      SpriteMapOutlineWater_36: -1755953607
+      SpriteMapOutlineWater_9: 1203868983
+      SpriteMapOutlineWater_25: -1219010421
+      SpriteMapOutlineWater_41: 282568954
+      SpriteMapOutlineWater_3: -1271109922
+      SpriteMapOutlineWater_44: 996389719
+      SpriteMapOutlineWater_29: -354491347
+      SpriteMapOutlineWater_62: -420172176
+      SpriteMapOutlineWater_51: -942143651
+      SpriteMapOutlineWater_63: 2141476523
+      SpriteMapOutlineWater_14: 355356027
+      SpriteMapOutlineWater_6: 1141363795
+      SpriteMapOutlineWater_33: -607025301
+      SpriteMapOutlineWater_42: -1601498132
+      SpriteMapOutlineWater_8: -234256681
+      SpriteMapOutlineWater_46: -1038239846
+      SpriteMapOutlineWater_53: -448321318
+      SpriteMapOutlineWater_16: 798325843
+      SpriteMapOutlineWater_13: 2128419906
+      SpriteMapOutlineWater_28: -147151450
+      SpriteMapOutlineWater_35: -1386480458
+      SpriteMapOutlineWater_0: -282973771
+      SpriteMapOutlineWater_56: 74286801
+      SpriteMapOutlineWater_17: 2063487808
+      SpriteMapOutlineWater_58: -1214767555
+      SpriteMapOutlineWater_59: -118690244
+      SpriteMapOutlineWater_15: 623406208
+      SpriteMapOutlineWater_61: -99450632
+      SpriteMapOutlineWater_1: -1960917910
+      SpriteMapOutlineWater_18: -632900156
+      SpriteMapOutlineWater_20: 1368779242
+      SpriteMapOutlineWater_26: -1679702708
+      SpriteMapOutlineWater_31: 1494056635
+      SpriteMapOutlineWater_37: -141368117
+      SpriteMapOutlineWater_47: 899703197
+      SpriteMapOutlineWater_52: -1558128271
+      SpriteMapOutlineWater_45: 1024432280
+      SpriteMapOutlineWater_27: 336603738
+      SpriteMapOutlineWater_34: -600789944
+      SpriteMapOutlineWater_48: 828691055
+      SpriteMapOutlineWater_10: -1380976580
+      SpriteMapOutlineWater_32: 515477011
+      SpriteMapOutlineWater_40: -141630876
+      SpriteMapOutlineWater_12: -202307053
+      SpriteMapOutlineWater_54: -91640101
+      SpriteMapOutlineWater_5: 759561564
+      SpriteMapOutlineWater_24: 1232496190
+      SpriteMapOutlineWater_7: 116847468
+      SpriteMapOutlineWater_22: 936678081
+      SpriteMapOutlineWater_57: -369254679
+      SpriteMapOutlineWater_2: 121564604
+      SpriteMapOutlineWater_49: -214762429
+      SpriteMapOutlineWater_11: 73600016
+      SpriteMapOutlineWater_39: -399760471
+      SpriteMapOutlineWater_23: -123986435
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

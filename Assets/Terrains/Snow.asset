@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Snow
   m_EditorClassIdentifier: 
   tileType: 6
-  tileSprite: {fileID: 11400000, guid: 06fb6cc740224c24f99a1e2609a37d2f, type: 2}
+  tileSprite: {fileID: 11400000, guid: 829d73babcbc41548863a5c4a7ca9a45, type: 2}
   walkable: 1
   adjacentGrassValue: 0
   adjacentWaterValue: 1
@@ -24,20 +24,54 @@ MonoBehaviour:
   AnimationSpeed: 1
   AnimationStartTime: 0
   tileRule:
-    targetTerrain: 0
-    Base: []
-    UpOnly: []
-    LeftOnly: []
-    DownOnly: []
-    RightOnly: []
-    UpLeft: []
-    LeftDown: []
-    DownRight: []
-    RightUp: []
-    LeftRight: []
-    UpDown: []
-    UpLeftDown: []
-    LeftDownRight: []
-    DownRightUp: []
-    RightUpLeft: []
-    AllSides: []
+    targetTerrains: 03000000
+    Base:
+    - {fileID: 1385929290, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 609076518, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: -1387559134, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 1054647597, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    UpOnly:
+    - {fileID: 1412717977, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 1856513373, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    LeftOnly:
+    - {fileID: 1224954910, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 1548574037, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    DownOnly:
+    - {fileID: -1324352122, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: -1960230803, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    RightOnly:
+    - {fileID: 957095153, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: -993308271, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    UpLeft:
+    - {fileID: -1684223526, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 849028337, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    LeftDown:
+    - {fileID: 226349865, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: -847624941, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    DownRight:
+    - {fileID: 1499975334, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 1104906870, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    RightUp:
+    - {fileID: 1305768079, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 947442097, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    LeftRight:
+    - {fileID: 1633678251, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: -1956920456, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    UpDown:
+    - {fileID: -243147388, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: -593501074, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    UpLeftDown:
+    - {fileID: -750284625, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 652582474, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    LeftDownRight:
+    - {fileID: 487995978, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: -1035228339, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    DownRightUp:
+    - {fileID: -1275727198, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 835731298, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    RightUpLeft:
+    - {fileID: -675965127, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 201060078, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    AllSides:
+    - {fileID: 618539626, guid: 80efe20326e13624784fb007a0e460a4, type: 3}
+    - {fileID: 921236079, guid: 80efe20326e13624784fb007a0e460a4, type: 3}

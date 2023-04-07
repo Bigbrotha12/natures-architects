@@ -16,6 +16,7 @@ public class GameLevelSO : ScriptableObject
         public int[] FireTargets = new int[3];
     }
 
+    public string StoryText;
     public FlavorTexts FlavorTexts;
     public bool ShowTutorialText;
     public AudioClip music;

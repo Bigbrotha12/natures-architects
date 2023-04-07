@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: Blank
   m_EditorClassIdentifier: 
   tileType: 7
-  tileSprite: {fileID: 11400000, guid: b9889fbb1ac05ea4ca9e5f197c4cf7b7, type: 2}
+  tileSprite: {fileID: 11400000, guid: 3c53782d4bf551f48b5347a34a96c0e5, type: 2}
+  walkable: 0
   adjacentGrassValue: 0
   adjacentWaterValue: 0
   adjacentMountainValue: 0
   adjacentForestValue: 0
   adjacentSnowValue: 0
   adjacentFireValue: 0
-  Grass_animatedSprites: []
   AnimationSpeed: 1
   AnimationStartTime: 0
   tileRule:
+    targetTerrains: 
     Base: []
     UpOnly: []
     LeftOnly: []

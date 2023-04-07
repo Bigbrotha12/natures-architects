@@ -41,7 +41,6 @@ public class SavingSystem : MonoBehaviour
     private Dictionary<string, object> LoadFile(string saveFile)
     {
         string path = GetPathFromSaveFile(saveFile);
-        print(path);
         if (!File.Exists(path))
         {
             return new Dictionary<string, object>();
@@ -56,7 +55,6 @@ public class SavingSystem : MonoBehaviour
     private void SaveFile(string saveFile, object state)
     {
         string path = GetPathFromSaveFile(saveFile);
-        print("Saving to " + path);
         using (FileStream stream = File.Open(path, FileMode.Create))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -85,7 +83,7 @@ public class SavingSystem : MonoBehaviour
             }
             else
             {
-                print("Save error: No save data for " + saveable.name);
+                Debug.LogError("Save error: No save data for " + saveable.name);
             }
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,7 @@ public class FloatingTextManager : MonoBehaviour
     [SerializeField] Color positiveColor;
     [SerializeField] Color negativeColor;
     [SerializeField] float duration;
+    [SerializeField] float speed;
 
     private List<FloatingText> floatingTexts = new List<FloatingText>();
 
@@ -25,7 +27,7 @@ public class FloatingTextManager : MonoBehaviour
 
     public void Show(string msg, bool positive)
     {
-        Show(msg, fontSize, positive ? positiveColor : negativeColor, playerTransform.position + Vector3.up, duration, Vector3.up);
+        Show(msg, fontSize, positive ? positiveColor : negativeColor, playerTransform.position + Vector3.up, duration, Vector3.up * speed);
     }
 
     public void Show(string msg, int fontSize, Color color, Vector3 position, float duration, Vector3 motion)
@@ -52,7 +54,7 @@ public class FloatingTextManager : MonoBehaviour
             txt = new FloatingText();
             txt.go = Instantiate(textPrefab);
             txt.go.transform.SetParent(textContainer.transform);
-            txt.txt = txt.go.GetComponent<Text>();
+            txt.txt = txt.go.GetComponent<TextMeshProUGUI>();
 
             floatingTexts.Add(txt);
         }

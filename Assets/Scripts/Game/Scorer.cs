@@ -158,7 +158,7 @@ public class Scorer : MonoBehaviour
     {
         if(!UIElement.ContainsKey(type))
         {
-            Debug.Log("Invalid tile type.");
+            Debug.LogError("Invalid tile type.");
             return;
         }
 

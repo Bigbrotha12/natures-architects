@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11461a77521f8f5449e81546127edaa0, type: 3}
-  m_Name: Level_04
+  m_Name: Story Level_04
   m_EditorClassIdentifier: 
-  levelID: 4
+  levelID: 104
+  StoryText: The Creators were devastated, their energy spent, their mission failed.
+    But something unexpected began to happen, Their Power somehow reawakened.
   FlavorTexts:
-    IntroText: The Creators were devastated, their energy spent, their mission failed.
-      But something unexpected began to happen, Their Power somehow reawakened.
+    IntroText: 
     SuccessText: The trees started to regrow, the mountains refilled the lakes and
       streams, and the world's energy healed the Creators themselves.
     FailText: However, it was not enough. The devastation  was too great and their
@@ -23,7 +24,7 @@ MonoBehaviour:
     TutorialText: 
   ShowTutorialText: 0
   music: {fileID: 8300000, guid: 5bc89260206ebfe459233f75f373c32b, type: 3}
-  map: {fileID: 8259568037166387696, guid: c45fa09a5ce91fb4888ff1215c21b70a, type: 3}
+  map: {fileID: 8259568037166387696, guid: 26d66a300939eaf44a4ddaac71d98b10, type: 3}
   starterTile: {fileID: 11400000, guid: e9a83d52c25db2a4b9fc1bd269a32ad1, type: 2}
   rows: 20
   columns: 20

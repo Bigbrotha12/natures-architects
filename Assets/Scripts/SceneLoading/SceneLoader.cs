@@ -38,7 +38,6 @@ public class SceneLoader : MonoBehaviour
 
         foreach (SceneIndex oldScene in oldScenes)
         {
-            print("Unloading scene:" + oldScene);
             scenesLoading.Add(SceneManager.UnloadSceneAsync((int)oldScene));
 
         }

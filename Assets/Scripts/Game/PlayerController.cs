@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     bool isDead;
     bool canBuild = true;
 
+    Coroutine moveCooldownRoutine;
+    Coroutine buildCooldownRoutine;
+
     void Awake()
     {
         if (player == null)
@@ -53,7 +56,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Fire1") > 0.5f)
         {
             canBuild = false;
-            canMove = false;
             PlaceTileAttempt();
             return;
         }
@@ -139,29 +141,29 @@ public class PlayerController : MonoBehaviour
     {
         if (player is null )
         {
-            Debug.Log("player reference not set.");
-            StartCoroutine(InputCooldown());
+            Debug.LogError("player reference not set.");
+            StartBuildInputCooldown();
             return;
         }
 
         if (mapGrid is null)
         {
-            Debug.Log("Map grid reference not set.");
-            StartCoroutine(InputCooldown());
+            Debug.LogError("Map grid reference not set.");
+            StartBuildInputCooldown();
             return;
         }
 
         if (character is null)
         {
-            Debug.Log("Character reference not set.");
-            StartCoroutine(InputCooldown());
+            Debug.LogError("Character reference not set.");
+            StartBuildInputCooldown();
             return;
         }
 
         if (character.TerrainTile is null)
         {
-            Debug.Log("Terrain tile reference not set.");
-            StartCoroutine(InputCooldown());
+            Debug.LogError("Terrain tile reference not set.");
+            StartBuildInputCooldown();
             return;
         }
 
@@ -177,7 +179,7 @@ public class PlayerController : MonoBehaviour
             EventBroker.CallPlayerMoveBlocked();
            
         }
-        StartCoroutine("InputCooldown");
+        StartBuildInputCooldown();
     }
 
     bool CanPlaceTile(TerrainTypes targetTerrain)
@@ -207,7 +209,7 @@ public class PlayerController : MonoBehaviour
     {
         if (player is null)
         {
-            Debug.Log("Character transform not set.");
+            Debug.LogError("Character transform not set.");
             return;
         }
 
@@ -215,7 +217,6 @@ public class PlayerController : MonoBehaviour
 
         if (CanMoveToTile(newPosition))
         {
-            IncrementActionCount();
             mover.movementCompletedEvent += OnMovementCompleted;
             mover.MoveToLocation(player, newPosition);
             EventBroker.CallPlayerMove();
@@ -223,7 +224,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             EventBroker.CallPlayerMoveBlocked();
-            StartCoroutine(InputCooldown());
+            StartMoveInputCooldown();
         }
     }
 
@@ -236,13 +237,14 @@ public class PlayerController : MonoBehaviour
     void OnMovementCompleted()
     {
         mover.movementCompletedEvent -= OnMovementCompleted;
+        IncrementActionCount();
 
         if (isDead)
         {
             CharacterDeath();
             return;
         }
-        StartCoroutine(InputCooldown());
+        StartMoveInputCooldown();
     }
 
     void IncrementActionCount()
@@ -265,10 +267,29 @@ public class PlayerController : MonoBehaviour
         EventBroker.CallCharacterDeath();
     }
 
-    IEnumerator InputCooldown() 
+    void StartMoveInputCooldown()
     {
-        yield return new WaitForSeconds(inputDelay);
+        if (moveCooldownRoutine is not null) StopCoroutine(moveCooldownRoutine);
+        canMove = false;
+        moveCooldownRoutine = StartCoroutine(MoveInputCooldownRoutine(inputDelay));
+    }
+
+    IEnumerator MoveInputCooldownRoutine(float duration) 
+    {
+        yield return new WaitForSeconds(duration);
         canMove = true;
+    }
+
+    void StartBuildInputCooldown()
+    {
+        if (buildCooldownRoutine is not null) StopCoroutine(buildCooldownRoutine);
+        canBuild = false;
+        buildCooldownRoutine = StartCoroutine(BuildInputCooldownRoutine(inputDelay));
+    }
+
+    IEnumerator BuildInputCooldownRoutine(float duration)
+    {
+        yield return new WaitForSeconds(duration);
         canBuild = true;
     }
 }

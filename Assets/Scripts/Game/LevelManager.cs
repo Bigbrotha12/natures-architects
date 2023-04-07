@@ -8,11 +8,12 @@ public class LevelManager : MonoBehaviour
     public GameLevelSO[] levels;
     [SerializeField] int currentLevelIndex;
     [SerializeField] MapGrid mapGrid;
-    [SerializeField] AudioClip defaultMusic;
+    [SerializeField] AudioClip[] defaultMusic;
     [SerializeField] AudioClip gameOverMusic;
     [SerializeField] AudioClip levelSelectMusic;
     [SerializeField] PlayerController player;
     [SerializeField] GameObject levelSelectMenu;
+    [SerializeField] GameObject storyText;
     [SerializeField] GameObject storyEndText;
 
     Scorer scorer;
@@ -68,7 +69,6 @@ public class LevelManager : MonoBehaviour
 
     public void InitializeLevel(bool showIntro)
     {
-        Debug.Log("Index result: " + currentLevelIndex.ToString());
         scorer.ResetScores();
         player.ShowCharacter(false);
         currentCharacterID = 0;
@@ -77,6 +77,16 @@ public class LevelManager : MonoBehaviour
         mapGrid.SetLevel(CurrentLevelSO);
         SetLevelText(CurrentLevelSO);
         uiController.SetLevelInformation(CurrentLevelSO);
+
+        if (!String.IsNullOrEmpty(CurrentLevelSO.StoryText))
+        {
+            if (GameManager.Instance is not null)
+            {
+                GameManager.Instance.ChangeGameState(GameState.PAUSE);
+            }
+            storyText.GetComponent<Dialogue>().lines[0] = CurrentLevelSO.StoryText;
+            storyText.SetActive(true);
+        }
 
         PlayLevelMusic();
         if (showIntro)
@@ -133,7 +143,7 @@ public class LevelManager : MonoBehaviour
 
     void PlayLevelMusic()
     {
-        AudioClip clip = defaultMusic;
+        AudioClip clip = defaultMusic[UnityEngine.Random.Range(0, defaultMusic.Length)];
         if (CurrentLevelSO.music != null)
         {
             clip = CurrentLevelSO.music;

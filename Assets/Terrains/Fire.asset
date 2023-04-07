@@ -24,7 +24,7 @@ MonoBehaviour:
   AnimationSpeed: 1
   AnimationStartTime: 0
   tileRule:
-    targetTerrains: 
+    targetTerrains: 02000000
     Base:
     - {fileID: 789295731, guid: a2ec0184fd1aee64aa502d79f4865f0c, type: 3}
     - {fileID: 276503123, guid: a2ec0184fd1aee64aa502d79f4865f0c, type: 3}

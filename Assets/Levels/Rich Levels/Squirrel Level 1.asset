@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelID: 10
   FlavorTexts:
-    IntroText: Next up, Sebastiane Squirrel; building great forests providing shelter
-      and sources of nourishment for the returning creatures
+    IntroText: Next up, Alan Squirrel; building great forests providing shelter and
+      sources of nourishment for the returning creatures
     SuccessText: Who "wood" have thought you'd find it so easy!
     FailText: Try to place more forest tiles next to water tiles
     TutorialText: Forests also score more points when they're next to water
   ShowTutorialText: 0
-  music: {fileID: 8300000, guid: 30adb61996c47724b960484f311dd278, type: 3}
+  music: {fileID: 0}
   map: {fileID: 8259568037166387696, guid: 9f54d59b1db472f4399bb94ebd8088cf, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 3
@@ -31,7 +31,7 @@ MonoBehaviour:
     Uses: 4
   levelTargets:
     GrassTargets: 000000000000000000000000
-    ForestTargets: 020000000300000005000000
+    ForestTargets: 060000000700000008000000
     MountainTargets: 000000000000000000000000
     WaterTargets: 000000000000000000000000
     SnowTargets: 000000000000000000000000

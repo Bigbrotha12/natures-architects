@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ public class FloatingText
 {
     public bool active;
     public GameObject go;
-    public Text txt;
+    public TextMeshProUGUI txt;
     public Vector3 motion;
     public float duration;
     public float lastShown;

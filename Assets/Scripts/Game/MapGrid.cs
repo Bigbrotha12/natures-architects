@@ -40,6 +40,7 @@ public class MapGrid : MonoBehaviour
         if(CheckPositionIsOnMapGrid(position))
         {
             mutableMap.SetTile(position, type);
+            
         }
     }
 
@@ -88,6 +89,7 @@ public class MapGrid : MonoBehaviour
             {
                 TerrainTile adjacentTile = mutableMap.GetTile<TerrainTile>(adjacentPosition);
                 validAdjacentTiles.Add(adjacentTile);
+                mutableMap.RefreshTile(adjacentPosition);
             }
         }
 

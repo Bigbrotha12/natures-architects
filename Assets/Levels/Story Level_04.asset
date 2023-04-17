@@ -25,7 +25,7 @@ MonoBehaviour:
   ShowTutorialText: 0
   music: {fileID: 8300000, guid: 5bc89260206ebfe459233f75f373c32b, type: 3}
   map: {fileID: 8259568037166387696, guid: 26d66a300939eaf44a4ddaac71d98b10, type: 3}
-  starterTile: {fileID: 11400000, guid: e9a83d52c25db2a4b9fc1bd269a32ad1, type: 2}
+  starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 20
   columns: 20
   StartCoordinates: {x: 0, y: 0, z: 0}

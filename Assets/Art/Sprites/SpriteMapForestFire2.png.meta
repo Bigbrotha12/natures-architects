@@ -43,13 +43,13 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
-  spriteMeshType: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -277,7 +277,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 191
         width: 32
         height: 32
       alignment: 0
@@ -298,7 +298,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 192
+        y: 191
         width: 32
         height: 32
       alignment: 0
@@ -319,7 +319,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 192
+        y: 191
         width: 32
         height: 32
       alignment: 0
@@ -340,7 +340,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 192
+        y: 191
         width: 32
         height: 32
       alignment: 0
@@ -361,7 +361,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 192
+        y: 191
         width: 32
         height: 32
       alignment: 0
@@ -382,7 +382,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 192
+        y: 191
         width: 32
         height: 32
       alignment: 0
@@ -403,7 +403,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 192
+        y: 191
         width: 32
         height: 32
       alignment: 0
@@ -424,7 +424,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 192
+        y: 191
         width: 32
         height: 32
       alignment: 0
@@ -445,7 +445,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
+        y: 158
         width: 32
         height: 32
       alignment: 0
@@ -466,7 +466,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 160
+        y: 158
         width: 32
         height: 32
       alignment: 0
@@ -487,7 +487,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 160
+        y: 158
         width: 32
         height: 32
       alignment: 0
@@ -508,7 +508,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 160
+        y: 158
         width: 32
         height: 32
       alignment: 0
@@ -529,7 +529,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 160
+        y: 158
         width: 32
         height: 32
       alignment: 0
@@ -550,7 +550,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 160
+        y: 158
         width: 32
         height: 32
       alignment: 0
@@ -571,7 +571,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 160
+        y: 158
         width: 32
         height: 32
       alignment: 0
@@ -592,7 +592,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 160
+        y: 158
         width: 32
         height: 32
       alignment: 0
@@ -613,7 +613,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 125
         width: 32
         height: 32
       alignment: 0
@@ -634,7 +634,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 128
+        y: 125
         width: 32
         height: 32
       alignment: 0
@@ -655,7 +655,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 125
         width: 32
         height: 32
       alignment: 0
@@ -676,7 +676,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 128
+        y: 125
         width: 32
         height: 32
       alignment: 0
@@ -697,7 +697,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 125
         width: 32
         height: 32
       alignment: 0
@@ -718,7 +718,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 128
+        y: 125
         width: 32
         height: 32
       alignment: 0
@@ -739,7 +739,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 128
+        y: 125
         width: 32
         height: 32
       alignment: 0
@@ -760,7 +760,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 128
+        y: 125
         width: 32
         height: 32
       alignment: 0
@@ -781,7 +781,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 92
         width: 32
         height: 32
       alignment: 0
@@ -802,7 +802,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
+        y: 92
         width: 32
         height: 32
       alignment: 0
@@ -823,7 +823,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 96
+        y: 92
         width: 32
         height: 32
       alignment: 0
@@ -844,7 +844,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 96
+        y: 92
         width: 32
         height: 32
       alignment: 0
@@ -865,7 +865,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 96
+        y: 92
         width: 32
         height: 32
       alignment: 0
@@ -886,7 +886,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 96
+        y: 92
         width: 32
         height: 32
       alignment: 0
@@ -907,7 +907,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 96
+        y: 92
         width: 32
         height: 32
       alignment: 0
@@ -928,7 +928,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 96
+        y: 92
         width: 32
         height: 32
       alignment: 0
@@ -949,7 +949,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 59
         width: 32
         height: 32
       alignment: 0
@@ -970,7 +970,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
+        y: 59
         width: 32
         height: 32
       alignment: 0
@@ -991,7 +991,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
+        y: 59
         width: 32
         height: 32
       alignment: 0
@@ -1012,7 +1012,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 64
+        y: 59
         width: 32
         height: 32
       alignment: 0
@@ -1033,7 +1033,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
+        y: 59
         width: 32
         height: 32
       alignment: 0
@@ -1054,7 +1054,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 64
+        y: 59
         width: 32
         height: 32
       alignment: 0
@@ -1075,7 +1075,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 64
+        y: 59
         width: 32
         height: 32
       alignment: 0
@@ -1096,7 +1096,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 64
+        y: 59
         width: 32
         height: 32
       alignment: 0
@@ -1117,7 +1117,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 26
         width: 32
         height: 32
       alignment: 0
@@ -1138,7 +1138,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 26
         width: 32
         height: 32
       alignment: 0
@@ -1159,7 +1159,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 26
         width: 32
         height: 32
       alignment: 0
@@ -1180,7 +1180,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 32
+        y: 26
         width: 32
         height: 32
       alignment: 0
@@ -1201,7 +1201,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 32
+        y: 26
         width: 32
         height: 32
       alignment: 0
@@ -1222,7 +1222,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 32
+        y: 26
         width: 32
         height: 32
       alignment: 0
@@ -1243,7 +1243,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 32
+        y: 26
         width: 32
         height: 32
       alignment: 0
@@ -1264,7 +1264,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 32
+        y: 26
         width: 32
         height: 32
       alignment: 0
@@ -1276,174 +1276,6 @@ TextureImporter:
       bones: []
       spriteID: f62261d7076586749abd703beedc6c0c
       internalID: 1132335208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteMapForestFire2_56
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21f7790a6d323044090daae199813dcb
-      internalID: -426084491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteMapForestFire2_57
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb1ab464262755c449b4391e22fcaa73
-      internalID: 1253174231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteMapForestFire2_58
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c934f7726e2f3b74f811b2432eafaab6
-      internalID: -733917493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteMapForestFire2_59
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39bdb43947debfa439b88d6833e0e676
-      internalID: 587707927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteMapForestFire2_60
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e01394c1c8008b438e2d0a07639f451
-      internalID: -596083157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteMapForestFire2_61
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9f66b0e03349f9439174547807afb40
-      internalID: 1836539640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteMapForestFire2_62
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f6460c58802c494db709bfcf78aa6bf
-      internalID: -126626186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteMapForestFire2_63
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b6f10a9738b959439c791fe84c3c887
-      internalID: 586525041
       vertices: []
       indices: 
       edges: []
@@ -1462,7 +1294,6 @@ TextureImporter:
       SpriteMapForestFire2_34: 494875330
       SpriteMapForestFire2_6: 686656162
       SpriteMapForestFire2_44: -2140978970
-      SpriteMapForestFire2_57: 1253174231
       SpriteMapForestFire2_12: -2093533301
       SpriteMapForestFire2_54: 1328859056
       SpriteMapForestFire2_13: -33497109
@@ -1475,14 +1306,10 @@ TextureImporter:
       SpriteMapForestFire2_0: 265636832
       SpriteMapForestFire2_11: 1548717391
       SpriteMapForestFire2_46: 1699445856
-      SpriteMapForestFire2_56: -426084491
       SpriteMapForestFire2_47: -2022832438
       SpriteMapForestFire2_21: 1233347125
       SpriteMapForestFire2_3: 789295731
       SpriteMapForestFire2_26: 474709663
-      SpriteMapForestFire2_60: -596083157
-      SpriteMapForestFire2_63: 586525041
-      SpriteMapForestFire2_62: -126626186
       SpriteMapForestFire2_22: -2009491983
       SpriteMapForestFire2_38: -1990095802
       SpriteMapForestFire2_53: -1852660624
@@ -1496,7 +1323,6 @@ TextureImporter:
       SpriteMapForestFire2_19: 1407667205
       SpriteMapForestFire2_9: 1990526493
       SpriteMapForestFire2_20: 1899737571
-      SpriteMapForestFire2_58: -733917493
       SpriteMapForestFire2_10: -1175492298
       SpriteMapForestFire2_16: -2069897406
       SpriteMapForestFire2_28: -1456064400
@@ -1505,7 +1331,6 @@ TextureImporter:
       SpriteMapForestFire2_30: -1240715438
       SpriteMapForestFire2_39: 1102268473
       SpriteMapForestFire2_4: 276503123
-      SpriteMapForestFire2_61: 1836539640
       SpriteMapForestFire2_23: 227448557
       SpriteMapForestFire2_55: 1132335208
       SpriteMapForestFire2_24: 1627421099
@@ -1517,7 +1342,6 @@ TextureImporter:
       SpriteMapForestFire2_29: 1659587313
       SpriteMapForestFire2_8: 963772814
       SpriteMapForestFire2_42: -1646107219
-      SpriteMapForestFire2_59: 587707927
       SpriteMapForestFire2_50: 731895654
       SpriteMapForestFire2_35: 300869464
       SpriteMapForestFire2_15: -1907429864

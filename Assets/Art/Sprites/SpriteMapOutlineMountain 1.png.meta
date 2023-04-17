@@ -43,13 +43,13 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
-  spriteMeshType: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -1495,10 +1495,10 @@ TextureImporter:
       SpriteMapOutlineMountain 1_48: -1729780175
       SpriteMapOutlineMountain 1_10: 1926200257
       SpriteMapOutlineMountain 1_3: -1338399650
-      SpriteMapOutlineMountain 1_41: -55658818
       SpriteMapOutlineMountain 1_55: 1787450047
       SpriteMapOutlineMountain 1_6: 1510853973
       SpriteMapOutlineMountain 1_63: 352517177
+      SpriteMapOutlineMountain 1_41: -55658818
       SpriteMapOutlineMountain 1_23: 770154664
       SpriteMapOutlineMountain 1_19: -1574133440
       SpriteMapOutlineMountain 1_24: 846121970

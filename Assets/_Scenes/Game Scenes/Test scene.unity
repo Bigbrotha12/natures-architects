@@ -1750,6 +1750,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -4884178947027028929, guid: 7b98587d4a077544b9824a46847338a4, type: 2}
+    - target: {fileID: 1617438077, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1700441813, guid: 7c1bd006c4e149244833bfa4e7f461ea, type: 3}
       propertyPath: m_fontAsset
       value: 

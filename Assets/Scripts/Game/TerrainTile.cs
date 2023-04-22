@@ -161,8 +161,6 @@ public class TerrainTile : TileBase
         return (Up, Left, Down, Right);
     }
 
-    
-
     public List<string> GetScoringKeyText() 
     {
         List<string> scoringText = new List<string>();

@@ -24,7 +24,7 @@ MonoBehaviour:
     TutorialText: 
   ShowTutorialText: 0
   music: {fileID: 8300000, guid: f1f5b7daa3bec2647bb25cd71cdf0d2a, type: 3}
-  map: {fileID: 8259568037166387696, guid: 6e43269e459d8674c96db5335a3780a5, type: 3}
+  map: {fileID: 8259568037166387696, guid: beaabeeeaf4e9e74a92d9fa298e221eb, type: 3}
   starterTile: {fileID: 11400000, guid: 24b00f2f9fe29d042bf9b4f378f80fbf, type: 2}
   rows: 10
   columns: 12
